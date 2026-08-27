@@ -90,15 +90,15 @@ SPRING_COCKED_FORCE_N = (SPRING_FREE_LENGTH - SPRING_COCKED_LENGTH) * SPRING_RAT
 SPRING_RELEASE_ENERGY_J = (
     (SPRING_FIRED_FORCE_N + SPRING_COCKED_FORCE_N) * 0.5 * PLUNGER_STROKE / 1000.0
 )
-COCKING_LEVER_MECHANICAL_ADVANTAGE = 2.20
+COCKING_LEVER_MECHANICAL_ADVANTAGE = 2.06
 MAX_HAND_COCK_FORCE_N = SPRING_COCKED_FORCE_N / COCKING_LEVER_MECHANICAL_ADVANTAGE
 
 # Layout driven from shared interfaces.
-BRIDGE_X = 105.0
+BRIDGE_X = 108.0
 BRIDGE_LENGTH = 92.0
 BRIDGE_DECK_Z = 6.2
-BRIDGE_FASTENER_X = 111.0
-BRIDGE_FASTENER_Y = 18.0
+BRIDGE_FASTENER_X = 112.0
+BRIDGE_FASTENER_Y = 24.0
 BRIDGE_THICKNESS = 3.0
 NOZZLE_AXIS_Y = SYRINGE_AXIS_Y
 NOZZLE_AXIS_Z = SYRINGE_AXIS_Z
@@ -108,8 +108,8 @@ NOZZLE_OD = 4.19  # real 8 ga nominal OD; the conservative effective outlet is 3
 NOZZLE_GUIDE_CLEARANCE = 0.60
 
 CARRIAGE_X = SYRINGE_THUMB_FLANGE_X - 5.0
-CARRIAGE_Y = -14.0
-CARRIAGE_Z = 3.3
+CARRIAGE_Y = -18.0
+CARRIAGE_Z = 4.5
 SPRING_REAR_X = CARRIAGE_X - SPRING_COCKED_LENGTH
 SPRING_AXIS_Y = SYRINGE_AXIS_Y
 SPRING_AXIS_Z = 10.0
@@ -194,7 +194,7 @@ def make_baseplate() -> cq.Shape:
         _move(_box(39.5, 58.0, BASE_THICKNESS), 1.0, -29.0),       # LiPo tray
         _move(_box(47.0, 16.0, BASE_THICKNESS), 34.0, -15.0),      # spring spine
         _move(_box(34.0, 27.0, BASE_THICKNESS), 38.0, 3.0),        # servo tray
-        _move(_box(47.0, 29.0, BASE_THICKNESS), 70.0, 3.0),        # board deck
+        _move(_box(47.0, 44.0, BASE_THICKNESS), 70.0, 3.0),        # board deck/outrigger
         _move(_box(22.0, 54.0, BASE_THICKNESS), 96.0, -27.0),      # bridge root
         _move(_box(20.0, 24.0, BASE_THICKNESS), 78.0, -19.0),      # syringe reaction rib
     )
@@ -215,29 +215,29 @@ def make_baseplate() -> cq.Shape:
     # Spring reaction wall and two long carriage rails.  Rail faces are 0.4 mm
     # outside the moving carriage at every point in the stroke.
     additions.append(_move(_box(3.0, 18.0, 15.0), SPRING_REAR_X - 3.0, -15.0, BASE_THICKNESS))
-    additions.append(_move(_box(45.0, 1.6, 13.7), 39.0, -16.0, BASE_THICKNESS))
-    additions.append(_move(_box(45.0, 1.6, 13.7), 39.0, 2.4, BASE_THICKNESS))
+    additions.append(_move(_box(45.0, 1.6, 12.7), 39.0, -20.0, BASE_THICKNESS))
+    additions.append(_move(_box(45.0, 1.6, 12.7), 39.0, 6.4, BASE_THICKNESS))
 
     # Servo cradle and two real M3 mounting bosses for its ears.
     additions.extend((
-        _move(_box(31.5, 1.4, 5.0), 40.0, 3.0, BASE_THICKNESS),
-        _move(_box(31.5, 1.4, 5.0), 40.0, 28.6, BASE_THICKNESS),
-        _move(_box(1.4, 24.2, 5.0), 40.0, 4.4, BASE_THICKNESS),
-        _move(_box(1.4, 24.2, 5.0), 70.1, 4.4, BASE_THICKNESS),
+        _move(_box(31.5, 1.4, 5.0), 40.0, 15.3, BASE_THICKNESS),
+        _move(_box(31.5, 1.4, 5.0), 40.0, 40.9, BASE_THICKNESS),
+        _move(_box(1.4, 24.2, 5.0), 40.0, 16.7, BASE_THICKNESS),
+        _move(_box(1.4, 24.2, 5.0), 70.1, 16.7, BASE_THICKNESS),
     ))
-    for x0, y0 in ((43.0, 2.0), (68.0, 2.0)):
+    for x0, y0 in ((43.0, 14.3), (68.0, 14.3)):
         boss = _move(_cylinder_z(8.0, 3.5), x0, y0, BASE_THICKNESS)
         boss = boss.cut(_move(_cylinder_z(10.0, 1.7), x0, y0, BASE_THICKNESS - 1.0))
         additions.append(boss)
 
-    # Board keepers are open posts with EPDM-retainer notches; USB ends stay open.
-    board_specs = ((89.0, 3.5, 17.0, 28.0), (70.5, 6.0, 17.8, 21.0))
-    for x0, y0, sx, sy in board_specs:
-        for px in (x0 - 1.8, x0 + sx + 0.6):
-            for py in (y0 - 1.8, y0 + sy + 0.6):
-                post = _move(_box(2.5, 2.5, 7.5), px, py, BASE_THICKNESS)
-                notch = _move(_box(0.8, 3.5, 1.5), px + 1.7, py - 0.5, BASE_THICKNESS + 5.0)
-                additions.append(post.cut(notch))
+    # Each board is captured by an EPDM U-band in a pair of broad grooved anchors;
+    # the bands supply top retention while all USB ends remain open.
+    for band_x, low_y, high_y in ((98.3, 4.0, 35.5), (86.0, 5.5, 30.0)):
+        for anchor_y in (low_y, high_y):
+            anchor = _move(_box(4.5, 2.5, 5.0), band_x - 1.65, anchor_y, BASE_THICKNESS)
+            groove = _move(_box(1.5, 3.5, 1.4), band_x - 0.15, anchor_y - 0.5,
+                           BASE_THICKNESS + 3.6)
+            additions.append(anchor.cut(groove))
 
     # Rear syringe cradle, open at the top, plus a broad two-post flange stop.
     for guide_y in (
@@ -246,13 +246,13 @@ def make_baseplate() -> cq.Shape:
     ):
         additions.append(_move(_box(7.0, 3.0, 16.7), 88.0, guide_y, BASE_THICKNESS))
     additions.append(_move(_box(13.0, 21.0, 0.5), 86.0, -16.5, BASE_THICKNESS))
-    for stop_y in (-20.0, 3.0):
-        additions.append(_move(_box(2.0, 7.0, 17.0), 79.5, stop_y, BASE_THICKNESS))
+    # Low flange stop reacts the syringe barrel below the elevated carriage sweep.
+    additions.append(_move(_box(2.0, 24.0, 1.2), 79.5, -18.0, BASE_THICKNESS))
 
     # Bridge bosses are well inboard of the +X face.  Their top is the actual
     # joint plane: there is no designed air gap.
     for y in (-BRIDGE_FASTENER_Y, BRIDGE_FASTENER_Y):
-        boss = _move(_cylinder_z(BRIDGE_DECK_Z, 6.0), BRIDGE_FASTENER_X, y, 0.0)
+        boss = _move(_cylinder_z(BRIDGE_DECK_Z, 4.0), BRIDGE_FASTENER_X, y, 0.0)
         pocket = _move(
             _cylinder_z(M3_INSERT_LENGTH, M3_INSERT_POCKET_DIAMETER / 2.0),
             BRIDGE_FASTENER_X, y, BRIDGE_DECK_Z - M3_INSERT_LENGTH,
@@ -260,8 +260,8 @@ def make_baseplate() -> cq.Shape:
         additions.append(boss.cut(pocket))
 
     # Cocking-lever and sear pivots close their loads into the base floor.
-    for x0, y0, height in ((42.0, -25.0, 19.5), (68.0, 4.0, 15.6)):
-        boss = _move(_cylinder_z(height - BASE_THICKNESS, 4.5), x0, y0, BASE_THICKNESS)
+    for x0, y0, height, radius in ((42.0, -25.0, 19.5, 4.5), (68.0, 13.7, 15.3, 3.0)):
+        boss = _move(_cylinder_z(height - BASE_THICKNESS, radius), x0, y0, BASE_THICKNESS)
         hole = _move(_cylinder_z(height + 2.0, 1.7), x0, y0, 0.0)
         additions.append(boss.cut(hole))
 
@@ -271,13 +271,13 @@ def make_baseplate() -> cq.Shape:
 def make_bridge() -> cq.Shape:
     """Continuous 32 mm spine; slots live in wings and never neck the load path."""
     deck = _move(_box(BRIDGE_LENGTH, 32.0, BRIDGE_THICKNESS), 0.0, -22.0)
-    rear_wing = _move(_box(16.0, 50.0, BRIDGE_THICKNESS), 0.0, -25.0)
+    rear_wing = _move(_box(16.0, 60.0, BRIDGE_THICKNESS), 0.0, -30.0)
     palm_wing = _move(_box(32.0, 50.0, BRIDGE_THICKNESS), 14.0, -25.0)
     bridge = deck.fuse(rear_wing).fuse(palm_wing)
 
     # The barrel sits in an open center lane.  Two 6.75 x 3 mm side rails remain,
     # giving 40.5 mm2 total section instead of Mk2's two 0.75 mm ligaments.
-    syringe_lane = _move(_box(68.0, SYRINGE_BARREL_OD + 2.0 * SYRINGE_GUIDE_CLEARANCE,
+    syringe_lane = _move(_box(74.0, SYRINGE_BARREL_OD + 2.0 * SYRINGE_GUIDE_CLEARANCE,
                               BRIDGE_THICKNESS + 2.0),
                           0.0, SYRINGE_AXIS_Y - SYRINGE_BARREL_OD / 2.0
                           - SYRINGE_GUIDE_CLEARANCE, -1.0)
@@ -302,7 +302,6 @@ def make_bridge() -> cq.Shape:
         post = _move(_box(7.0, 3.0, 13.7), 45.0, guide_y, BRIDGE_THICKNESS)
         notch = _move(_box(3.0, 4.0, 1.8), 47.0, guide_y - 0.5, 12.5)
         additions.append(post.cut(notch))
-    additions.append(_move(_box(12.0, 21.0, 0.5), 43.0, -22.5, BRIDGE_THICKNESS))
 
     # Two robust bored towers.  Each has >6 mm material between the live and dummy
     # bores and a full 32x3 mm deck below it.
@@ -319,13 +318,14 @@ def make_bridge() -> cq.Shape:
 
 def make_carriage() -> cq.Shape:
     """Broad guided tappet with spring seat, plunger face, latch and cocking lug."""
-    body = _box(5.0, 16.0, 13.0)
-    spring_seat = _move(_box(2.0, 12.0, 10.0), 0.0, 2.0, 1.7)
-    push_pad = _move(_box(1.8, 14.0, 12.0), 3.2, 1.0, 0.5)
-    latch_lug = _move(_box(5.0, 3.0, 3.0), 0.0, 19.0, 12.7)
-    cock_lug = _move(_box(5.0, 8.0, 3.0), 0.0, -5.0, 13.5)
-    carriage = body.fuse(spring_seat).fuse(push_pad).fuse(latch_lug).fuse(cock_lug)
-    cock_hole = _move(_cylinder_z(5.0, 1.7), 2.5, -1.0, 13.0)
+    body = _box(5.0, 24.0, 13.0)
+    spring_seat = _move(_box(2.0, 20.0, 10.0), 0.0, 2.0, 1.7)
+    push_pad = _move(_box(1.8, 22.0, 12.0), 3.2, 1.0, 0.5)
+    latch_neck = _move(_box(5.0, 4.0, 2.5), 0.0, 23.0, 11.5)
+    latch_lug = _move(_box(5.0, 2.0, 3.0), 0.0, 26.5, 11.5)
+    cock_lug = _move(_box(5.0, 8.0, 3.0), 0.0, -5.0, 11.5)
+    carriage = body.fuse(spring_seat).fuse(push_pad).fuse(latch_neck).fuse(latch_lug).fuse(cock_lug)
+    cock_hole = _move(_cylinder_z(5.0, 1.7), 2.5, -1.0, 11.0)
     return _ground(carriage.cut(cock_hole))
 
 
@@ -336,18 +336,18 @@ def make_cocking_lever() -> cq.Shape:
     lever = bar.fuse(grip)
     lever = lever.cut(_move(_cylinder_z(5.0, 1.7), 0.0, 0.0, -1.0))
     # Closed drive eye is stronger than the Mk2 yoke and cannot cam off its pin.
-    lever = lever.cut(_move(_cylinder_z(5.0, 1.9), 27.857, 0.0, -1.0))
+    lever = lever.cut(_move(_cylinder_z(5.0, 1.9), 26.683, 0.0, -1.0))
     return _ground(lever)
 
 
 def make_sear() -> cq.Shape:
     """M3-pivoted sear; the servo horn only moves the low-load release tail."""
     tooth = _box(4.0, 4.0, 3.0)
-    arm = _move(_box(6.5, 4.0, 3.0), -6.5, 0.0)
-    tail = _move(_box(8.0, 4.0, 3.0), -7.0, 6.0)
-    neck = _move(_box(4.0, 6.0, 3.0), -4.0, 3.0)
+    arm = _move(_box(7.0, 5.8, 3.0), -6.5, 6.0)
+    tail = _move(_box(8.0, 4.0, 3.0), -7.0, 8.0)
+    neck = _move(_box(4.0, 7.0, 3.0), 0.0, 3.0)
     sear = tooth.fuse(arm).fuse(tail).fuse(neck)
-    return _ground(sear.cut(_move(_cylinder_z(5.0, 1.7), -2.5, 2.0, -1.0)))
+    return _ground(sear.cut(_move(_cylinder_z(5.0, 1.7), -2.5, 8.9, -1.0)))
 
 
 def make_switch_pod() -> cq.Shape:
@@ -371,9 +371,9 @@ printed_parts: Dict[str, PlacedShape] = {
     "spring_carriage": PlacedShape(make_carriage(), cq.Location(cq.Vector(CARRIAGE_X, CARRIAGE_Y, CARRIAGE_Z))),
     "cocking_lever": PlacedShape(
         make_cocking_lever(),
-        cq.Location(cq.Vector(42.0, -25.0, 19.9), cq.Vector(0.0, 0.0, 1.0), 21.038),
+        cq.Location(cq.Vector(42.0, -25.0, 19.9), cq.Vector(0.0, 0.0, 1.0), 12.995),
     ),
-    "servo_sear": PlacedShape(make_sear(), cq.Location(cq.Vector(70.5, 5.0, 16.0))),
+    "servo_sear": PlacedShape(make_sear(), cq.Location(cq.Vector(70.5, 4.8, 16.0))),
     "palm_switch_pod": PlacedShape(make_switch_pod(), cq.Location(cq.Vector(132.0, -17.0, -12.0))),
 }
 
@@ -385,11 +385,8 @@ def _source(name: str, source: str, envelope: str, confidence: str = "HIGH") -> 
     MOCKUP_SOURCES[name] = MockupSource(source, envelope, confidence)
 
 
-def make_mockups() -> Dict[str, PlacedShape]:
-    """Real envelopes only; every entry is paired with a printed report source."""
-    items: Dict[str, PlacedShape] = {}
-
-    # Complete two-part syringe, including the previously omitted finger flange.
+def _syringe_subassemblies() -> tuple[cq.Shape, cq.Shape]:
+    """Return static barrel/flange and moving plunger at the cocked pose."""
     barrel = _move(_cylinder_x(SYRINGE_BARREL_LENGTH, SYRINGE_BARREL_OD / 2.0),
                    SYRINGE_X, SYRINGE_AXIS_Y, SYRINGE_AXIS_Z)
     luer = _move(_cylinder_x(SYRINGE_LUER_LENGTH, SYRINGE_LUER_OD / 2.0),
@@ -400,8 +397,17 @@ def make_mockups() -> Dict[str, PlacedShape]:
                          SYRINGE_AXIS_Y - 10.0, SYRINGE_AXIS_Z - 7.0)
     rod = _move(_cylinder_x(SYRINGE_FINGER_FLANGE_X - (SYRINGE_THUMB_FLANGE_X + 2.0), 3.0),
                 SYRINGE_THUMB_FLANGE_X + 2.0, SYRINGE_AXIS_Y, SYRINGE_AXIS_Z)
+    return _compound((barrel, luer, finger_flange)), _compound((thumb_flange, rod))
+
+
+def make_mockups() -> Dict[str, PlacedShape]:
+    """Real envelopes only; every entry is paired with a printed report source."""
+    items: Dict[str, PlacedShape] = {}
+
+    # Complete two-part syringe, including the previously omitted finger flange.
+    syringe_static, syringe_moving = _syringe_subassemblies()
     items["syringe_norm_ject_10ml"] = PlacedShape(
-        _compound((barrel, luer, finger_flange, thumb_flange, rod)), cq.Location())
+        _compound((syringe_static, syringe_moving)), cq.Location())
     _source("syringe_norm_ject_10ml", "Restek 22775 / NORM-JECT specification table",
             "15.9 ID, 17.3 OD, 85.3 cylinder; flange conservatively caliper-sized")
 
@@ -428,31 +434,31 @@ def make_mockups() -> Dict[str, PlacedShape]:
             "OD <=10, free 39.7, rate 1.94 N/mm, cocked 25.53, peak 27.6 N", "MEASURE")
 
     # DS239MG lying on its side, including lugs and horn sweep envelope.
-    servo_body = _move(_box(27.5, 23.0, 12.0), 42.0, 5.0, 3.4)
-    servo_lugs = _move(_box(31.5, 4.0, 2.0), 40.0, 1.0, 8.0).fuse(
-        _move(_box(31.5, 4.0, 2.0), 40.0, 28.0, 8.0))
+    servo_body = _move(_box(27.5, 23.0, 12.0), 42.0, 17.3, 3.4)
+    servo_lugs = _move(_box(31.5, 4.0, 2.0), 40.0, 13.3, 8.0).fuse(
+        _move(_box(31.5, 4.0, 2.0), 40.0, 40.3, 8.0))
     servo = servo_body.fuse(servo_lugs)
     items["corona_ds239mg_servo"] = PlacedShape(servo, cq.Location())
     _source("corona_ds239mg_servo", "HobbyKing Corona DS239MG published dimensions",
             "27.5 x 23 x 12 body plus mounting lugs")
 
-    horn = _move(_box(3.0, 16.0, 1.6), 63.0, 8.0, 15.7)
+    horn = _move(_box(3.0, 16.0, 1.6), 63.0, 16.8, 15.7)
     items["ds239mg_horn"] = PlacedShape(horn, cq.Location())
     _source("ds239mg_horn", "owned DS239MG supplied horn; conservative measured envelope",
             "3 x 16 x 1.6")
 
     # Electronics retained on open floors; deleted boost and H-bridge are absent.
-    lipo = _move(_box(34.0, 54.0, 10.0), 3.5, -27.0, 3.4)
+    lipo = _move(_box(34.0, 54.0, 10.0), 2.5, -27.0, 3.4)
     items["lipo_eemb_103454_rotated"] = PlacedShape(lipo, cq.Location())
     _source("lipo_eemb_103454_rotated", "EEMB 103454 manufacturer envelope",
             "54 x 34 x 10, rotated in plane; 0.6 mm floor gap and no top clamp")
 
-    tp4056 = _move(_box(28.0, 17.0, 4.0), 70.5, 8.0, 3.4)
+    tp4056 = _move(_box(17.0, 28.0, 4.0), 90.4, 7.0, 3.4)
     items["tp4056_usbc_dw01"] = PlacedShape(tp4056, cq.Location())
     _source("tp4056_usbc_dw01", "owned common USB-C TP4056/DW01 board, conservative caliper envelope",
-            "28 x 17 x 4", "MEASURE")
+            "28 x 17 x 4, rotated in plane", "MEASURE")
 
-    xiao = _move(_box(17.8, 21.0, 3.6), 99.0, 6.0, 3.4)
+    xiao = _move(_box(17.8, 21.0, 3.6), 72.1, 8.5, 3.4)
     items["seeed_xiao_esp32c3"] = PlacedShape(xiao, cq.Location())
     _source("seeed_xiao_esp32c3", "Seeed Studio XIAO ESP32C3 mechanical drawing",
             "17.8 x 21 x 3.6")
@@ -480,26 +486,27 @@ def make_mockups() -> Dict[str, PlacedShape]:
         _source(iname, "owned M3 heat-set inserts", "5.0 OD x 4.0 length")
 
     for name, x0, y0, z0, length in (
-        ("cocking_pivot_m3", 35.0, -25.0, 0.2, 23.0),
-        ("cocking_drive_m3", 67.7, -20.9, 17.8, 6.0),
-        ("sear_pivot_m3", 64.5, 5.0, 0.2, 19.0),
+        ("cocking_pivot_m3", 42.0, -25.0, 0.2, 23.0),
+        ("cocking_drive_m3", 68.0, -19.0, 18.3, 5.5),
+        ("sear_pivot_m3", 68.0, 13.7, 0.2, 19.0),
     ):
         items[name] = PlacedShape(_move(_cylinder_z(length, 1.5), x0, y0, z0), cq.Location())
         _source(name, "owned ISO M3 screws", f"3.0 OD x {length:.1f} envelope")
 
     # EPDM retainers are explicit; they sit above, rather than clamp, the pouch.
-    for name, x0, y0, sx, sy, z0 in (
-        ("tp4056_epdm_retainer", 68.8, 6.2, 31.4, 20.4, 8.7),
-        ("xiao_epdm_retainer", 97.3, 4.2, 21.2, 24.4, 8.3),
+    for name, x0, y0, sy, z_top in (
+        ("tp4056_epdm_retainer", 98.3, 5.5, 31.0, 7.8),
+        ("xiao_epdm_retainer", 86.0, 7.0, 24.0, 7.4),
     ):
-        outer = _move(_box(sx, sy, 1.2), x0, y0, z0)
-        inner = _move(_box(sx - 2.0, sy - 2.0, 2.0), x0 + 1.0, y0 + 1.0, z0 - 0.4)
-        items[name] = PlacedShape(outer.cut(inner), cq.Location())
-        _source(name, "owned EPDM O-rings / bands", f"retainer envelope {sx} x {sy}", "MEASURE")
+        top = _move(_box(1.2, sy, 1.0), x0, y0, z_top)
+        left = _move(_box(1.2, 1.0, z_top - BASE_THICKNESS), x0, y0, BASE_THICKNESS)
+        right = _move(_box(1.2, 1.0, z_top - BASE_THICKNESS), x0, y0 + sy - 1.0, BASE_THICKNESS)
+        items[name] = PlacedShape(_compound((top, left, right)), cq.Location())
+        _source(name, "owned EPDM O-rings / bands", f"U-retainer at x={x0}", "MEASURE")
 
-    syringe_retainer = _move(_cylinder_x(5.0, 11.0), 84.0, SYRINGE_AXIS_Y, SYRINGE_AXIS_Z)
+    syringe_retainer = _move(_cylinder_x(5.0, 11.0), 88.0, SYRINGE_AXIS_Y, SYRINGE_AXIS_Z)
     syringe_retainer = syringe_retainer.cut(
-        _move(_cylinder_x(7.0, 9.7), 83.0, SYRINGE_AXIS_Y, SYRINGE_AXIS_Z))
+        _move(_cylinder_x(7.0, 9.7), 87.0, SYRINGE_AXIS_Y, SYRINGE_AXIS_Z))
     items["syringe_epdm_retainer"] = PlacedShape(syringe_retainer, cq.Location())
     _source("syringe_epdm_retainer", "owned EPDM O-rings", "stretched OD <=22 around guide notches", "MEASURE")
 
@@ -575,6 +582,13 @@ for i in (1, 2):
     CONTACT_ALLOWLIST[_pair(f"mockup/bridge_m3_insert_{i}", f"mockup/bridge_m3_screw_{i}")] = "thread engagement"
 CONTACT_ALLOWLIST[_pair("printed/baseplate", "mockup/cocking_pivot_m3")] = "pivot screw in boss"
 CONTACT_ALLOWLIST[_pair("printed/baseplate", "mockup/sear_pivot_m3")] = "pivot screw in boss"
+CONTACT_ALLOWLIST[_pair("printed/baseplate", "mockup/corona_ds239mg_servo")] = "servo lugs in M3 cradle"
+CONTACT_ALLOWLIST[_pair("mockup/corona_ds239mg_servo", "mockup/sear_pivot_m3")] = "shared lower servo-lug pivot"
+CONTACT_ALLOWLIST[_pair("printed/baseplate", "mockup/syringe_epdm_retainer")] = "retainer seated in guide grooves"
+CONTACT_ALLOWLIST[_pair("printed/baseplate", "mockup/tp4056_epdm_retainer")] = "EPDM band in board anchors"
+CONTACT_ALLOWLIST[_pair("printed/baseplate", "mockup/xiao_epdm_retainer")] = "EPDM band in board anchors"
+for i in (1, 2):
+    CONTACT_ALLOWLIST[_pair("printed/barrel_bridge", f"mockup/bridge_m3_insert_{i}")] = "insert top at clamped joint"
 
 
 FIRST_LAYER_MIN_MM2: Mapping[str, float] = {
@@ -803,12 +817,15 @@ def verify_model() -> dict:
         "mockup/syringe_norm_ject_10ml",  # plunger subassembly is represented separately below
     }
     sweep_static = {name: shape for name, shape in all_items.items() if name not in static_exclusions}
+    syringe_static, syringe_moving_cocked = _syringe_subassemblies()
+    sweep_static["mockup/syringe_static_barrel_and_finger_flange"] = syringe_static
     step_count = int(math.floor(PLUNGER_STROKE / 0.5))
     sweep_positions = [i * 0.5 for i in range(step_count + 1)]
     if abs(sweep_positions[-1] - PLUNGER_STROKE) > 1.0e-6:
         sweep_positions.append(PLUNGER_STROKE)
     for travel in sweep_positions:
         carriage = _stroke_carriage_shape(travel)
+        moving_plunger = syringe_moving_cocked.moved(cq.Location(cq.Vector(travel, 0.0, 0.0)))
         minimum_gap = float("inf")
         nearest = None
         maximum_intersection = 0.0
@@ -829,7 +846,17 @@ def verify_model() -> dict:
             "minimum_static_gap_mm": minimum_gap,
             "nearest_static_item": nearest,
             "maximum_intersection_mm3": maximum_intersection,
+            "moving_plunger_contact_gap_mm": float(carriage.distance(moving_plunger)),
+            "moving_plunger_intersection_mm3": _intersection_volume(carriage, moving_plunger),
         })
+        if report["stroke_sweep"][-1]["moving_plunger_intersection_mm3"] > GEOMETRY_TOLERANCE:
+            report["failures"].append(
+                f"stroke {travel:.3f} mm carriage/plunger interference: "
+                f"{report['stroke_sweep'][-1]['moving_plunger_intersection_mm3']:.6f} mm3")
+        if report["stroke_sweep"][-1]["moving_plunger_contact_gap_mm"] > GEOMETRY_TOLERANCE:
+            report["failures"].append(
+                f"stroke {travel:.3f} mm carriage lost plunger contact: "
+                f"{report['stroke_sweep'][-1]['moving_plunger_contact_gap_mm']:.6f} mm")
 
     # Centerline connectivity: outlet, hub inlet and both tower bores are coaxial.
     syringe_outlet = (NOZZLE_START_X, SYRINGE_AXIS_Y, SYRINGE_AXIS_Z)
@@ -879,6 +906,13 @@ def _safe_filename(name: str) -> str:
 
 
 def export_all() -> dict:
+    # Verify pristine B-reps before OCCT serializers perturb cached bounding-box
+    # tolerances.  The exact verified objects below are then serialized; any export
+    # exception still aborts the run.
+    report = verify_model()
+    if report["failures"]:
+        raise RuntimeError("Verification failed:\n  " + "\n  ".join(report["failures"]))
+
     PART_DIR.mkdir(exist_ok=True)
     ASSEMBLY_STL_DIR.mkdir(exist_ok=True)
 
@@ -904,11 +938,8 @@ def export_all() -> dict:
 
     assembly.save(str(OUT_DIR / "webshooter_mk2_assembly.step"), exportType="STEP")
 
-    report = verify_model()
     (OUT_DIR / "verification_report.json").write_text(
         json.dumps(report, indent=2, sort_keys=True), encoding="utf-8")
-    if report["failures"]:
-        raise RuntimeError("Verification failed:\n  " + "\n  ".join(report["failures"]))
     return report
 
 

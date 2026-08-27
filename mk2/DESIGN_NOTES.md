@@ -1,159 +1,102 @@
-# Web-Shooter Mk2 design notes
+# Web-Shooter Mk3 design notes
 
-## Result
+## Exit velocity and range — governing calculation
 
-Mk2 is an open frame, not an enclosure. A 3.2 mm nominal curved forearm plate carries exposed hardware; a narrow separate bridge runs over the back of the hand and carries two visible barrels. There is no shell, lid, box, cuff, or hidden pump.
+Mk3 uses a hand-cocked compression spring, a positive sear, and an owned Corona DS239MG servo only to release the sear. The Actuonix L12, Pololu U3V70F6 and DRV8833 are deleted.
 
-- Printed parts: **4** (`baseplate`, `barrel_bridge`, `pusher_yoke`, `palm_switch_pod`).
-- Shot: **1.986 mL** from 10.0 mm plunger travel in the selected 15.9 mm-bore syringe.
-- Wrist profile: **21.725 mm above the modeled skin crown** over x = 90–120 mm; target is <= 25 mm.
-- Baseplate underside: 50 mm forearm crown-radius proxy plus an assumed 0.8 mm foam gap.
-- Barrels: lower-Y barrel live; upper-Y barrel capped/dummy. One live outlet preserves one strong 1.986 mL strand and avoids splitting the dose and doubling outlet area. The second barrel is retained for worn symmetry.
-- Refill: lift the syringe out of the open side guides, pull the plunger back, command actuator retract, and drop the syringe back in. An owned EPDM loop around the guide posts is the removable retainer. No printed part is disassembled.
-
-The design is deliberately one shot per fill. That makes the complete shot a factory-limited 10 mm actuator stroke, eliminates a ratchet/indexing mechanism, and keeps the frame low.
-
-## Actuator decision
-
-### Required volume and plunger travel
-
-The selected syringe is the rubber-free, two-part 10 mL NORM-JECT geometry. Published cylinder dimensions are 15.9 mm ID, 17.3 mm OD and 85.3 mm cylinder length. It is PP/PE and contains no rubber or silicone oil. The CAD values come from the [Restek NORM-JECT specification table](https://www.restek.com/p/22775).
-
-Plunger area:
+For any positive-displacement syringe, force and viscosity do not set the kinematic ceiling. Plunger speed and area ratio do:
 
 ```text
-A = pi d^2 / 4
-  = pi (0.0159 m)^2 / 4
-  = 1.9856e-4 m^2
+10 mL syringe bore               d_p = 15.9 mm
+plunger area                     A_p = pi d_p^2 / 4 = 198.556 mm2
+3.0 mm effective outlet area     A_o = pi (3.0)^2 / 4 = 7.069 mm2
+area ratio                       A_p/A_o = 28.080
+
+2.000 mL stroke                  x = 2000 / 198.556 = 10.073 mm
+selected shot time               t = 0.069 s
+mean plunger speed               v_p = x/t = 0.14599 m/s
+exit velocity                    v_exit = v_p(A_p/A_o) = 4.101 m/s
+ideal level 45 degree range      R = v_exit^2/g = 1.715 m
 ```
 
-Ten millimetres of travel gives:
+The 69 ms shot is deliberate. The rebuild brief's illustrative 0.5 s shot would give only 0.566 m/s and an ideal ballistic range of 0.033 m. Even the final 250 ms limit gives only 1.13 m/s and 0.13 m ideal range. Therefore the explicit **>=1.5 m ballistic target** governs and requires no more than about 74 ms for 2 mL through a 3 mm outlet. Mk3 carries 14.3% ideal-range margin and 181 ms time margin to the hard limits.
+
+The range value is the drag-free 45 degree upper bound, not a promise for adhesive in air. Real strand range must be measured outdoors into a safe backstop. The calculation is printed on every generator run and stored in `verification_report.json` so a slow drive can never pass silently again.
+
+## Fluid and spring sizing
+
+Beacon's Fabri-Tac SDS publishes 8,000 cP (8.0 Pa·s) for the neat adhesive. Mk3 uses the permitted **1:1 Fabri-Tac/acetone starting mixture**. The brief's measured guidance is that this reduces shear viscosity about 16x, to roughly 0.5 Pa·s, while polymer extensional elasticity preserves stringing and acetone flash-off reconcentrates the strand.
+
+The source spring is selected from the owned/buying compression-spring assortment by measurement, not by color or appearance:
 
 ```text
-V = A x = (1.9856e-4)(0.010)
-  = 1.9856e-6 m^3
-  = 1.986 mL
+maximum OD                     10.0 mm
+free length                    39.7 mm
+spring rate                    1.94 N/mm
+fired installed length         35.6 mm
+cocked installed length        25.53 mm
+fired preload                  7.95 N
+cocked force                   27.50 N
+releasable energy              0.179 J
+lever mechanical advantage     2.06:1
+maximum ideal hand force       13.35 N
 ```
 
-### Fluid-force estimate
+The releasable energy is below the verifier's 0.25 J safety ceiling. It is enough for the short, wide 8 ga/Luer path only after 1:1 thinning; it is not permission to install a stiffer spring. Bench-select the spring with the multimeter-sized scale/force fixture described below, then confirm 2 mL discharge in <=69 ms with high-frame-rate video. If the measured shot is slower, reduce restriction and seal friction before changing spring energy.
 
-Fabri-Tac has no published viscosity in the manufacturer data found, so viscosity is the largest unverified input. The first-pass estimate uses:
-
-- dynamic viscosity `mu = 1.5 Pa*s` (1,500 cP), with a 2x sensitivity case;
-- one 14 ga / 1.6 mm-ID live flow path, radius `r = 0.0008 m`;
-- `L = 0.040 m` effective restriction length (short connector plus live needle);
-- 8 N dry syringe seal/guide allowance;
-- laminar Hagen-Poiseuille flow. Fabri-Tac is not guaranteed Newtonian, so this is a sizing calculation, not a substitute for a force test.
-
-With actuator speed `v` expressed in mm/s, `Q = A v` and:
-
-```text
-DeltaP = 8 mu L Q / (pi r^4)
-F_hyd  = DeltaP A
-       = 14.706 v  N
-F_total = 8 + 14.706 v  N
-```
-
-For a deliberately conservative actuator-line approximation between 80 N at zero speed and 6.5 mm/s at zero load:
-
-```text
-F_act = 80 (1 - v / 6.5)
-
-8 + 14.706v = 80(1 - v/6.5)
-v = 2.665 mm/s
-F = 47.20 N
-shot time = 10 / 2.665 = 3.75 s
-```
-
-At twice the assumed viscosity, the same arithmetic gives 58.76 N at 1.726 mm/s and a 5.79 s shot.
-
-### Why the owned Corona DS239MG is rejected
-
-The published DS239MG figures are 4.6 kg*cm stall torque at 6 V and 40 degrees travel to each side. Those specifications are listed by [HobbyKing](https://hobbyking.com/corona-ds-239mg-digital-slim-wing-servo-metal-gear-4-6kg-0-15sec-22g.html).
-
-```text
-T_stall = 4.6 kgf*cm x 9.80665 x 0.01 = 0.451 N*m
-
-For a 10 mm chord over an 80 degree total sweep:
-r = 10 mm / (2 sin 40 degrees) = 7.779 mm
-
-Ideal stall force = T/r = 0.451/0.007779 = 57.99 N
-1/3-stall working force = 19.33 N
-```
-
-The estimate requires 47.20 N. The DS239MG has only a 1.23x ideal **stall** ratio and only 0.41x of the required force at a conservative one-third-stall working point. Link-angle loss, syringe side load, startup friction, and the fact that the owned 1S battery cannot supply its rated 6 V make that worse. A force-gaining lever would reduce the already-required travel. For a multi-shot 50 mm stroke, the required crank radius becomes 38.9 mm and stall force falls to about 11.6 N.
-
-**Plain conclusion: the DS239MG cannot do this job with an acceptable margin. Do not build the syringe drive around it.**
-
-### Selected actuator and margin
-
-Use the actually sold **Actuonix L12-10-210-6-S**: 10 mm stroke, 210:1 gearing, 6 V, internal end limit switches. The manufacturer's listing gives 80 N maximum load, 45 N backdrive force and 6.5 mm/s no-load speed. The datasheet also gives a 62 N at 3.2 mm/s peak-power point, 460 mA stall current and 20% maximum duty cycle: [Actuonix product page](https://www.actuonix.com/l12-10-210-6-s), [L12 datasheet](https://www.actuonix.com/assets/images/datasheets/ActuonixL12Datasheet.pdf).
-
-Nominal estimated-load margin:
-
-```text
-to 62 N peak-power load: 62 - 47.20 = 14.80 N; ratio 1.31
-to 80 N maximum load:    80 - 47.20 = 32.80 N; ratio 1.69
-```
-
-At the 2x-viscosity sensitivity point, margin is 3.24 N to the 62 N point and 21.24 N to maximum. This is adequate for a prototype only if the real force test passes. The controller should drive one full extension per shot, then remain off; respect the actuator's 20% duty cycle.
-
-The `-S` actuator is reversed by a DRV8833 H-bridge. Its internal end switches terminate extension/retraction. The 1S LiPo therefore requires a regulated 6 V rail. This actuator choice **does force a boost converter back into the design**, but it is a fixed Pololu U3V70F6 rather than an MT3608. The protected battery feeds the required power switch, then the 6 V regulator, actuator and motor driver. All logic shares ground.
+The live nozzle mockup uses the real nominal 8 ga OD of 4.19 mm and a conservative 3.0 mm effective outlet. The capped upper nozzle is visual symmetry only. The syringe Luer, live hub, metal nozzle, and both bridge bores share the named axis `(y=-6.0, z=12.5)`; the verification report asserts 0.000 mm axis and axial connection error.
 
 ## Mechanical architecture
 
-- `baseplate`: curved forearm shell segment, two 25 mm forearm-strap slots, exposed actuator/syringe guides, board clips, power-switch saddle and two M3 insert pockets.
-- `barrel_bridge`: raised narrow hand plate with a locally widened two-screw rear interface, palm strap slots, an open syringe lane and perforated twin-barrel towers.
-- `pusher_yoke`: pinned to the actuator clevis with an owned M3 screw and bears on the syringe thumb flange.
-- `palm_switch_pod`: open frame on the palm strap for the owned 12 x 12 mm tactile switch.
+Six printed parts are generated:
 
-The base and bridge mating holes are driven from `BRIDGE_FASTENER_X`, `BRIDGE_FASTENER_Y`, `M3_CLEARANCE_DIAMETER`, `M3_INSERT_OD` and `M3_INSERT_LENGTH`. Barrel OD and guide clearance, strap thickness and slot width, actuator pin diameter, syringe OD and guide clearance are likewise shared named values rather than duplicated mating literals.
+1. `baseplate` — flat-printing 2.8 mm shallow chord with a continuous perimeter, broad device floors, two forearm strap pairs, spring reaction wall, 24 mm-wide carriage way, open electronics anchors, syringe cradle, and bridge bosses.
+2. `barrel_bridge` — continuous 32 mm deck with a 74 mm open syringe/Luer lane, 60 mm rear joint wing, outboard palm strap slots, forward syringe guide, and two bored barrel towers.
+3. `spring_carriage` — broad anti-rotation tappet guided on both sides, with spring seat, full plunger pad, closed cocking-pin lug, and sear shoulder.
+4. `cocking_lever` — one-hand lever with a 55 mm hand arm and closed M3 drive eye. Its deployed arc retracts the carriage through the full 10.073 mm stroke; the sear holds the load while the lever returns to the stowed position.
+5. `servo_sear` — M3-pivoted, thickened around the pivot. The spring load closes into the base boss; the DS239MG horn only trips the unloaded tail.
+6. `palm_switch_pod` — 2 mm floor under the owned 12 mm tactile switch, two bounded 26 mm strap slots, and lead-retention holes. It is held by the palm strap rather than floating from the hand.
 
-The XIAO and TP4056 USB-C ends remain exposed. Use GPIO4 for the palm switch (GPIO8 and GPIO9 are reserved/avoided), configure an internal pull-up, and recognize a double tap whose second falling edge arrives within 400 ms. Firmware is intentionally outside this CAD deliverable.
+The baseplate prints flat on its 7,435.6 mm² first layer. It is not a concave shell. Closed-cell neoprene supplies the conformal skin interface. The bridge joint has direct boss-to-deck contact at z=6.2 mm and two M3 heat-set inserts centered at x=112 mm, 6 mm inboard of the base end; no insert pocket breaks out and there is no clamped air gap.
 
-## Interference and geometry verification
+The bridge lane leaves two 6.75 x 3.0 mm continuous side rails through the syringe zone: 40.5 mm² total section before the wider wings and tower roots. This replaces Mk2's two 0.75 mm ligaments. The rear and forward syringe guides have 0.60 mm radial clearance and explicit EPDM retainer geometry. A low rear flange stop reacts the syringe body below the elevated carriage sweep. The complete finger flange is present in the syringe mockup.
 
-`python webshooter_mk2.py` regenerates all exports and `verification_report.json`. The verification run checks:
+The electronics stack is now only the owned 1S LiPo, XIAO ESP32C3, TP4056/DW01 charger, DS239MG servo, hard switch, and wiring. The pouch has a 0.60 mm floor gap, low corner keepers, and no top clamp. Each board rests 0.60 mm above a real floor and is held under an EPDM U-band in broad grooved anchors; USB ends stay open.
 
-- every printed item has exactly one solid;
-- every printed item is valid;
-- every printed item has local `z_min >= 0` (within a 1e-6 mm kernel tolerance);
-- shot volume and printed-part limits;
-- wrist profile;
-- every unordered pair across all printed parts and all mockups, with no skip list and no allow-list.
+## Verification harness
 
-Latest result: **PASS**, 4 printed solids, 1.986 mL, 21.725 mm wrist profile, **300/300 pair volumes exactly 0.0 mm^3**.
+`python webshooter_mk2.py` regenerates the part STEP/STL files, full assembly STEP, every assembly STL mockup, and `verification_report.json`. A passing run performs all of the following:
 
-Functional contacts are explicitly represented with clearance or tangent faces, so none requires an interference exception:
+- prints exit velocity, ideal 45 degree ballistic range, volume, and shot time;
+- checks exactly 2.000 mL, <=69 ms, >=1.5 m ideal range, <=0.25 J spring release energy, <=6 printed parts, and <=25 mm wrist profile;
+- sweeps the carriage every 0.5 mm through 10.0 mm and at the exact 10.073 mm endpoint;
+- checks both intersection volume and true minimum distance for every unordered assembly pair;
+- rejects tangency for non-contact pairs and documents every allowed functional contact;
+- requires `abs(z_min) < 0.0001 mm` in the real print orientation—there are no epsilon lifts;
+- computes first-layer footprint from a real 0.20 mm slab;
+- sections every part along X, Y, and Z at nine stations and rejects sampled areas below 2 mm² or sampled ligaments below 1.2 mm;
+- tessellates each part, samples actual triangle normals, and reports down-facing area below 45 degrees above the build layer;
+- checks straight fluid-path connectivity and tower-bore alignment;
+- asserts a named source and envelope for every assembly mockup.
 
-| Interface | Purpose | CAD intersection |
-|---|---|---:|
-| Yoke face / syringe thumb flange | Transfers shot force | 0.0 mm^3 |
-| M3 clevis pin / actuator and yoke bores | Joins actuator to yoke | 0.0 mm^3 |
-| Bridge screws / clearance holes / insert bores | Clamps bridge to base | 0.0 mm^3 |
-| Base / bridge interface | 0.35 mm print/assembly gap before screw clamp | 0.0 mm^3 |
-| Syringe / guide posts | 0.50 mm radial removal clearance | 0.0 mm^3 |
-| Barrels / tower bores | 0.25 mm diametral clearance | 0.0 mm^3 |
-| Boards / clip rails | Captive exposed mounting | 0.0 mm^3 |
-| Strap tabs / printed slots | Represents routed 25 mm webbing | 0.0 mm^3 |
-| Base / forearm reference | 0.8 mm foam allowance | 0.0 mm^3 |
+Latest clean audit values are written to the JSON rather than copied as untracked claims. The generated model has 6 valid single-solid parts, a 24.3 mm wrist-zone profile, a 0.400 mm worst-case swept static gap, and zero verifier failures.
 
-`assembly_stl/` contains each printed part after its explicit assembly transform. `printed_parts/` contains local-coordinate STEP and STL exports. `webshooter_mk2_assembly.step` is exported from the real `cadquery.Assembly`; mockups remain non-printable dictionary/assembly members.
+## Assembly and operation
 
-## Proxies and measure-before-printing
+1. Print the base, bridge, carriage, lever, sear, and switch pod in PETG using their exported local orientations. Do not rotate the base onto its old curved underside.
+2. Heat-set the two bridge inserts; install the bridge with direct face contact. Confirm the live Luer/nozzle axis by sight before fitting adhesive.
+3. Select and measure the spring. Reject any spring above 10 mm OD, 2.0 N/mm measured rate, 28 N cocked force, or 0.20 J measured release energy.
+4. Fit the carriage between the two open rails, install the M3 cocking and pivot pins, and verify the carriage moves the full 10.073 mm by hand with the spring removed.
+5. Fit the syringe under the EPDM guide retainer with its finger flange behind the low axial stop. The syringe must lift out after the retainer is released, allowing a second fill/shot after re-cocking.
+6. Mount the DS239MG in its M3 cradle. Adjust the horn so it clears the sear except during a commanded trip. The servo must never hold spring load.
+7. Route both forearm straps and the palm strap through all modeled slot pairs. The palm strap retains the switch pod.
+8. Mix only a small 1:1 charge, away from ignition sources, with strong ventilation and eye protection. Acetone and Fabri-Tac vapors are flammable. Never aim the device at a person, animal, face, flame, vehicle, or property.
 
-High confidence: NORM-JECT cylinder ID/OD/length, actuator stroke/load/speed envelope, 25 mm webbing width, owned item names, M3 hardware nominal dimensions.
+## Mandatory bench gates
 
-Proxy or unverified: Fabri-Tac viscosity/rheology, actual syringe breakaway force and flange size, exact L12 body/clevis envelope, EEMB pouch swelling envelope, individual board/USB connector envelopes, regulator/driver carrier outlines, switch body, wearer anatomy, webbing thickness and purchased needle ID.
-
-Measure or test before committing a full print:
-
-1. Put the actual syringe, shortest proposed connector and live needle on a scale; push at roughly 2–3 mm/s with undiluted Fabri-Tac. Required peak must stay below 62 N. If it does not, shorten/widen the flow path before changing adhesive concentration. Do not exceed 1:0.5 thinning.
-2. Confirm the purchased needle has at least 1.6 mm clear ID. A smaller ID changes force with `1/r^4` and invalidates the margin.
-3. Measure syringe OD, cylinder length, thumb flange, Luer location and breakaway force; update the named constants.
-4. Measure actuator body, clevis and pin location from the purchased unit/STEP file.
-5. Measure the actual LiPo, XIAO, TP4056, boost, DRV8833 and switch—including solder joints and USB plugs. Allow for LiPo swelling; never clamp the pouch.
-6. Measure the wearer's forearm crown and neutral-wrist bridge height. Print 20 mm-long strap/curvature coupons first.
-7. Verify the boost holds 6.0 V during actuator startup and that the power switch has a genuine >= 1 A DC rating at 6 V.
-8. Bench-test with water first, then adhesive, outdoors or with strong ventilation and the owned eye/respiratory protection. Never aim at a person, face, flame or ignition source.
-
+- With the nozzle removed, confirm carriage travel is >=10.073 mm and no contact occurs at any intermediate position.
+- With water, confirm 2.00 mL leaves in <=69 ms. Then repeat with a very small 1:1 adhesive charge into a safe disposable backstop.
+- Measure spring force at fired and cocked lengths. Do not exceed the limits above.
+- Confirm the LiPo cannot be compressed by straps or retainers and has clearance for swelling.
+- Measure the actual owned TP4056, LiPo, switch, EPDM bands, spring and syringe flanges. Items marked `MEASURE` in the report must fit their conservative envelopes before printing the full base.
+- Treat 1.715 m as an ideal ballistic ceiling. Record actual strand range and stop if atomization, splashback, clogging, frame cracking, sear bounce, or accidental release occurs.
