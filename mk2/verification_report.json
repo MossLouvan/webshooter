@@ -1,344 +1,4830 @@
 {
-  "failures": [],
-  "pairwise_intersections_mm3": {
-    "mockup/actuator_clevis_M3_pin <> mockup/actuonix_L12_10_210_6_S": 0.0,
-    "mockup/actuator_clevis_M3_pin <> mockup/barrel_dummy_14ga": 0.0,
-    "mockup/actuator_clevis_M3_pin <> mockup/barrel_live_14ga": 0.0,
-    "mockup/actuator_clevis_M3_pin <> mockup/boost_6V_U3V70F6": 0.0,
-    "mockup/actuator_clevis_M3_pin <> mockup/bridge_M3_insert_1": 0.0,
-    "mockup/actuator_clevis_M3_pin <> mockup/bridge_M3_insert_2": 0.0,
-    "mockup/actuator_clevis_M3_pin <> mockup/bridge_M3_screw_1": 0.0,
-    "mockup/actuator_clevis_M3_pin <> mockup/bridge_M3_screw_2": 0.0,
-    "mockup/actuator_clevis_M3_pin <> mockup/forearm_reference": 0.0,
-    "mockup/actuator_clevis_M3_pin <> mockup/forearm_strap_25mm": 0.0,
-    "mockup/actuator_clevis_M3_pin <> mockup/hand_reference": 0.0,
-    "mockup/actuator_clevis_M3_pin <> mockup/lipo_EEMB_103454": 0.0,
-    "mockup/actuator_clevis_M3_pin <> mockup/motor_driver_DRV8833": 0.0,
-    "mockup/actuator_clevis_M3_pin <> mockup/palm_strap_25mm": 0.0,
-    "mockup/actuator_clevis_M3_pin <> mockup/palm_tactile_switch_12mm": 0.0,
-    "mockup/actuator_clevis_M3_pin <> mockup/power_slide_switch": 0.0,
-    "mockup/actuator_clevis_M3_pin <> mockup/ptfe_line_owned": 0.0,
-    "mockup/actuator_clevis_M3_pin <> mockup/syringe_10ml_all_plastic": 0.0,
-    "mockup/actuator_clevis_M3_pin <> mockup/tp4056_usbc_dw01": 0.0,
-    "mockup/actuator_clevis_M3_pin <> mockup/xiao_esp32c3": 0.0,
-    "mockup/actuator_clevis_M3_pin <> printed/barrel_bridge": 0.0,
-    "mockup/actuator_clevis_M3_pin <> printed/baseplate": 0.0,
-    "mockup/actuator_clevis_M3_pin <> printed/palm_switch_pod": 0.0,
-    "mockup/actuator_clevis_M3_pin <> printed/pusher_yoke": 0.0,
-    "mockup/actuonix_L12_10_210_6_S <> mockup/barrel_dummy_14ga": 0.0,
-    "mockup/actuonix_L12_10_210_6_S <> mockup/barrel_live_14ga": 0.0,
-    "mockup/actuonix_L12_10_210_6_S <> mockup/boost_6V_U3V70F6": 0.0,
-    "mockup/actuonix_L12_10_210_6_S <> mockup/bridge_M3_insert_1": 0.0,
-    "mockup/actuonix_L12_10_210_6_S <> mockup/bridge_M3_insert_2": 0.0,
-    "mockup/actuonix_L12_10_210_6_S <> mockup/bridge_M3_screw_1": 0.0,
-    "mockup/actuonix_L12_10_210_6_S <> mockup/bridge_M3_screw_2": 0.0,
-    "mockup/actuonix_L12_10_210_6_S <> mockup/forearm_reference": 0.0,
-    "mockup/actuonix_L12_10_210_6_S <> mockup/forearm_strap_25mm": 0.0,
-    "mockup/actuonix_L12_10_210_6_S <> mockup/hand_reference": 0.0,
-    "mockup/actuonix_L12_10_210_6_S <> mockup/lipo_EEMB_103454": 0.0,
-    "mockup/actuonix_L12_10_210_6_S <> mockup/motor_driver_DRV8833": 0.0,
-    "mockup/actuonix_L12_10_210_6_S <> mockup/palm_strap_25mm": 0.0,
-    "mockup/actuonix_L12_10_210_6_S <> mockup/palm_tactile_switch_12mm": 0.0,
-    "mockup/actuonix_L12_10_210_6_S <> mockup/power_slide_switch": 0.0,
-    "mockup/actuonix_L12_10_210_6_S <> mockup/ptfe_line_owned": 0.0,
-    "mockup/actuonix_L12_10_210_6_S <> mockup/syringe_10ml_all_plastic": 0.0,
-    "mockup/actuonix_L12_10_210_6_S <> mockup/tp4056_usbc_dw01": 0.0,
-    "mockup/actuonix_L12_10_210_6_S <> mockup/xiao_esp32c3": 0.0,
-    "mockup/actuonix_L12_10_210_6_S <> printed/barrel_bridge": 0.0,
-    "mockup/actuonix_L12_10_210_6_S <> printed/baseplate": 0.0,
-    "mockup/actuonix_L12_10_210_6_S <> printed/palm_switch_pod": 0.0,
-    "mockup/actuonix_L12_10_210_6_S <> printed/pusher_yoke": 0.0,
-    "mockup/barrel_dummy_14ga <> mockup/barrel_live_14ga": 0.0,
-    "mockup/barrel_dummy_14ga <> mockup/boost_6V_U3V70F6": 0.0,
-    "mockup/barrel_dummy_14ga <> mockup/bridge_M3_insert_1": 0.0,
-    "mockup/barrel_dummy_14ga <> mockup/bridge_M3_insert_2": 0.0,
-    "mockup/barrel_dummy_14ga <> mockup/bridge_M3_screw_1": 0.0,
-    "mockup/barrel_dummy_14ga <> mockup/bridge_M3_screw_2": 0.0,
-    "mockup/barrel_dummy_14ga <> mockup/forearm_reference": 0.0,
-    "mockup/barrel_dummy_14ga <> mockup/forearm_strap_25mm": 0.0,
-    "mockup/barrel_dummy_14ga <> mockup/hand_reference": 0.0,
-    "mockup/barrel_dummy_14ga <> mockup/lipo_EEMB_103454": 0.0,
-    "mockup/barrel_dummy_14ga <> mockup/motor_driver_DRV8833": 0.0,
-    "mockup/barrel_dummy_14ga <> mockup/palm_strap_25mm": 0.0,
-    "mockup/barrel_dummy_14ga <> mockup/palm_tactile_switch_12mm": 0.0,
-    "mockup/barrel_dummy_14ga <> mockup/power_slide_switch": 0.0,
-    "mockup/barrel_dummy_14ga <> mockup/ptfe_line_owned": 0.0,
-    "mockup/barrel_dummy_14ga <> mockup/syringe_10ml_all_plastic": 0.0,
-    "mockup/barrel_dummy_14ga <> mockup/tp4056_usbc_dw01": 0.0,
-    "mockup/barrel_dummy_14ga <> mockup/xiao_esp32c3": 0.0,
-    "mockup/barrel_dummy_14ga <> printed/barrel_bridge": 0.0,
-    "mockup/barrel_dummy_14ga <> printed/baseplate": 0.0,
-    "mockup/barrel_dummy_14ga <> printed/palm_switch_pod": 0.0,
-    "mockup/barrel_dummy_14ga <> printed/pusher_yoke": 0.0,
-    "mockup/barrel_live_14ga <> mockup/boost_6V_U3V70F6": 0.0,
-    "mockup/barrel_live_14ga <> mockup/bridge_M3_insert_1": 0.0,
-    "mockup/barrel_live_14ga <> mockup/bridge_M3_insert_2": 0.0,
-    "mockup/barrel_live_14ga <> mockup/bridge_M3_screw_1": 0.0,
-    "mockup/barrel_live_14ga <> mockup/bridge_M3_screw_2": 0.0,
-    "mockup/barrel_live_14ga <> mockup/forearm_reference": 0.0,
-    "mockup/barrel_live_14ga <> mockup/forearm_strap_25mm": 0.0,
-    "mockup/barrel_live_14ga <> mockup/hand_reference": 0.0,
-    "mockup/barrel_live_14ga <> mockup/lipo_EEMB_103454": 0.0,
-    "mockup/barrel_live_14ga <> mockup/motor_driver_DRV8833": 0.0,
-    "mockup/barrel_live_14ga <> mockup/palm_strap_25mm": 0.0,
-    "mockup/barrel_live_14ga <> mockup/palm_tactile_switch_12mm": 0.0,
-    "mockup/barrel_live_14ga <> mockup/power_slide_switch": 0.0,
-    "mockup/barrel_live_14ga <> mockup/ptfe_line_owned": 0.0,
-    "mockup/barrel_live_14ga <> mockup/syringe_10ml_all_plastic": 0.0,
-    "mockup/barrel_live_14ga <> mockup/tp4056_usbc_dw01": 0.0,
-    "mockup/barrel_live_14ga <> mockup/xiao_esp32c3": 0.0,
-    "mockup/barrel_live_14ga <> printed/barrel_bridge": 0.0,
-    "mockup/barrel_live_14ga <> printed/baseplate": 0.0,
-    "mockup/barrel_live_14ga <> printed/palm_switch_pod": 0.0,
-    "mockup/barrel_live_14ga <> printed/pusher_yoke": 0.0,
-    "mockup/boost_6V_U3V70F6 <> mockup/bridge_M3_insert_1": 0.0,
-    "mockup/boost_6V_U3V70F6 <> mockup/bridge_M3_insert_2": 0.0,
-    "mockup/boost_6V_U3V70F6 <> mockup/bridge_M3_screw_1": 0.0,
-    "mockup/boost_6V_U3V70F6 <> mockup/bridge_M3_screw_2": 0.0,
-    "mockup/boost_6V_U3V70F6 <> mockup/forearm_reference": 0.0,
-    "mockup/boost_6V_U3V70F6 <> mockup/forearm_strap_25mm": 0.0,
-    "mockup/boost_6V_U3V70F6 <> mockup/hand_reference": 0.0,
-    "mockup/boost_6V_U3V70F6 <> mockup/lipo_EEMB_103454": 0.0,
-    "mockup/boost_6V_U3V70F6 <> mockup/motor_driver_DRV8833": 0.0,
-    "mockup/boost_6V_U3V70F6 <> mockup/palm_strap_25mm": 0.0,
-    "mockup/boost_6V_U3V70F6 <> mockup/palm_tactile_switch_12mm": 0.0,
-    "mockup/boost_6V_U3V70F6 <> mockup/power_slide_switch": 0.0,
-    "mockup/boost_6V_U3V70F6 <> mockup/ptfe_line_owned": 0.0,
-    "mockup/boost_6V_U3V70F6 <> mockup/syringe_10ml_all_plastic": 0.0,
-    "mockup/boost_6V_U3V70F6 <> mockup/tp4056_usbc_dw01": 0.0,
-    "mockup/boost_6V_U3V70F6 <> mockup/xiao_esp32c3": 0.0,
-    "mockup/boost_6V_U3V70F6 <> printed/barrel_bridge": 0.0,
-    "mockup/boost_6V_U3V70F6 <> printed/baseplate": 0.0,
-    "mockup/boost_6V_U3V70F6 <> printed/palm_switch_pod": 0.0,
-    "mockup/boost_6V_U3V70F6 <> printed/pusher_yoke": 0.0,
-    "mockup/bridge_M3_insert_1 <> mockup/bridge_M3_insert_2": 0.0,
-    "mockup/bridge_M3_insert_1 <> mockup/bridge_M3_screw_1": 0.0,
-    "mockup/bridge_M3_insert_1 <> mockup/bridge_M3_screw_2": 0.0,
-    "mockup/bridge_M3_insert_1 <> mockup/forearm_reference": 0.0,
-    "mockup/bridge_M3_insert_1 <> mockup/forearm_strap_25mm": 0.0,
-    "mockup/bridge_M3_insert_1 <> mockup/hand_reference": 0.0,
-    "mockup/bridge_M3_insert_1 <> mockup/lipo_EEMB_103454": 0.0,
-    "mockup/bridge_M3_insert_1 <> mockup/motor_driver_DRV8833": 0.0,
-    "mockup/bridge_M3_insert_1 <> mockup/palm_strap_25mm": 0.0,
-    "mockup/bridge_M3_insert_1 <> mockup/palm_tactile_switch_12mm": 0.0,
-    "mockup/bridge_M3_insert_1 <> mockup/power_slide_switch": 0.0,
-    "mockup/bridge_M3_insert_1 <> mockup/ptfe_line_owned": 0.0,
-    "mockup/bridge_M3_insert_1 <> mockup/syringe_10ml_all_plastic": 0.0,
-    "mockup/bridge_M3_insert_1 <> mockup/tp4056_usbc_dw01": 0.0,
-    "mockup/bridge_M3_insert_1 <> mockup/xiao_esp32c3": 0.0,
-    "mockup/bridge_M3_insert_1 <> printed/barrel_bridge": 0.0,
-    "mockup/bridge_M3_insert_1 <> printed/baseplate": 0.0,
-    "mockup/bridge_M3_insert_1 <> printed/palm_switch_pod": 0.0,
-    "mockup/bridge_M3_insert_1 <> printed/pusher_yoke": 0.0,
-    "mockup/bridge_M3_insert_2 <> mockup/bridge_M3_screw_1": 0.0,
-    "mockup/bridge_M3_insert_2 <> mockup/bridge_M3_screw_2": 0.0,
-    "mockup/bridge_M3_insert_2 <> mockup/forearm_reference": 0.0,
-    "mockup/bridge_M3_insert_2 <> mockup/forearm_strap_25mm": 0.0,
-    "mockup/bridge_M3_insert_2 <> mockup/hand_reference": 0.0,
-    "mockup/bridge_M3_insert_2 <> mockup/lipo_EEMB_103454": 0.0,
-    "mockup/bridge_M3_insert_2 <> mockup/motor_driver_DRV8833": 0.0,
-    "mockup/bridge_M3_insert_2 <> mockup/palm_strap_25mm": 0.0,
-    "mockup/bridge_M3_insert_2 <> mockup/palm_tactile_switch_12mm": 0.0,
-    "mockup/bridge_M3_insert_2 <> mockup/power_slide_switch": 0.0,
-    "mockup/bridge_M3_insert_2 <> mockup/ptfe_line_owned": 0.0,
-    "mockup/bridge_M3_insert_2 <> mockup/syringe_10ml_all_plastic": 0.0,
-    "mockup/bridge_M3_insert_2 <> mockup/tp4056_usbc_dw01": 0.0,
-    "mockup/bridge_M3_insert_2 <> mockup/xiao_esp32c3": 0.0,
-    "mockup/bridge_M3_insert_2 <> printed/barrel_bridge": 0.0,
-    "mockup/bridge_M3_insert_2 <> printed/baseplate": 0.0,
-    "mockup/bridge_M3_insert_2 <> printed/palm_switch_pod": 0.0,
-    "mockup/bridge_M3_insert_2 <> printed/pusher_yoke": 0.0,
-    "mockup/bridge_M3_screw_1 <> mockup/bridge_M3_screw_2": 0.0,
-    "mockup/bridge_M3_screw_1 <> mockup/forearm_reference": 0.0,
-    "mockup/bridge_M3_screw_1 <> mockup/forearm_strap_25mm": 0.0,
-    "mockup/bridge_M3_screw_1 <> mockup/hand_reference": 0.0,
-    "mockup/bridge_M3_screw_1 <> mockup/lipo_EEMB_103454": 0.0,
-    "mockup/bridge_M3_screw_1 <> mockup/motor_driver_DRV8833": 0.0,
-    "mockup/bridge_M3_screw_1 <> mockup/palm_strap_25mm": 0.0,
-    "mockup/bridge_M3_screw_1 <> mockup/palm_tactile_switch_12mm": 0.0,
-    "mockup/bridge_M3_screw_1 <> mockup/power_slide_switch": 0.0,
-    "mockup/bridge_M3_screw_1 <> mockup/ptfe_line_owned": 0.0,
-    "mockup/bridge_M3_screw_1 <> mockup/syringe_10ml_all_plastic": 0.0,
-    "mockup/bridge_M3_screw_1 <> mockup/tp4056_usbc_dw01": 0.0,
-    "mockup/bridge_M3_screw_1 <> mockup/xiao_esp32c3": 0.0,
-    "mockup/bridge_M3_screw_1 <> printed/barrel_bridge": 0.0,
-    "mockup/bridge_M3_screw_1 <> printed/baseplate": 0.0,
-    "mockup/bridge_M3_screw_1 <> printed/palm_switch_pod": 0.0,
-    "mockup/bridge_M3_screw_1 <> printed/pusher_yoke": 0.0,
-    "mockup/bridge_M3_screw_2 <> mockup/forearm_reference": 0.0,
-    "mockup/bridge_M3_screw_2 <> mockup/forearm_strap_25mm": 0.0,
-    "mockup/bridge_M3_screw_2 <> mockup/hand_reference": 0.0,
-    "mockup/bridge_M3_screw_2 <> mockup/lipo_EEMB_103454": 0.0,
-    "mockup/bridge_M3_screw_2 <> mockup/motor_driver_DRV8833": 0.0,
-    "mockup/bridge_M3_screw_2 <> mockup/palm_strap_25mm": 0.0,
-    "mockup/bridge_M3_screw_2 <> mockup/palm_tactile_switch_12mm": 0.0,
-    "mockup/bridge_M3_screw_2 <> mockup/power_slide_switch": 0.0,
-    "mockup/bridge_M3_screw_2 <> mockup/ptfe_line_owned": 0.0,
-    "mockup/bridge_M3_screw_2 <> mockup/syringe_10ml_all_plastic": 0.0,
-    "mockup/bridge_M3_screw_2 <> mockup/tp4056_usbc_dw01": 0.0,
-    "mockup/bridge_M3_screw_2 <> mockup/xiao_esp32c3": 0.0,
-    "mockup/bridge_M3_screw_2 <> printed/barrel_bridge": 0.0,
-    "mockup/bridge_M3_screw_2 <> printed/baseplate": 0.0,
-    "mockup/bridge_M3_screw_2 <> printed/palm_switch_pod": 0.0,
-    "mockup/bridge_M3_screw_2 <> printed/pusher_yoke": 0.0,
-    "mockup/forearm_reference <> mockup/forearm_strap_25mm": 0.0,
-    "mockup/forearm_reference <> mockup/hand_reference": 0.0,
-    "mockup/forearm_reference <> mockup/lipo_EEMB_103454": 0.0,
-    "mockup/forearm_reference <> mockup/motor_driver_DRV8833": 0.0,
-    "mockup/forearm_reference <> mockup/palm_strap_25mm": 0.0,
-    "mockup/forearm_reference <> mockup/palm_tactile_switch_12mm": 0.0,
-    "mockup/forearm_reference <> mockup/power_slide_switch": 0.0,
-    "mockup/forearm_reference <> mockup/ptfe_line_owned": 0.0,
-    "mockup/forearm_reference <> mockup/syringe_10ml_all_plastic": 0.0,
-    "mockup/forearm_reference <> mockup/tp4056_usbc_dw01": 0.0,
-    "mockup/forearm_reference <> mockup/xiao_esp32c3": 0.0,
-    "mockup/forearm_reference <> printed/barrel_bridge": 0.0,
-    "mockup/forearm_reference <> printed/baseplate": 0.0,
-    "mockup/forearm_reference <> printed/palm_switch_pod": 0.0,
-    "mockup/forearm_reference <> printed/pusher_yoke": 0.0,
-    "mockup/forearm_strap_25mm <> mockup/hand_reference": 0.0,
-    "mockup/forearm_strap_25mm <> mockup/lipo_EEMB_103454": 0.0,
-    "mockup/forearm_strap_25mm <> mockup/motor_driver_DRV8833": 0.0,
-    "mockup/forearm_strap_25mm <> mockup/palm_strap_25mm": 0.0,
-    "mockup/forearm_strap_25mm <> mockup/palm_tactile_switch_12mm": 0.0,
-    "mockup/forearm_strap_25mm <> mockup/power_slide_switch": 0.0,
-    "mockup/forearm_strap_25mm <> mockup/ptfe_line_owned": 0.0,
-    "mockup/forearm_strap_25mm <> mockup/syringe_10ml_all_plastic": 0.0,
-    "mockup/forearm_strap_25mm <> mockup/tp4056_usbc_dw01": 0.0,
-    "mockup/forearm_strap_25mm <> mockup/xiao_esp32c3": 0.0,
-    "mockup/forearm_strap_25mm <> printed/barrel_bridge": 0.0,
-    "mockup/forearm_strap_25mm <> printed/baseplate": 0.0,
-    "mockup/forearm_strap_25mm <> printed/palm_switch_pod": 0.0,
-    "mockup/forearm_strap_25mm <> printed/pusher_yoke": 0.0,
-    "mockup/hand_reference <> mockup/lipo_EEMB_103454": 0.0,
-    "mockup/hand_reference <> mockup/motor_driver_DRV8833": 0.0,
-    "mockup/hand_reference <> mockup/palm_strap_25mm": 0.0,
-    "mockup/hand_reference <> mockup/palm_tactile_switch_12mm": 0.0,
-    "mockup/hand_reference <> mockup/power_slide_switch": 0.0,
-    "mockup/hand_reference <> mockup/ptfe_line_owned": 0.0,
-    "mockup/hand_reference <> mockup/syringe_10ml_all_plastic": 0.0,
-    "mockup/hand_reference <> mockup/tp4056_usbc_dw01": 0.0,
-    "mockup/hand_reference <> mockup/xiao_esp32c3": 0.0,
-    "mockup/hand_reference <> printed/barrel_bridge": 0.0,
-    "mockup/hand_reference <> printed/baseplate": 0.0,
-    "mockup/hand_reference <> printed/palm_switch_pod": 0.0,
-    "mockup/hand_reference <> printed/pusher_yoke": 0.0,
-    "mockup/lipo_EEMB_103454 <> mockup/motor_driver_DRV8833": 0.0,
-    "mockup/lipo_EEMB_103454 <> mockup/palm_strap_25mm": 0.0,
-    "mockup/lipo_EEMB_103454 <> mockup/palm_tactile_switch_12mm": 0.0,
-    "mockup/lipo_EEMB_103454 <> mockup/power_slide_switch": 0.0,
-    "mockup/lipo_EEMB_103454 <> mockup/ptfe_line_owned": 0.0,
-    "mockup/lipo_EEMB_103454 <> mockup/syringe_10ml_all_plastic": 0.0,
-    "mockup/lipo_EEMB_103454 <> mockup/tp4056_usbc_dw01": 0.0,
-    "mockup/lipo_EEMB_103454 <> mockup/xiao_esp32c3": 0.0,
-    "mockup/lipo_EEMB_103454 <> printed/barrel_bridge": 0.0,
-    "mockup/lipo_EEMB_103454 <> printed/baseplate": 0.0,
-    "mockup/lipo_EEMB_103454 <> printed/palm_switch_pod": 0.0,
-    "mockup/lipo_EEMB_103454 <> printed/pusher_yoke": 0.0,
-    "mockup/motor_driver_DRV8833 <> mockup/palm_strap_25mm": 0.0,
-    "mockup/motor_driver_DRV8833 <> mockup/palm_tactile_switch_12mm": 0.0,
-    "mockup/motor_driver_DRV8833 <> mockup/power_slide_switch": 0.0,
-    "mockup/motor_driver_DRV8833 <> mockup/ptfe_line_owned": 0.0,
-    "mockup/motor_driver_DRV8833 <> mockup/syringe_10ml_all_plastic": 0.0,
-    "mockup/motor_driver_DRV8833 <> mockup/tp4056_usbc_dw01": 0.0,
-    "mockup/motor_driver_DRV8833 <> mockup/xiao_esp32c3": 0.0,
-    "mockup/motor_driver_DRV8833 <> printed/barrel_bridge": 0.0,
-    "mockup/motor_driver_DRV8833 <> printed/baseplate": 0.0,
-    "mockup/motor_driver_DRV8833 <> printed/palm_switch_pod": 0.0,
-    "mockup/motor_driver_DRV8833 <> printed/pusher_yoke": 0.0,
-    "mockup/palm_strap_25mm <> mockup/palm_tactile_switch_12mm": 0.0,
-    "mockup/palm_strap_25mm <> mockup/power_slide_switch": 0.0,
-    "mockup/palm_strap_25mm <> mockup/ptfe_line_owned": 0.0,
-    "mockup/palm_strap_25mm <> mockup/syringe_10ml_all_plastic": 0.0,
-    "mockup/palm_strap_25mm <> mockup/tp4056_usbc_dw01": 0.0,
-    "mockup/palm_strap_25mm <> mockup/xiao_esp32c3": 0.0,
-    "mockup/palm_strap_25mm <> printed/barrel_bridge": 0.0,
-    "mockup/palm_strap_25mm <> printed/baseplate": 0.0,
-    "mockup/palm_strap_25mm <> printed/palm_switch_pod": 0.0,
-    "mockup/palm_strap_25mm <> printed/pusher_yoke": 0.0,
-    "mockup/palm_tactile_switch_12mm <> mockup/power_slide_switch": 0.0,
-    "mockup/palm_tactile_switch_12mm <> mockup/ptfe_line_owned": 0.0,
-    "mockup/palm_tactile_switch_12mm <> mockup/syringe_10ml_all_plastic": 0.0,
-    "mockup/palm_tactile_switch_12mm <> mockup/tp4056_usbc_dw01": 0.0,
-    "mockup/palm_tactile_switch_12mm <> mockup/xiao_esp32c3": 0.0,
-    "mockup/palm_tactile_switch_12mm <> printed/barrel_bridge": 0.0,
-    "mockup/palm_tactile_switch_12mm <> printed/baseplate": 0.0,
-    "mockup/palm_tactile_switch_12mm <> printed/palm_switch_pod": 0.0,
-    "mockup/palm_tactile_switch_12mm <> printed/pusher_yoke": 0.0,
-    "mockup/power_slide_switch <> mockup/ptfe_line_owned": 0.0,
-    "mockup/power_slide_switch <> mockup/syringe_10ml_all_plastic": 0.0,
-    "mockup/power_slide_switch <> mockup/tp4056_usbc_dw01": 0.0,
-    "mockup/power_slide_switch <> mockup/xiao_esp32c3": 0.0,
-    "mockup/power_slide_switch <> printed/barrel_bridge": 0.0,
-    "mockup/power_slide_switch <> printed/baseplate": 0.0,
-    "mockup/power_slide_switch <> printed/palm_switch_pod": 0.0,
-    "mockup/power_slide_switch <> printed/pusher_yoke": 0.0,
-    "mockup/ptfe_line_owned <> mockup/syringe_10ml_all_plastic": 0.0,
-    "mockup/ptfe_line_owned <> mockup/tp4056_usbc_dw01": 0.0,
-    "mockup/ptfe_line_owned <> mockup/xiao_esp32c3": 0.0,
-    "mockup/ptfe_line_owned <> printed/barrel_bridge": 0.0,
-    "mockup/ptfe_line_owned <> printed/baseplate": 0.0,
-    "mockup/ptfe_line_owned <> printed/palm_switch_pod": 0.0,
-    "mockup/ptfe_line_owned <> printed/pusher_yoke": 0.0,
-    "mockup/syringe_10ml_all_plastic <> mockup/tp4056_usbc_dw01": 0.0,
-    "mockup/syringe_10ml_all_plastic <> mockup/xiao_esp32c3": 0.0,
-    "mockup/syringe_10ml_all_plastic <> printed/barrel_bridge": 0.0,
-    "mockup/syringe_10ml_all_plastic <> printed/baseplate": 0.0,
-    "mockup/syringe_10ml_all_plastic <> printed/palm_switch_pod": 0.0,
-    "mockup/syringe_10ml_all_plastic <> printed/pusher_yoke": 0.0,
-    "mockup/tp4056_usbc_dw01 <> mockup/xiao_esp32c3": 0.0,
-    "mockup/tp4056_usbc_dw01 <> printed/barrel_bridge": 0.0,
-    "mockup/tp4056_usbc_dw01 <> printed/baseplate": 0.0,
-    "mockup/tp4056_usbc_dw01 <> printed/palm_switch_pod": 0.0,
-    "mockup/tp4056_usbc_dw01 <> printed/pusher_yoke": 0.0,
-    "mockup/xiao_esp32c3 <> printed/barrel_bridge": 0.0,
-    "mockup/xiao_esp32c3 <> printed/baseplate": 0.0,
-    "mockup/xiao_esp32c3 <> printed/palm_switch_pod": 0.0,
-    "mockup/xiao_esp32c3 <> printed/pusher_yoke": 0.0,
-    "printed/barrel_bridge <> printed/baseplate": 0.0,
-    "printed/barrel_bridge <> printed/palm_switch_pod": 0.0,
-    "printed/barrel_bridge <> printed/pusher_yoke": 0.0,
-    "printed/baseplate <> printed/palm_switch_pod": 0.0,
-    "printed/baseplate <> printed/pusher_yoke": 0.0,
-    "printed/palm_switch_pod <> printed/pusher_yoke": 0.0
+  "architecture": "hand-cocked compression spring + DS239MG-tripped sear",
+  "contact_allowlist": {
+    "mockup/bridge_m3_insert_1 <> mockup/bridge_m3_screw_1": "thread engagement",
+    "mockup/bridge_m3_insert_1 <> printed/baseplate": "heat-set interference",
+    "mockup/bridge_m3_insert_2 <> mockup/bridge_m3_screw_2": "thread engagement",
+    "mockup/bridge_m3_insert_2 <> printed/baseplate": "heat-set interference",
+    "mockup/bridge_m3_screw_1 <> printed/barrel_bridge": "screw head clamp",
+    "mockup/bridge_m3_screw_1 <> printed/baseplate": "fastener through insert",
+    "mockup/bridge_m3_screw_2 <> printed/barrel_bridge": "screw head clamp",
+    "mockup/bridge_m3_screw_2 <> printed/baseplate": "fastener through insert",
+    "mockup/cocking_drive_m3 <> printed/cocking_lever": "closed cocking eye",
+    "mockup/cocking_drive_m3 <> printed/spring_carriage": "carriage drive pin",
+    "mockup/cocking_pivot_m3 <> printed/baseplate": "pivot screw in boss",
+    "mockup/cocking_pivot_m3 <> printed/cocking_lever": "cocking pivot bearing",
+    "mockup/corona_ds239mg_servo <> mockup/ds239mg_horn": "servo output spline",
+    "mockup/ds239mg_horn <> printed/servo_sear": "servo trip contact",
+    "mockup/live_8ga_blunt_nozzle <> mockup/syringe_norm_ject_10ml": "Luer-lock fluid joint",
+    "mockup/palm_strap_25mm <> printed/palm_switch_pod": "strap retention",
+    "mockup/sear_pivot_m3 <> printed/baseplate": "pivot screw in boss",
+    "mockup/sear_pivot_m3 <> printed/servo_sear": "sear pivot bearing",
+    "mockup/selected_compression_spring <> printed/baseplate": "spring reaction wall",
+    "mockup/selected_compression_spring <> printed/spring_carriage": "spring seat",
+    "mockup/syringe_norm_ject_10ml <> printed/spring_carriage": "plunger push face",
+    "printed/barrel_bridge <> printed/baseplate": "M3-clamped bridge boss faces",
+    "printed/servo_sear <> printed/spring_carriage": "latched sear shoulder"
   },
-  "printed_part_count": 4,
-  "printed_parts": {
-    "barrel_bridge": {
-      "is_valid": true,
-      "local_z_max_mm": 13.210000100000006,
-      "local_z_min_mm": 0.008811098140275198,
-      "solid_count": 1,
-      "volume_mm3": 5328.020812303302
+  "deleted_drive_items": [
+    "Actuonix L12",
+    "Pololu U3V70F6",
+    "DRV8833"
+  ],
+  "failures": [
+    "baseplate: solid_count=8",
+    "baseplate: x-section component area 1.200 mm2",
+    "baseplate: x-section ligament 1.000 mm",
+    "baseplate: z-section component area 1.440 mm2",
+    "baseplate: z-section ligament 1.200 mm",
+    "barrel_bridge: abs(z_min)=0.0011889 mm",
+    "spring_carriage: y-section ligament 1.003 mm",
+    "cocking_lever: abs(z_min)=0.00132876 mm",
+    "cocking_lever: y-section ligament 1.104 mm",
+    "servo_sear: abs(z_min)=0.0011889 mm",
+    "servo_sear: y-section total area 1.809 mm2",
+    "servo_sear: y-section component area 0.905 mm2",
+    "servo_sear: y-section ligament 0.305 mm",
+    "palm_switch_pod: abs(z_min)=0.000489607 mm",
+    "unallowed interference mockup/bridge_m3_insert_1 <> mockup/syringe_norm_ject_10ml: 6.222678 mm3",
+    "unallowed gap mockup/bridge_m3_insert_1 <> mockup/syringe_norm_ject_10ml: 0.000000 mm",
+    "unallowed gap mockup/bridge_m3_insert_1 <> printed/barrel_bridge: 0.000000 mm",
+    "unallowed interference mockup/bridge_m3_insert_2 <> mockup/seeed_xiao_esp32c3: 38.946324 mm3",
+    "unallowed gap mockup/bridge_m3_insert_2 <> mockup/seeed_xiao_esp32c3: 0.000000 mm",
+    "unallowed gap mockup/bridge_m3_insert_2 <> printed/barrel_bridge: 0.000000 mm",
+    "unallowed interference mockup/bridge_m3_screw_1 <> mockup/syringe_norm_ject_10ml: 86.138264 mm3",
+    "unallowed gap mockup/bridge_m3_screw_1 <> mockup/syringe_norm_ject_10ml: 0.000000 mm",
+    "unallowed interference mockup/bridge_m3_screw_2 <> mockup/seeed_xiao_esp32c3: 25.446900 mm3",
+    "unallowed gap mockup/bridge_m3_screw_2 <> mockup/seeed_xiao_esp32c3: 0.000000 mm",
+    "unallowed interference mockup/cocking_pivot_m3 <> mockup/forearm_straps_25mm: 0.065568 mm3",
+    "unallowed gap mockup/cocking_pivot_m3 <> mockup/forearm_straps_25mm: 0.000000 mm",
+    "unallowed interference mockup/cocking_pivot_m3 <> mockup/lipo_eemb_103454_rotated: 70.685835 mm3",
+    "unallowed gap mockup/cocking_pivot_m3 <> mockup/lipo_eemb_103454_rotated: 0.000000 mm",
+    "unallowed interference mockup/corona_ds239mg_servo <> mockup/sear_pivot_m3: 49.480084 mm3",
+    "unallowed gap mockup/corona_ds239mg_servo <> mockup/sear_pivot_m3: 0.000000 mm",
+    "unallowed interference mockup/corona_ds239mg_servo <> mockup/tp4056_epdm_retainer: 17.136000 mm3",
+    "unallowed gap mockup/corona_ds239mg_servo <> mockup/tp4056_epdm_retainer: 0.000000 mm",
+    "unallowed interference mockup/corona_ds239mg_servo <> printed/baseplate: 446.750909 mm3",
+    "unallowed gap mockup/corona_ds239mg_servo <> printed/baseplate: 0.000000 mm",
+    "unallowed gap mockup/ds239mg_horn <> printed/baseplate: 0.100000 mm",
+    "unallowed interference mockup/lipo_eemb_103454_rotated <> printed/baseplate: 406.497746 mm3",
+    "unallowed gap mockup/lipo_eemb_103454_rotated <> printed/baseplate: 0.000000 mm",
+    "unallowed interference mockup/live_8ga_blunt_nozzle <> printed/barrel_bridge: 8.235076 mm3",
+    "unallowed gap mockup/live_8ga_blunt_nozzle <> printed/barrel_bridge: 0.000000 mm",
+    "unallowed interference mockup/palm_strap_25mm <> mockup/syringe_norm_ject_10ml: 35.154740 mm3",
+    "unallowed gap mockup/palm_strap_25mm <> mockup/syringe_norm_ject_10ml: 0.000000 mm",
+    "unallowed interference mockup/seeed_xiao_esp32c3 <> printed/barrel_bridge: 187.296638 mm3",
+    "unallowed gap mockup/seeed_xiao_esp32c3 <> printed/barrel_bridge: 0.000000 mm",
+    "unallowed interference mockup/seeed_xiao_esp32c3 <> printed/baseplate: 275.222003 mm3",
+    "unallowed gap mockup/seeed_xiao_esp32c3 <> printed/baseplate: 0.000000 mm",
+    "unallowed gap mockup/syringe_epdm_retainer <> mockup/syringe_norm_ject_10ml: 0.000000 mm",
+    "unallowed interference mockup/syringe_epdm_retainer <> printed/baseplate: 187.001598 mm3",
+    "unallowed gap mockup/syringe_epdm_retainer <> printed/baseplate: 0.000000 mm",
+    "unallowed interference mockup/syringe_norm_ject_10ml <> printed/barrel_bridge: 2711.838594 mm3",
+    "unallowed gap mockup/syringe_norm_ject_10ml <> printed/barrel_bridge: 0.000000 mm",
+    "unallowed interference mockup/syringe_norm_ject_10ml <> printed/baseplate: 365.377543 mm3",
+    "unallowed gap mockup/syringe_norm_ject_10ml <> printed/baseplate: 0.000000 mm",
+    "unallowed gap mockup/syringe_norm_ject_10ml <> printed/servo_sear: 0.000000 mm",
+    "unallowed interference mockup/tp4056_epdm_retainer <> mockup/xiao_epdm_retainer: 1.600000 mm3",
+    "unallowed gap mockup/tp4056_epdm_retainer <> mockup/xiao_epdm_retainer: 0.000000 mm",
+    "unallowed interference mockup/tp4056_epdm_retainer <> printed/baseplate: 2.881433 mm3",
+    "unallowed gap mockup/tp4056_epdm_retainer <> printed/baseplate: 0.000000 mm",
+    "unallowed interference mockup/tp4056_usbc_dw01 <> printed/baseplate: 68.000000 mm3",
+    "unallowed gap mockup/tp4056_usbc_dw01 <> printed/baseplate: 0.000000 mm",
+    "unallowed interference mockup/xiao_epdm_retainer <> printed/barrel_bridge: 30.870000 mm3",
+    "unallowed gap mockup/xiao_epdm_retainer <> printed/barrel_bridge: 0.000000 mm",
+    "unallowed interference mockup/xiao_epdm_retainer <> printed/baseplate: 0.960000 mm3",
+    "unallowed gap mockup/xiao_epdm_retainer <> printed/baseplate: 0.000000 mm",
+    "unallowed interference printed/baseplate <> printed/servo_sear: 6.400000 mm3",
+    "unallowed gap printed/baseplate <> printed/servo_sear: 0.000000 mm",
+    "unallowed interference printed/baseplate <> printed/spring_carriage: 4.562192 mm3",
+    "unallowed gap printed/baseplate <> printed/spring_carriage: 0.000000 mm",
+    "stroke 0.000 mm interference with printed/baseplate: 4.562192 mm3",
+    "stroke 0.000 mm gap to printed/baseplate: 0.000000 mm",
+    "stroke 0.500 mm interference with printed/baseplate: 4.562192 mm3",
+    "stroke 0.500 mm gap to printed/baseplate: 0.000000 mm",
+    "stroke 1.000 mm interference with printed/baseplate: 4.562192 mm3",
+    "stroke 1.000 mm gap to printed/baseplate: 0.000000 mm",
+    "stroke 1.500 mm interference with printed/baseplate: 4.562192 mm3",
+    "stroke 1.500 mm gap to printed/baseplate: 0.000000 mm",
+    "stroke 2.000 mm interference with printed/baseplate: 4.562192 mm3",
+    "stroke 2.000 mm gap to printed/baseplate: 0.000000 mm",
+    "stroke 2.500 mm interference with printed/baseplate: 4.562192 mm3",
+    "stroke 2.500 mm gap to printed/baseplate: 0.000000 mm",
+    "stroke 3.000 mm interference with printed/baseplate: 4.562192 mm3",
+    "stroke 3.000 mm gap to printed/baseplate: 0.000000 mm",
+    "stroke 3.500 mm interference with printed/baseplate: 4.562192 mm3",
+    "stroke 3.500 mm gap to printed/baseplate: 0.000000 mm",
+    "stroke 4.000 mm interference with printed/baseplate: 4.562192 mm3",
+    "stroke 4.000 mm gap to printed/baseplate: 0.000000 mm",
+    "stroke 4.500 mm interference with printed/baseplate: 4.562192 mm3",
+    "stroke 4.500 mm gap to printed/baseplate: 0.000000 mm",
+    "stroke 5.000 mm interference with printed/baseplate: 4.562192 mm3",
+    "stroke 5.000 mm gap to printed/baseplate: 0.000000 mm",
+    "stroke 5.500 mm interference with printed/baseplate: 4.562192 mm3",
+    "stroke 5.500 mm gap to printed/baseplate: 0.000000 mm",
+    "stroke 6.000 mm interference with printed/baseplate: 4.562192 mm3",
+    "stroke 6.000 mm gap to printed/baseplate: 0.000000 mm",
+    "stroke 6.500 mm interference with printed/baseplate: 4.562192 mm3",
+    "stroke 6.500 mm gap to printed/baseplate: 0.000000 mm",
+    "stroke 7.000 mm interference with printed/baseplate: 4.562192 mm3",
+    "stroke 7.000 mm gap to printed/baseplate: 0.000000 mm",
+    "stroke 7.500 mm interference with printed/baseplate: 4.562192 mm3",
+    "stroke 7.500 mm gap to printed/baseplate: 0.000000 mm",
+    "stroke 8.000 mm interference with printed/baseplate: 4.562192 mm3",
+    "stroke 8.000 mm gap to printed/baseplate: 0.000000 mm",
+    "stroke 8.500 mm interference with printed/baseplate: 4.562192 mm3",
+    "stroke 8.500 mm gap to printed/baseplate: 0.000000 mm",
+    "stroke 9.000 mm interference with printed/baseplate: 4.562192 mm3",
+    "stroke 9.000 mm gap to printed/baseplate: 0.000000 mm",
+    "stroke 9.500 mm interference with printed/baseplate: 29.002192 mm3",
+    "stroke 9.500 mm gap to printed/baseplate: 0.000000 mm",
+    "stroke 10.000 mm interference with printed/baseplate: 52.835542 mm3",
+    "stroke 10.000 mm gap to printed/baseplate: 0.000000 mm",
+    "stroke 10.073 mm interference with printed/baseplate: 56.033609 mm3",
+    "stroke 10.073 mm gap to printed/baseplate: 0.000000 mm"
+  ],
+  "fluid_path": {
+    "axial_gap_mm": 0.0,
+    "axis_offset_mm": 0.0,
+    "connected": true,
+    "nozzle_inlet_xyz_mm": [
+      178.3,
+      -12.0,
+      12.5
+    ],
+    "outlet_xyz_mm": [
+      206.70000000000002,
+      -12.0,
+      12.5
+    ],
+    "syringe_outlet_xyz_mm": [
+      178.3,
+      -12.0,
+      12.5
+    ],
+    "tower_bore_axis_error_mm": 0.0
+  },
+  "mockup_sources": {
+    "bridge_m3_insert_1": {
+      "confidence": "HIGH",
+      "envelope": "5.0 OD x 4.0 length",
+      "source": "owned M3 heat-set inserts"
     },
-    "baseplate": {
-      "is_valid": true,
-      "local_z_max_mm": 24.06000010000041,
-      "local_z_min_mm": 0.02337905392255065,
-      "solid_count": 1,
-      "volume_mm3": 38592.980433200224
+    "bridge_m3_insert_2": {
+      "confidence": "HIGH",
+      "envelope": "5.0 OD x 4.0 length",
+      "source": "owned M3 heat-set inserts"
     },
-    "palm_switch_pod": {
-      "is_valid": true,
-      "local_z_max_mm": 6.500000100000003,
-      "local_z_min_mm": 1.8499998999999974,
-      "solid_count": 1,
-      "volume_mm3": 732.7935000000002
+    "bridge_m3_screw_1": {
+      "confidence": "HIGH",
+      "envelope": "3.0 shaft, 5.8 head",
+      "source": "owned ISO M3 socket screws"
     },
-    "pusher_yoke": {
-      "is_valid": true,
-      "local_z_max_mm": 9.0010001,
-      "local_z_min_mm": 0.0009998999999982236,
-      "solid_count": 1,
-      "volume_mm3": 690.0
+    "bridge_m3_screw_2": {
+      "confidence": "HIGH",
+      "envelope": "3.0 shaft, 5.8 head",
+      "source": "owned ISO M3 socket screws"
+    },
+    "capped_dummy_8ga_nozzle": {
+      "confidence": "HIGH",
+      "envelope": "8 ga OD 4.19, capped; no fluid connection",
+      "source": "ISO 9626 gauge table + owned 8/10/12/14 ga assortment"
+    },
+    "cocking_drive_m3": {
+      "confidence": "HIGH",
+      "envelope": "3.0 OD x 6.0 envelope",
+      "source": "owned ISO M3 screws"
+    },
+    "cocking_pivot_m3": {
+      "confidence": "HIGH",
+      "envelope": "3.0 OD x 23.0 envelope",
+      "source": "owned ISO M3 screws"
+    },
+    "corona_ds239mg_servo": {
+      "confidence": "HIGH",
+      "envelope": "27.5 x 23 x 12 body plus mounting lugs",
+      "source": "HobbyKing Corona DS239MG published dimensions"
+    },
+    "ds239mg_horn": {
+      "confidence": "HIGH",
+      "envelope": "3 x 16 x 1.6",
+      "source": "owned DS239MG supplied horn; conservative measured envelope"
+    },
+    "forearm_straps_25mm": {
+      "confidence": "MEASURE",
+      "envelope": "25 x 1.5 segments; thickness to verify",
+      "source": "owned 1 inch hook-and-loop strapping"
+    },
+    "lipo_eemb_103454_rotated": {
+      "confidence": "HIGH",
+      "envelope": "54 x 34 x 10, rotated in plane; 0.6 mm floor gap and no top clamp",
+      "source": "EEMB 103454 manufacturer envelope"
+    },
+    "live_8ga_blunt_nozzle": {
+      "confidence": "HIGH",
+      "envelope": "8 ga OD 4.19, 25.4 mm cannula; 3.0 mm conservative effective outlet",
+      "source": "ISO 9626 gauge table + owned 8/10/12/14 ga assortment"
+    },
+    "palm_strap_25mm": {
+      "confidence": "MEASURE",
+      "envelope": "25 x 1.5 routed tabs; thickness to verify",
+      "source": "owned 1 inch hook-and-loop strapping"
+    },
+    "sear_pivot_m3": {
+      "confidence": "HIGH",
+      "envelope": "3.0 OD x 19.0 envelope",
+      "source": "owned ISO M3 screws"
+    },
+    "seeed_xiao_esp32c3": {
+      "confidence": "HIGH",
+      "envelope": "17.8 x 21 x 3.6",
+      "source": "Seeed Studio XIAO ESP32C3 mechanical drawing"
+    },
+    "selected_compression_spring": {
+      "confidence": "MEASURE",
+      "envelope": "OD <=10, free 39.7, rate 1.94 N/mm, cocked 25.53, peak 27.6 N",
+      "source": "owned compression-spring assortment; select by scale test"
+    },
+    "syringe_epdm_retainer": {
+      "confidence": "MEASURE",
+      "envelope": "stretched OD <=22 around guide notches",
+      "source": "owned EPDM O-rings"
+    },
+    "syringe_norm_ject_10ml": {
+      "confidence": "HIGH",
+      "envelope": "15.9 ID, 17.3 OD, 85.3 cylinder; flange conservatively caliper-sized",
+      "source": "Restek 22775 / NORM-JECT specification table"
+    },
+    "tactile_switch_12mm": {
+      "confidence": "HIGH",
+      "envelope": "12 x 12 x 4.3",
+      "source": "Omron B3F 12 mm-class tactile switch drawing"
+    },
+    "tp4056_epdm_retainer": {
+      "confidence": "MEASURE",
+      "envelope": "retainer envelope 31.4 x 20.4",
+      "source": "owned EPDM O-rings / bands"
+    },
+    "tp4056_usbc_dw01": {
+      "confidence": "MEASURE",
+      "envelope": "28 x 17 x 4",
+      "source": "owned common USB-C TP4056/DW01 board, conservative caliper envelope"
+    },
+    "xiao_epdm_retainer": {
+      "confidence": "MEASURE",
+      "envelope": "retainer envelope 21.2 x 24.4",
+      "source": "owned EPDM O-rings / bands"
     }
   },
-  "shot_volume_ml": 1.9855650968850889,
+  "pairwise_clearance": {
+    "mockup/bridge_m3_insert_1 <> mockup/bridge_m3_insert_2": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 31.0
+    },
+    "mockup/bridge_m3_insert_1 <> mockup/bridge_m3_screw_1": {
+      "allowed_contact": "thread engagement",
+      "intersection_mm3": 5.372123437638541,
+      "minimum_gap_mm": 0.0
+    },
+    "mockup/bridge_m3_insert_1 <> mockup/bridge_m3_screw_2": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 31.005805907926344
+    },
+    "mockup/bridge_m3_insert_1 <> mockup/capped_dummy_8ga_nozzle": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 69.82832623506887
+    },
+    "mockup/bridge_m3_insert_1 <> mockup/cocking_drive_m3": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 41.069258137451705
+    },
+    "mockup/bridge_m3_insert_1 <> mockup/cocking_pivot_m3": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 72.32168761236873
+    },
+    "mockup/bridge_m3_insert_1 <> mockup/corona_ds239mg_servo": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 41.37124207176488
+    },
+    "mockup/bridge_m3_insert_1 <> mockup/ds239mg_horn": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 50.375036186550524
+    },
+    "mockup/bridge_m3_insert_1 <> mockup/forearm_straps_25mm": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 8.827510759209197
+    },
+    "mockup/bridge_m3_insert_1 <> mockup/lipo_eemb_103454_rotated": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 71.0
+    },
+    "mockup/bridge_m3_insert_1 <> mockup/live_8ga_blunt_nozzle": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 61.01776930343377
+    },
+    "mockup/bridge_m3_insert_1 <> mockup/palm_strap_25mm": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 8.002975768799999
+    },
+    "mockup/bridge_m3_insert_1 <> mockup/sear_pivot_m3": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 47.87725898695883
+    },
+    "mockup/bridge_m3_insert_1 <> mockup/seeed_xiao_esp32c3": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 21.5
+    },
+    "mockup/bridge_m3_insert_1 <> mockup/selected_compression_spring": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 43.049316996567114
+    },
+    "mockup/bridge_m3_insert_1 <> mockup/syringe_epdm_retainer": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 19.5
+    },
+    "mockup/bridge_m3_insert_1 <> mockup/syringe_norm_ject_10ml": {
+      "allowed_contact": null,
+      "intersection_mm3": 6.222678178362958,
+      "minimum_gap_mm": 0.0
+    },
+    "mockup/bridge_m3_insert_1 <> mockup/tactile_switch_12mm": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 29.842527569481234
+    },
+    "mockup/bridge_m3_insert_1 <> mockup/tp4056_epdm_retainer": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 24.13042000963818
+    },
+    "mockup/bridge_m3_insert_1 <> mockup/tp4056_usbc_dw01": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 26.348743473503315
+    },
+    "mockup/bridge_m3_insert_1 <> mockup/xiao_epdm_retainer": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 19.81161275615895
+    },
+    "mockup/bridge_m3_insert_1 <> printed/barrel_bridge": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 0.0
+    },
+    "mockup/bridge_m3_insert_1 <> printed/baseplate": {
+      "allowed_contact": "heat-set interference",
+      "intersection_mm3": 13.579534245141833,
+      "minimum_gap_mm": 0.0
+    },
+    "mockup/bridge_m3_insert_1 <> printed/cocking_lever": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 40.188572391424714
+    },
+    "mockup/bridge_m3_insert_1 <> printed/palm_switch_pod": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 19.87387782471899
+    },
+    "mockup/bridge_m3_insert_1 <> printed/servo_sear": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 41.52448147044514
+    },
+    "mockup/bridge_m3_insert_1 <> printed/spring_carriage": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 38.0
+    },
+    "mockup/bridge_m3_insert_2 <> mockup/bridge_m3_screw_1": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 31.005805907926344
+    },
+    "mockup/bridge_m3_insert_2 <> mockup/bridge_m3_screw_2": {
+      "allowed_contact": "thread engagement",
+      "intersection_mm3": 5.372123437638541,
+      "minimum_gap_mm": 0.0
+    },
+    "mockup/bridge_m3_insert_2 <> mockup/capped_dummy_8ga_nozzle": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 69.82832623506887
+    },
+    "mockup/bridge_m3_insert_2 <> mockup/cocking_drive_m3": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 55.43465429875081
+    },
+    "mockup/bridge_m3_insert_2 <> mockup/cocking_pivot_m3": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 83.3212459828649
+    },
+    "mockup/bridge_m3_insert_2 <> mockup/corona_ds239mg_servo": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 38.288499222105926
+    },
+    "mockup/bridge_m3_insert_2 <> mockup/ds239mg_horn": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 43.54882317583335
+    },
+    "mockup/bridge_m3_insert_2 <> mockup/forearm_straps_25mm": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 8.827510759209197
+    },
+    "mockup/bridge_m3_insert_2 <> mockup/lipo_eemb_103454_rotated": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 71.0
+    },
+    "mockup/bridge_m3_insert_2 <> mockup/live_8ga_blunt_nozzle": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 66.38700546138702
+    },
+    "mockup/bridge_m3_insert_2 <> mockup/palm_strap_25mm": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 12.173530590829188
+    },
+    "mockup/bridge_m3_insert_2 <> mockup/sear_pivot_m3": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 44.283019789569906
+    },
+    "mockup/bridge_m3_insert_2 <> mockup/seeed_xiao_esp32c3": {
+      "allowed_contact": null,
+      "intersection_mm3": 38.94632412655266,
+      "minimum_gap_mm": 0.0
+    },
+    "mockup/bridge_m3_insert_2 <> mockup/selected_compression_spring": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 49.536496500287846
+    },
+    "mockup/bridge_m3_insert_2 <> mockup/syringe_epdm_retainer": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 27.025657187063217
+    },
+    "mockup/bridge_m3_insert_2 <> mockup/syringe_norm_ject_10ml": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 19.562408617486028
+    },
+    "mockup/bridge_m3_insert_2 <> mockup/tactile_switch_12mm": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 29.842527569481234
+    },
+    "mockup/bridge_m3_insert_2 <> mockup/tp4056_epdm_retainer": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 8.668333173107746
+    },
+    "mockup/bridge_m3_insert_2 <> mockup/tp4056_usbc_dw01": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 10.0
+    },
+    "mockup/bridge_m3_insert_2 <> mockup/xiao_epdm_retainer": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 4.517742799230607
+    },
+    "mockup/bridge_m3_insert_2 <> printed/barrel_bridge": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 0.0
+    },
+    "mockup/bridge_m3_insert_2 <> printed/baseplate": {
+      "allowed_contact": "heat-set interference",
+      "intersection_mm3": 13.579534245141847,
+      "minimum_gap_mm": 0.0
+    },
+    "mockup/bridge_m3_insert_2 <> printed/cocking_lever": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 52.763478885958
+    },
+    "mockup/bridge_m3_insert_2 <> printed/palm_switch_pod": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 19.87387782471899
+    },
+    "mockup/bridge_m3_insert_2 <> printed/servo_sear": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 40.8820225637469
+    },
+    "mockup/bridge_m3_insert_2 <> printed/spring_carriage": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 43.35739078912168
+    },
+    "mockup/bridge_m3_screw_1 <> mockup/bridge_m3_screw_2": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 30.2
+    },
+    "mockup/bridge_m3_screw_1 <> mockup/capped_dummy_8ga_nozzle": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 69.17675786964895
+    },
+    "mockup/bridge_m3_screw_1 <> mockup/cocking_drive_m3": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 39.26737017367865
+    },
+    "mockup/bridge_m3_screw_1 <> mockup/cocking_pivot_m3": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 71.92168761236873
+    },
+    "mockup/bridge_m3_screw_1 <> mockup/corona_ds239mg_servo": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 40.94965223112719
+    },
+    "mockup/bridge_m3_screw_1 <> mockup/ds239mg_horn": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 49.13478761655207
+    },
+    "mockup/bridge_m3_screw_1 <> mockup/forearm_straps_25mm": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 9.827510759209192
+    },
+    "mockup/bridge_m3_screw_1 <> mockup/lipo_eemb_103454_rotated": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 70.6
+    },
+    "mockup/bridge_m3_screw_1 <> mockup/live_8ga_blunt_nozzle": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 60.4493488522179
+    },
+    "mockup/bridge_m3_screw_1 <> mockup/palm_strap_25mm": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 8.102175050007254
+    },
+    "mockup/bridge_m3_screw_1 <> mockup/sear_pivot_m3": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 47.47725898695882
+    },
+    "mockup/bridge_m3_screw_1 <> mockup/seeed_xiao_esp32c3": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 21.513948963405117
+    },
+    "mockup/bridge_m3_screw_1 <> mockup/selected_compression_spring": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 42.61378775746766
+    },
+    "mockup/bridge_m3_screw_1 <> mockup/syringe_epdm_retainer": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 19.38785587285045
+    },
+    "mockup/bridge_m3_screw_1 <> mockup/syringe_norm_ject_10ml": {
+      "allowed_contact": null,
+      "intersection_mm3": 86.13826404069792,
+      "minimum_gap_mm": 0.0
+    },
+    "mockup/bridge_m3_screw_1 <> mockup/tactile_switch_12mm": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 30.386606770765784
+    },
+    "mockup/bridge_m3_screw_1 <> mockup/tp4056_epdm_retainer": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 23.636343139669346
+    },
+    "mockup/bridge_m3_screw_1 <> mockup/tp4056_usbc_dw01": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 26.225508343093768
+    },
+    "mockup/bridge_m3_screw_1 <> mockup/xiao_epdm_retainer": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 19.374725804511403
+    },
+    "mockup/bridge_m3_screw_1 <> printed/barrel_bridge": {
+      "allowed_contact": "screw head clamp",
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 0.2000000000000004
+    },
+    "mockup/bridge_m3_screw_1 <> printed/baseplate": {
+      "allowed_contact": "fastener through insert",
+      "intersection_mm3": 18.37831702350028,
+      "minimum_gap_mm": 0.0
+    },
+    "mockup/bridge_m3_screw_1 <> printed/cocking_lever": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 37.97704913334656
+    },
+    "mockup/bridge_m3_screw_1 <> printed/palm_switch_pod": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 20.204420602311615
+    },
+    "mockup/bridge_m3_screw_1 <> printed/servo_sear": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 40.04948652868894
+    },
+    "mockup/bridge_m3_screw_1 <> printed/spring_carriage": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 37.599999999999994
+    },
+    "mockup/bridge_m3_screw_2 <> mockup/capped_dummy_8ga_nozzle": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 69.17675786964895
+    },
+    "mockup/bridge_m3_screw_2 <> mockup/cocking_drive_m3": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 54.00365716267939
+    },
+    "mockup/bridge_m3_screw_2 <> mockup/cocking_pivot_m3": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 82.92124598286489
+    },
+    "mockup/bridge_m3_screw_2 <> mockup/corona_ds239mg_servo": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 37.86518506900765
+    },
+    "mockup/bridge_m3_screw_2 <> mockup/ds239mg_horn": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 42.17416270656715
+    },
+    "mockup/bridge_m3_screw_2 <> mockup/forearm_straps_25mm": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 9.827510759209192
+    },
+    "mockup/bridge_m3_screw_2 <> mockup/lipo_eemb_103454_rotated": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 70.6
+    },
+    "mockup/bridge_m3_screw_2 <> mockup/live_8ga_blunt_nozzle": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 65.72317392834582
+    },
+    "mockup/bridge_m3_screw_2 <> mockup/palm_strap_25mm": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 12.101901609796316
+    },
+    "mockup/bridge_m3_screw_2 <> mockup/sear_pivot_m3": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 43.88301978956992
+    },
+    "mockup/bridge_m3_screw_2 <> mockup/seeed_xiao_esp32c3": {
+      "allowed_contact": null,
+      "intersection_mm3": 25.44690049407732,
+      "minimum_gap_mm": 0.0
+    },
+    "mockup/bridge_m3_screw_2 <> mockup/selected_compression_spring": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 49.02791825719623
+    },
+    "mockup/bridge_m3_screw_2 <> mockup/syringe_epdm_retainer": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 26.168883707497265
+    },
+    "mockup/bridge_m3_screw_2 <> mockup/syringe_norm_ject_10ml": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 18.45
+    },
+    "mockup/bridge_m3_screw_2 <> mockup/tactile_switch_12mm": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 30.386606770765784
+    },
+    "mockup/bridge_m3_screw_2 <> mockup/tp4056_epdm_retainer": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 8.006247560499244
+    },
+    "mockup/bridge_m3_screw_2 <> mockup/tp4056_usbc_dw01": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 10.32472759931224
+    },
+    "mockup/bridge_m3_screw_2 <> mockup/xiao_epdm_retainer": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 3.981205847478871
+    },
+    "mockup/bridge_m3_screw_2 <> printed/barrel_bridge": {
+      "allowed_contact": "screw head clamp",
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 0.2000000000000004
+    },
+    "mockup/bridge_m3_screw_2 <> printed/baseplate": {
+      "allowed_contact": "fastener through insert",
+      "intersection_mm3": 18.37831702350028,
+      "minimum_gap_mm": 0.0
+    },
+    "mockup/bridge_m3_screw_2 <> printed/cocking_lever": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 50.99589812068715
+    },
+    "mockup/bridge_m3_screw_2 <> printed/palm_switch_pod": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 20.204420602311615
+    },
+    "mockup/bridge_m3_screw_2 <> printed/servo_sear": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 39.38969068077513
+    },
+    "mockup/bridge_m3_screw_2 <> printed/spring_carriage": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 41.92892879393788
+    },
+    "mockup/capped_dummy_8ga_nozzle <> mockup/cocking_drive_m3": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 113.75713798603346
+    },
+    "mockup/capped_dummy_8ga_nozzle <> mockup/cocking_pivot_m3": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 146.58216984161194
+    },
+    "mockup/capped_dummy_8ga_nozzle <> mockup/corona_ds239mg_servo": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 109.80162614792668
+    },
+    "mockup/capped_dummy_8ga_nozzle <> mockup/ds239mg_horn": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 115.48427113738464
+    },
+    "mockup/capped_dummy_8ga_nozzle <> mockup/forearm_straps_25mm": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 83.83148927586527
+    },
+    "mockup/capped_dummy_8ga_nozzle <> mockup/lipo_eemb_103454_rotated": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 143.8
+    },
+    "mockup/capped_dummy_8ga_nozzle <> mockup/live_8ga_blunt_nozzle": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 6.404999999999999
+    },
+    "mockup/capped_dummy_8ga_nozzle <> mockup/palm_strap_25mm": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 30.735305838725612
+    },
+    "mockup/capped_dummy_8ga_nozzle <> mockup/sear_pivot_m3": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 115.33612037807488
+    },
+    "mockup/capped_dummy_8ga_nozzle <> mockup/seeed_xiao_esp32c3": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 64.7825971681529
+    },
+    "mockup/capped_dummy_8ga_nozzle <> mockup/selected_compression_spring": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 115.91502474641698
+    },
+    "mockup/capped_dummy_8ga_nozzle <> mockup/syringe_epdm_retainer": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 92.30000000000001
+    },
+    "mockup/capped_dummy_8ga_nozzle <> mockup/syringe_norm_ject_10ml": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 8.268435462649508
+    },
+    "mockup/capped_dummy_8ga_nozzle <> mockup/tactile_switch_12mm": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 33.243601264002685
+    },
+    "mockup/capped_dummy_8ga_nozzle <> mockup/tp4056_epdm_retainer": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 81.23194728022828
+    },
+    "mockup/capped_dummy_8ga_nozzle <> mockup/tp4056_usbc_dw01": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 83.12933890359724
+    },
+    "mockup/capped_dummy_8ga_nozzle <> mockup/xiao_epdm_retainer": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 62.87481832402107
+    },
+    "mockup/capped_dummy_8ga_nozzle <> printed/barrel_bridge": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 0.299999999999999
+    },
+    "mockup/capped_dummy_8ga_nozzle <> printed/baseplate": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 62.75582001030079
+    },
+    "mockup/capped_dummy_8ga_nozzle <> printed/cocking_lever": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 112.22750176632094
+    },
+    "mockup/capped_dummy_8ga_nozzle <> printed/palm_switch_pod": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 26.286955415186455
+    },
+    "mockup/capped_dummy_8ga_nozzle <> printed/servo_sear": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 110.80890769698979
+    },
+    "mockup/capped_dummy_8ga_nozzle <> printed/spring_carriage": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 110.81077201600014
+    },
+    "mockup/cocking_drive_m3 <> mockup/cocking_pivot_m3": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 29.95603131446504
+    },
+    "mockup/cocking_drive_m3 <> mockup/corona_ds239mg_servo": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 21.840329667841555
+    },
+    "mockup/cocking_drive_m3 <> mockup/ds239mg_horn": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 27.454510185646644
+    },
+    "mockup/cocking_drive_m3 <> mockup/forearm_straps_25mm": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 16.683063428413686
+    },
+    "mockup/cocking_drive_m3 <> mockup/lipo_eemb_103454_rotated": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 29.035323314886647
+    },
+    "mockup/cocking_drive_m3 <> mockup/live_8ga_blunt_nozzle": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 105.32122829893869
+    },
+    "mockup/cocking_drive_m3 <> mockup/palm_strap_25mm": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 53.150123532634765
+    },
+    "mockup/cocking_drive_m3 <> mockup/sear_pivot_m3": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 23.096934685897498
+    },
+    "mockup/cocking_drive_m3 <> mockup/seeed_xiao_esp32c3": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 41.21136778005126
+    },
+    "mockup/cocking_drive_m3 <> mockup/selected_compression_spring": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 6.053073139792783
+    },
+    "mockup/cocking_drive_m3 <> mockup/syringe_epdm_retainer": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 14.799999999999997
+    },
+    "mockup/cocking_drive_m3 <> mockup/syringe_norm_ject_10ml": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 1.2999999999999972
+    },
+    "mockup/cocking_drive_m3 <> mockup/tactile_switch_12mm": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 75.91904818652509
+    },
+    "mockup/cocking_drive_m3 <> mockup/tp4056_epdm_retainer": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 26.812554025939036
+    },
+    "mockup/cocking_drive_m3 <> mockup/tp4056_usbc_dw01": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 29.433892539984242
+    },
+    "mockup/cocking_drive_m3 <> mockup/xiao_epdm_retainer": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 38.22148324922664
+    },
+    "mockup/cocking_drive_m3 <> printed/barrel_bridge": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 35.84689665786984
+    },
+    "mockup/cocking_drive_m3 <> printed/baseplate": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 1.3000000000000007
+    },
+    "mockup/cocking_drive_m3 <> printed/cocking_lever": {
+      "allowed_contact": "closed cocking eye",
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 0.35431050010492704
+    },
+    "mockup/cocking_drive_m3 <> printed/palm_switch_pod": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 66.92186118586437
+    },
+    "mockup/cocking_drive_m3 <> printed/servo_sear": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 15.399999999999999
+    },
+    "mockup/cocking_drive_m3 <> printed/spring_carriage": {
+      "allowed_contact": "carriage drive pin",
+      "intersection_mm3": 0.32397070064652844,
+      "minimum_gap_mm": 0.0
+    },
+    "mockup/cocking_pivot_m3 <> mockup/corona_ds239mg_servo": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 24.976404589747453
+    },
+    "mockup/cocking_pivot_m3 <> mockup/ds239mg_horn": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 41.778170016764804
+    },
+    "mockup/cocking_pivot_m3 <> mockup/forearm_straps_25mm": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.06556813816762638,
+      "minimum_gap_mm": 0.0
+    },
+    "mockup/cocking_pivot_m3 <> mockup/lipo_eemb_103454_rotated": {
+      "allowed_contact": null,
+      "intersection_mm3": 70.68583470577032,
+      "minimum_gap_mm": 0.0
+    },
+    "mockup/cocking_pivot_m3 <> mockup/live_8ga_blunt_nozzle": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 138.12356534625522
+    },
+    "mockup/cocking_pivot_m3 <> mockup/palm_strap_25mm": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 85.159174355633
+    },
+    "mockup/cocking_pivot_m3 <> mockup/sear_pivot_m3": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 39.07433897282286
+    },
+    "mockup/cocking_pivot_m3 <> mockup/seeed_xiao_esp32c3": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 69.61258679024411
+    },
+    "mockup/cocking_pivot_m3 <> mockup/selected_compression_spring": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 7.919540196808802
+    },
+    "mockup/cocking_pivot_m3 <> mockup/syringe_epdm_retainer": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 47.540799340956916
+    },
+    "mockup/cocking_pivot_m3 <> mockup/syringe_norm_ject_10ml": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 34.126535054647114
+    },
+    "mockup/cocking_pivot_m3 <> mockup/tactile_switch_12mm": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 105.3488699316786
+    },
+    "mockup/cocking_pivot_m3 <> mockup/tp4056_epdm_retainer": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 44.49869563368074
+    },
+    "mockup/cocking_pivot_m3 <> mockup/tp4056_usbc_dw01": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 46.96906229751097
+    },
+    "mockup/cocking_pivot_m3 <> mockup/xiao_epdm_retainer": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 67.30356095435758
+    },
+    "mockup/cocking_pivot_m3 <> printed/barrel_bridge": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 67.5
+    },
+    "mockup/cocking_pivot_m3 <> printed/baseplate": {
+      "allowed_contact": "pivot screw in boss",
+      "intersection_mm3": 13.165943106023832,
+      "minimum_gap_mm": 0.0
+    },
+    "mockup/cocking_pivot_m3 <> printed/cocking_lever": {
+      "allowed_contact": "cocking pivot bearing",
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 0.199999999999995
+    },
+    "mockup/cocking_pivot_m3 <> printed/palm_switch_pod": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 95.9703182580291
+    },
+    "mockup/cocking_pivot_m3 <> printed/servo_sear": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 33.10130055359191
+    },
+    "mockup/cocking_pivot_m3 <> printed/spring_carriage": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 29.01638903933426
+    },
+    "mockup/corona_ds239mg_servo <> mockup/ds239mg_horn": {
+      "allowed_contact": "servo output spline",
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 0.29999999999999893
+    },
+    "mockup/corona_ds239mg_servo <> mockup/forearm_straps_25mm": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 6.082762530298219
+    },
+    "mockup/corona_ds239mg_servo <> mockup/lipo_eemb_103454_rotated": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 2.5
+    },
+    "mockup/corona_ds239mg_servo <> mockup/live_8ga_blunt_nozzle": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 103.26021781855724
+    },
+    "mockup/corona_ds239mg_servo <> mockup/palm_strap_25mm": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 50.015622559356395
+    },
+    "mockup/corona_ds239mg_servo <> mockup/sear_pivot_m3": {
+      "allowed_contact": null,
+      "intersection_mm3": 49.48008429403923,
+      "minimum_gap_mm": 0.0
+    },
+    "mockup/corona_ds239mg_servo <> mockup/seeed_xiao_esp32c3": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 27.536339626028727
+    },
+    "mockup/corona_ds239mg_servo <> mockup/selected_compression_spring": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 8.0
+    },
+    "mockup/corona_ds239mg_servo <> mockup/syringe_epdm_retainer": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 12.698801105331873
+    },
+    "mockup/corona_ds239mg_servo <> mockup/syringe_norm_ject_10ml": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 3.0
+    },
+    "mockup/corona_ds239mg_servo <> mockup/tactile_switch_12mm": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 69.77922326882121
+    },
+    "mockup/corona_ds239mg_servo <> mockup/tp4056_epdm_retainer": {
+      "allowed_contact": null,
+      "intersection_mm3": 17.136000000000063,
+      "minimum_gap_mm": 0.0
+    },
+    "mockup/corona_ds239mg_servo <> mockup/tp4056_usbc_dw01": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 1.0
+    },
+    "mockup/corona_ds239mg_servo <> mockup/xiao_epdm_retainer": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 25.799999999999997
+    },
+    "mockup/corona_ds239mg_servo <> printed/barrel_bridge": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 32.5
+    },
+    "mockup/corona_ds239mg_servo <> printed/baseplate": {
+      "allowed_contact": null,
+      "intersection_mm3": 446.75090900150155,
+      "minimum_gap_mm": 0.0
+    },
+    "mockup/corona_ds239mg_servo <> printed/cocking_lever": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 20.163382482869846
+    },
+    "mockup/corona_ds239mg_servo <> printed/palm_switch_pod": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 61.88093405888441
+    },
+    "mockup/corona_ds239mg_servo <> printed/servo_sear": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 0.5999999999999996
+    },
+    "mockup/corona_ds239mg_servo <> printed/spring_carriage": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 5.0
+    },
+    "mockup/ds239mg_horn <> mockup/forearm_straps_25mm": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 16.34441800738099
+    },
+    "mockup/ds239mg_horn <> mockup/lipo_eemb_103454_rotated": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 25.603515383634335
+    },
+    "mockup/ds239mg_horn <> mockup/live_8ga_blunt_nozzle": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 109.58831746270619
+    },
+    "mockup/ds239mg_horn <> mockup/palm_strap_25mm": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 55.978589657118015
+    },
+    "mockup/ds239mg_horn <> mockup/sear_pivot_m3": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 1.5
+    },
+    "mockup/ds239mg_horn <> mockup/seeed_xiao_esp32c3": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 34.1275548494175
+    },
+    "mockup/ds239mg_horn <> mockup/selected_compression_spring": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 15.796393918177257
+    },
+    "mockup/ds239mg_horn <> mockup/syringe_epdm_retainer": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 20.239653916970514
+    },
+    "mockup/ds239mg_horn <> mockup/syringe_norm_ject_10ml": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 10.965856099730654
+    },
+    "mockup/ds239mg_horn <> mockup/tactile_switch_12mm": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 76.94803441284255
+    },
+    "mockup/ds239mg_horn <> mockup/tp4056_epdm_retainer": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 6.4404968752418466
+    },
+    "mockup/ds239mg_horn <> mockup/tp4056_usbc_dw01": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 9.441398201537735
+    },
+    "mockup/ds239mg_horn <> mockup/xiao_epdm_retainer": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 31.908149429260227
+    },
+    "mockup/ds239mg_horn <> printed/barrel_bridge": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 38.55191305240247
+    },
+    "mockup/ds239mg_horn <> printed/baseplate": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 0.09999999999999787
+    },
+    "mockup/ds239mg_horn <> printed/cocking_lever": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 25.03547751923892
+    },
+    "mockup/ds239mg_horn <> printed/palm_switch_pod": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 69.17000795142357
+    },
+    "mockup/ds239mg_horn <> printed/servo_sear": {
+      "allowed_contact": "servo trip contact",
+      "intersection_mm3": 23.400000000000002,
+      "minimum_gap_mm": 0.0
+    },
+    "mockup/ds239mg_horn <> printed/spring_carriage": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 9.0
+    },
+    "mockup/forearm_straps_25mm <> mockup/lipo_eemb_103454_rotated": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 0.9999999999999996
+    },
+    "mockup/forearm_straps_25mm <> mockup/live_8ga_blunt_nozzle": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 74.59914478538118
+    },
+    "mockup/forearm_straps_25mm <> mockup/palm_strap_25mm": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 21.224749704060116
+    },
+    "mockup/forearm_straps_25mm <> mockup/sear_pivot_m3": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 18.958800062564766
+    },
+    "mockup/forearm_straps_25mm <> mockup/seeed_xiao_esp32c3": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 0.9999999999999996
+    },
+    "mockup/forearm_straps_25mm <> mockup/selected_compression_spring": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 9.49584207375577
+    },
+    "mockup/forearm_straps_25mm <> mockup/syringe_epdm_retainer": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 3.3900138985339408
+    },
+    "mockup/forearm_straps_25mm <> mockup/syringe_norm_ject_10ml": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 1.0999999999999996
+    },
+    "mockup/forearm_straps_25mm <> mockup/tactile_switch_12mm": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 42.78507333171231
+    },
+    "mockup/forearm_straps_25mm <> mockup/tp4056_epdm_retainer": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 6.299999999999999
+    },
+    "mockup/forearm_straps_25mm <> mockup/tp4056_usbc_dw01": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 0.9999999999999996
+    },
+    "mockup/forearm_straps_25mm <> mockup/xiao_epdm_retainer": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 5.9
+    },
+    "mockup/forearm_straps_25mm <> printed/barrel_bridge": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 5.166236541235795
+    },
+    "mockup/forearm_straps_25mm <> printed/baseplate": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 0.39999999999999947
+    },
+    "mockup/forearm_straps_25mm <> printed/cocking_lever": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 17.5
+    },
+    "mockup/forearm_straps_25mm <> printed/palm_switch_pod": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 32.01019368888604
+    },
+    "mockup/forearm_straps_25mm <> printed/servo_sear": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 17.18349498792373
+    },
+    "mockup/forearm_straps_25mm <> printed/spring_carriage": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 5.556302727533841
+    },
+    "mockup/lipo_eemb_103454_rotated <> mockup/live_8ga_blunt_nozzle": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 136.8
+    },
+    "mockup/lipo_eemb_103454_rotated <> mockup/palm_strap_25mm": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 84.0
+    },
+    "mockup/lipo_eemb_103454_rotated <> mockup/sear_pivot_m3": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 25.5
+    },
+    "mockup/lipo_eemb_103454_rotated <> mockup/seeed_xiao_esp32c3": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 61.5
+    },
+    "mockup/lipo_eemb_103454_rotated <> mockup/selected_compression_spring": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 2.4726992186635215
+    },
+    "mockup/lipo_eemb_103454_rotated <> mockup/syringe_epdm_retainer": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 46.5
+    },
+    "mockup/lipo_eemb_103454_rotated <> mockup/syringe_norm_ject_10ml": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 33.0
+    },
+    "mockup/lipo_eemb_103454_rotated <> mockup/tactile_switch_12mm": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 102.86855690637447
+    },
+    "mockup/lipo_eemb_103454_rotated <> mockup/tp4056_epdm_retainer": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 31.299999999999997
+    },
+    "mockup/lipo_eemb_103454_rotated <> mockup/tp4056_usbc_dw01": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 33.0
+    },
+    "mockup/lipo_eemb_103454_rotated <> mockup/xiao_epdm_retainer": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 59.8
+    },
+    "mockup/lipo_eemb_103454_rotated <> printed/barrel_bridge": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 66.5
+    },
+    "mockup/lipo_eemb_103454_rotated <> printed/baseplate": {
+      "allowed_contact": null,
+      "intersection_mm3": 406.4977464742932,
+      "minimum_gap_mm": 0.0
+    },
+    "mockup/lipo_eemb_103454_rotated <> printed/cocking_lever": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 6.499999999999998
+    },
+    "mockup/lipo_eemb_103454_rotated <> printed/palm_switch_pod": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 94.87259878384275
+    },
+    "mockup/lipo_eemb_103454_rotated <> printed/servo_sear": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 22.649724060129298
+    },
+    "mockup/lipo_eemb_103454_rotated <> printed/spring_carriage": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 28.0
+    },
+    "mockup/live_8ga_blunt_nozzle <> mockup/palm_strap_25mm": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 24.14000828500273
+    },
+    "mockup/live_8ga_blunt_nozzle <> mockup/sear_pivot_m3": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 109.1268050700191
+    },
+    "mockup/live_8ga_blunt_nozzle <> mockup/seeed_xiao_esp32c3": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 59.50629620827506
+    },
+    "mockup/live_8ga_blunt_nozzle <> mockup/selected_compression_spring": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 108.80000000000001
+    },
+    "mockup/live_8ga_blunt_nozzle <> mockup/syringe_epdm_retainer": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 85.52502557731276
+    },
+    "mockup/live_8ga_blunt_nozzle <> mockup/syringe_norm_ject_10ml": {
+      "allowed_contact": "Luer-lock fluid joint",
+      "intersection_mm3": 60.8212337734984,
+      "minimum_gap_mm": 0.0
+    },
+    "mockup/live_8ga_blunt_nozzle <> mockup/tactile_switch_12mm": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 27.035009701761616
+    },
+    "mockup/live_8ga_blunt_nozzle <> mockup/tp4056_epdm_retainer": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 75.5801995619491
+    },
+    "mockup/live_8ga_blunt_nozzle <> mockup/tp4056_usbc_dw01": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 77.71370491856993
+    },
+    "mockup/live_8ga_blunt_nozzle <> mockup/xiao_epdm_retainer": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 57.288759335239014
+    },
+    "mockup/live_8ga_blunt_nozzle <> printed/barrel_bridge": {
+      "allowed_contact": null,
+      "intersection_mm3": 8.235075711629559,
+      "minimum_gap_mm": 0.0
+    },
+    "mockup/live_8ga_blunt_nozzle <> printed/baseplate": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 56.6403566372953
+    },
+    "mockup/live_8ga_blunt_nozzle <> printed/cocking_lever": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 103.67024410529115
+    },
+    "mockup/live_8ga_blunt_nozzle <> printed/palm_switch_pod": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 20.012246250733583
+    },
+    "mockup/live_8ga_blunt_nozzle <> printed/servo_sear": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 103.931781124986
+    },
+    "mockup/live_8ga_blunt_nozzle <> printed/spring_carriage": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 103.80000000000001
+    },
+    "mockup/palm_strap_25mm <> mockup/sear_pivot_m3": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 55.513704492867326
+    },
+    "mockup/palm_strap_25mm <> mockup/seeed_xiao_esp32c3": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 4.700000000000003
+    },
+    "mockup/palm_strap_25mm <> mockup/selected_compression_spring": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 56.01880932318107
+    },
+    "mockup/palm_strap_25mm <> mockup/syringe_epdm_retainer": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 32.5
+    },
+    "mockup/palm_strap_25mm <> mockup/syringe_norm_ject_10ml": {
+      "allowed_contact": null,
+      "intersection_mm3": 35.15474018027502,
+      "minimum_gap_mm": 0.0
+    },
+    "mockup/palm_strap_25mm <> mockup/tactile_switch_12mm": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 1.5
+    },
+    "mockup/palm_strap_25mm <> mockup/tp4056_epdm_retainer": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 21.30211257129209
+    },
+    "mockup/palm_strap_25mm <> mockup/tp4056_usbc_dw01": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 23.00135865552294
+    },
+    "mockup/palm_strap_25mm <> mockup/xiao_epdm_retainer": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 3.0
+    },
+    "mockup/palm_strap_25mm <> printed/barrel_bridge": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 0.9433981132056595
+    },
+    "mockup/palm_strap_25mm <> printed/baseplate": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 3.0220026472523203
+    },
+    "mockup/palm_strap_25mm <> printed/cocking_lever": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 51.79878833197228
+    },
+    "mockup/palm_strap_25mm <> printed/palm_switch_pod": {
+      "allowed_contact": "strap retention",
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 0.5
+    },
+    "mockup/palm_strap_25mm <> printed/servo_sear": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 51.94056699729028
+    },
+    "mockup/palm_strap_25mm <> printed/spring_carriage": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 51.0
+    },
+    "mockup/sear_pivot_m3 <> mockup/seeed_xiao_esp32c3": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 33.014489710844636
+    },
+    "mockup/sear_pivot_m3 <> mockup/selected_compression_spring": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 10.5
+    },
+    "mockup/sear_pivot_m3 <> mockup/syringe_epdm_retainer": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 18.90220576310317
+    },
+    "mockup/sear_pivot_m3 <> mockup/syringe_norm_ject_10ml": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 7.7195444572928915
+    },
+    "mockup/sear_pivot_m3 <> mockup/tactile_switch_12mm": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 74.20411039827916
+    },
+    "mockup/sear_pivot_m3 <> mockup/tp4056_epdm_retainer": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 2.9643028571099426
+    },
+    "mockup/sear_pivot_m3 <> mockup/tp4056_usbc_dw01": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 5.208203932499363
+    },
+    "mockup/sear_pivot_m3 <> mockup/xiao_epdm_retainer": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 31.299999999999997
+    },
+    "mockup/sear_pivot_m3 <> printed/barrel_bridge": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 38.0
+    },
+    "mockup/sear_pivot_m3 <> printed/baseplate": {
+      "allowed_contact": "pivot screw in boss",
+      "intersection_mm3": 29.248413632232854,
+      "minimum_gap_mm": 0.0
+    },
+    "mockup/sear_pivot_m3 <> printed/cocking_lever": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 20.621205443716
+    },
+    "mockup/sear_pivot_m3 <> printed/palm_switch_pod": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 66.20453156695544
+    },
+    "mockup/sear_pivot_m3 <> printed/servo_sear": {
+      "allowed_contact": "sear pivot bearing",
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 0.19999999999999446
+    },
+    "mockup/sear_pivot_m3 <> printed/spring_carriage": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 4.5827625302982185
+    },
+    "mockup/seeed_xiao_esp32c3 <> mockup/selected_compression_spring": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 36.0245350294914
+    },
+    "mockup/seeed_xiao_esp32c3 <> mockup/syringe_epdm_retainer": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 12.695524213524559
+    },
+    "mockup/seeed_xiao_esp32c3 <> mockup/syringe_norm_ject_10ml": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 10.171530224718712
+    },
+    "mockup/seeed_xiao_esp32c3 <> mockup/tactile_switch_12mm": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 24.777610861420843
+    },
+    "mockup/seeed_xiao_esp32c3 <> mockup/tp4056_epdm_retainer": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 1.6999999999999993
+    },
+    "mockup/seeed_xiao_esp32c3 <> mockup/tp4056_usbc_dw01": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 0.5
+    },
+    "mockup/seeed_xiao_esp32c3 <> mockup/xiao_epdm_retainer": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 1.431782106327635
+    },
+    "mockup/seeed_xiao_esp32c3 <> printed/barrel_bridge": {
+      "allowed_contact": null,
+      "intersection_mm3": 187.29663778490035,
+      "minimum_gap_mm": 0.0
+    },
+    "mockup/seeed_xiao_esp32c3 <> printed/baseplate": {
+      "allowed_contact": null,
+      "intersection_mm3": 275.2220031196053,
+      "minimum_gap_mm": 0.0
+    },
+    "mockup/seeed_xiao_esp32c3 <> printed/cocking_lever": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 38.77588428802867
+    },
+    "mockup/seeed_xiao_esp32c3 <> printed/palm_switch_pod": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 17.36663467687393
+    },
+    "mockup/seeed_xiao_esp32c3 <> printed/servo_sear": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 30.483602149352365
+    },
+    "mockup/seeed_xiao_esp32c3 <> printed/spring_carriage": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 30.20347662107791
+    },
+    "mockup/selected_compression_spring <> mockup/syringe_epdm_retainer": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 18.630351580150066
+    },
+    "mockup/selected_compression_spring <> mockup/syringe_norm_ject_10ml": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 5.0
+    },
+    "mockup/selected_compression_spring <> mockup/tactile_switch_12mm": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 75.3723812075907
+    },
+    "mockup/selected_compression_spring <> mockup/tp4056_epdm_retainer": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 13.606515085354774
+    },
+    "mockup/selected_compression_spring <> mockup/tp4056_usbc_dw01": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 15.971132725787871
+    },
+    "mockup/selected_compression_spring <> mockup/xiao_epdm_retainer": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 33.717248669978574
+    },
+    "mockup/selected_compression_spring <> printed/barrel_bridge": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 38.5
+    },
+    "mockup/selected_compression_spring <> printed/baseplate": {
+      "allowed_contact": "spring reaction wall",
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 0.0
+    },
+    "mockup/selected_compression_spring <> printed/cocking_lever": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 6.152179925676018
+    },
+    "mockup/selected_compression_spring <> printed/palm_switch_pod": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 67.24767653978834
+    },
+    "mockup/selected_compression_spring <> printed/servo_sear": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 5.0
+    },
+    "mockup/selected_compression_spring <> printed/spring_carriage": {
+      "allowed_contact": "spring seat",
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 0.0
+    },
+    "mockup/syringe_epdm_retainer <> mockup/syringe_norm_ject_10ml": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 0.0
+    },
+    "mockup/syringe_epdm_retainer <> mockup/tactile_switch_12mm": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 51.590611674489175
+    },
+    "mockup/syringe_epdm_retainer <> mockup/tp4056_epdm_retainer": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 7.384776310850235
+    },
+    "mockup/syringe_epdm_retainer <> mockup/tp4056_usbc_dw01": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 9.640009689920205
+    },
+    "mockup/syringe_epdm_retainer <> mockup/xiao_epdm_retainer": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 9.943359706432533
+    },
+    "mockup/syringe_epdm_retainer <> printed/barrel_bridge": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 15.0
+    },
+    "mockup/syringe_epdm_retainer <> printed/baseplate": {
+      "allowed_contact": null,
+      "intersection_mm3": 187.00159800018233,
+      "minimum_gap_mm": 0.0
+    },
+    "mockup/syringe_epdm_retainer <> printed/cocking_lever": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 13.161628898945665
+    },
+    "mockup/syringe_epdm_retainer <> printed/palm_switch_pod": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 43.48850422812907
+    },
+    "mockup/syringe_epdm_retainer <> printed/servo_sear": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 13.5
+    },
+    "mockup/syringe_epdm_retainer <> printed/spring_carriage": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 13.5
+    },
+    "mockup/syringe_norm_ject_10ml <> mockup/tactile_switch_12mm": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 10.134035775093702
+    },
+    "mockup/syringe_norm_ject_10ml <> mockup/tp4056_epdm_retainer": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 6.2
+    },
+    "mockup/syringe_norm_ject_10ml <> mockup/tp4056_usbc_dw01": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 8.0
+    },
+    "mockup/syringe_norm_ject_10ml <> mockup/xiao_epdm_retainer": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 7.825436261295177
+    },
+    "mockup/syringe_norm_ject_10ml <> printed/barrel_bridge": {
+      "allowed_contact": null,
+      "intersection_mm3": 2711.83859419405,
+      "minimum_gap_mm": 0.0
+    },
+    "mockup/syringe_norm_ject_10ml <> printed/baseplate": {
+      "allowed_contact": null,
+      "intersection_mm3": 365.3775432890953,
+      "minimum_gap_mm": 0.0
+    },
+    "mockup/syringe_norm_ject_10ml <> printed/cocking_lever": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 0.3999999999999986
+    },
+    "mockup/syringe_norm_ject_10ml <> printed/palm_switch_pod": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 8.85
+    },
+    "mockup/syringe_norm_ject_10ml <> printed/servo_sear": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 0.0
+    },
+    "mockup/syringe_norm_ject_10ml <> printed/spring_carriage": {
+      "allowed_contact": "plunger push face",
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 0.0
+    },
+    "mockup/tactile_switch_12mm <> mockup/tp4056_epdm_retainer": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 42.1909942997318
+    },
+    "mockup/tactile_switch_12mm <> mockup/tp4056_usbc_dw01": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 42.449263833428255
+    },
+    "mockup/tactile_switch_12mm <> mockup/xiao_epdm_retainer": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 25.440322325002096
+    },
+    "mockup/tactile_switch_12mm <> printed/barrel_bridge": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 11.5
+    },
+    "mockup/tactile_switch_12mm <> printed/baseplate": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 22.629405648403583
+    },
+    "mockup/tactile_switch_12mm <> printed/cocking_lever": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 74.93398795922265
+    },
+    "mockup/tactile_switch_12mm <> printed/palm_switch_pod": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 0.40000000000000036
+    },
+    "mockup/tactile_switch_12mm <> printed/servo_sear": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 72.6907146752596
+    },
+    "mockup/tactile_switch_12mm <> printed/spring_carriage": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 70.03006497212465
+    },
+    "mockup/tp4056_epdm_retainer <> mockup/tp4056_usbc_dw01": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 1.4317821063276335
+    },
+    "mockup/tp4056_epdm_retainer <> mockup/xiao_epdm_retainer": {
+      "allowed_contact": null,
+      "intersection_mm3": 1.6000000000000014,
+      "minimum_gap_mm": 0.0
+    },
+    "mockup/tp4056_epdm_retainer <> printed/barrel_bridge": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 3.8000000000000114
+    },
+    "mockup/tp4056_epdm_retainer <> printed/baseplate": {
+      "allowed_contact": null,
+      "intersection_mm3": 2.8814332343683056,
+      "minimum_gap_mm": 0.0
+    },
+    "mockup/tp4056_epdm_retainer <> printed/cocking_lever": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 24.865130874053982
+    },
+    "mockup/tp4056_epdm_retainer <> printed/palm_switch_pod": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 34.6255685873893
+    },
+    "mockup/tp4056_epdm_retainer <> printed/servo_sear": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 6.100000000000001
+    },
+    "mockup/tp4056_epdm_retainer <> printed/spring_carriage": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 9.436630754670865
+    },
+    "mockup/tp4056_usbc_dw01 <> mockup/xiao_epdm_retainer": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 0.9000000000000004
+    },
+    "mockup/tp4056_usbc_dw01 <> printed/barrel_bridge": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 5.5
+    },
+    "mockup/tp4056_usbc_dw01 <> printed/baseplate": {
+      "allowed_contact": null,
+      "intersection_mm3": 68.0,
+      "minimum_gap_mm": 0.0
+    },
+    "mockup/tp4056_usbc_dw01 <> printed/cocking_lever": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 27.564401234685974
+    },
+    "mockup/tp4056_usbc_dw01 <> printed/palm_switch_pod": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 34.53708152117083
+    },
+    "mockup/tp4056_usbc_dw01 <> printed/servo_sear": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 8.729833904490967
+    },
+    "mockup/tp4056_usbc_dw01 <> printed/spring_carriage": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 12.0
+    },
+    "mockup/xiao_epdm_retainer <> printed/barrel_bridge": {
+      "allowed_contact": null,
+      "intersection_mm3": 30.869999999999948,
+      "minimum_gap_mm": 0.0
+    },
+    "mockup/xiao_epdm_retainer <> printed/baseplate": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.9600000000000253,
+      "minimum_gap_mm": 0.0
+    },
+    "mockup/xiao_epdm_retainer <> printed/cocking_lever": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 35.670447390843606
+    },
+    "mockup/xiao_epdm_retainer <> printed/palm_switch_pod": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 18.95098942008042
+    },
+    "mockup/xiao_epdm_retainer <> printed/servo_sear": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 27.894981627525762
+    },
+    "mockup/xiao_epdm_retainer <> printed/spring_carriage": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 28.02641611051973
+    },
+    "printed/barrel_bridge <> printed/baseplate": {
+      "allowed_contact": "M3-clamped bridge boss faces",
+      "intersection_mm3": 2.304000000000003,
+      "minimum_gap_mm": 0.0
+    },
+    "printed/barrel_bridge <> printed/cocking_lever": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 34.48391178311105
+    },
+    "printed/barrel_bridge <> printed/palm_switch_pod": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 11.2
+    },
+    "printed/barrel_bridge <> printed/servo_sear": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 34.18318299983195
+    },
+    "printed/barrel_bridge <> printed/spring_carriage": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 33.5
+    },
+    "printed/baseplate <> printed/cocking_lever": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 0.3999999999999986
+    },
+    "printed/baseplate <> printed/palm_switch_pod": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 14.866068747318506
+    },
+    "printed/baseplate <> printed/servo_sear": {
+      "allowed_contact": null,
+      "intersection_mm3": 6.399999999999999,
+      "minimum_gap_mm": 0.0
+    },
+    "printed/baseplate <> printed/spring_carriage": {
+      "allowed_contact": null,
+      "intersection_mm3": 4.562192114349369,
+      "minimum_gap_mm": 0.0
+    },
+    "printed/cocking_lever <> printed/palm_switch_pod": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 66.11166515725989
+    },
+    "printed/cocking_lever <> printed/servo_sear": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 12.597837598449821
+    },
+    "printed/cocking_lever <> printed/spring_carriage": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 0.5999999999999979
+    },
+    "printed/palm_switch_pod <> printed/servo_sear": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 64.9865370673034
+    },
+    "printed/palm_switch_pod <> printed/spring_carriage": {
+      "allowed_contact": null,
+      "intersection_mm3": 0.0,
+      "minimum_gap_mm": 62.05755393181397
+    },
+    "printed/servo_sear <> printed/spring_carriage": {
+      "allowed_contact": "latched sear shoulder",
+      "intersection_mm3": 45.0,
+      "minimum_gap_mm": 0.0
+    }
+  },
+  "physics": {
+    "area_ratio": 28.09,
+    "exit_velocity_m_s": 4.10061045003273,
+    "ideal_45deg_ballistic_range_m": 1.7146534303679268,
+    "maximum_hand_cock_force_n": 12.497743856457834,
+    "orifice_diameter_mm": 3.0,
+    "plunger_area_mm2": 198.5565096885089,
+    "plunger_speed_m_s": 0.1459811480965728,
+    "plunger_stroke_mm": 10.072699218663525,
+    "shot_time_s": 0.069,
+    "shot_volume_ml": 2.0,
+    "spring_force_cocked_n": 27.495036484207237,
+    "spring_force_fired_n": 7.954000000000002,
+    "spring_release_energy_j": 0.17853374104842454
+  },
+  "printed_part_count": 6,
+  "printed_parts": {
+    "barrel_bridge": {
+      "downfacing_overhang_area_below_45deg_mm2": 122.8690797271317,
+      "downfacing_sample_triangle_count": 174,
+      "first_layer_footprint_mm2": 3564.841594462251,
+      "first_layer_minimum_mm2": 1500.0,
+      "is_valid": true,
+      "local_z_max_mm": 16.700000100000004,
+      "local_z_min_mm": -0.0011889018597247595,
+      "section_audit": {
+        "x": {
+          "minimum_component_area_mm2": 12.75,
+          "minimum_component_span_mm": 3.0,
+          "minimum_total_area_mm2": 96.0,
+          "samples": [
+            {
+              "components": [
+                {
+                  "area_mm2": 16.020592658730983,
+                  "min_span_mm": 3.0
+                },
+                {
+                  "area_mm2": 98.04118531746204,
+                  "min_span_mm": 3.0
+                },
+                {
+                  "area_mm2": 16.020592658730987,
+                  "min_span_mm": 3.0
+                }
+              ],
+              "plane_mm": 7.359999915999994,
+              "total_area_mm2": 130.08237063492402
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 150.0,
+                  "min_span_mm": 3.0
+                }
+              ],
+              "plane_mm": 14.719999931999997,
+              "total_area_mm2": 150.0
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 48.75,
+                  "min_span_mm": 3.0
+                },
+                {
+                  "area_mm2": 67.5,
+                  "min_span_mm": 3.0
+                },
+                {
+                  "area_mm2": 12.75,
+                  "min_span_mm": 3.0
+                }
+              ],
+              "plane_mm": 22.999999949999996,
+              "total_area_mm2": 129.0
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 48.75,
+                  "min_span_mm": 3.0
+                },
+                {
+                  "area_mm2": 67.5,
+                  "min_span_mm": 3.0
+                },
+                {
+                  "area_mm2": 12.75,
+                  "min_span_mm": 3.0
+                }
+              ],
+              "plane_mm": 32.19999996999999,
+              "total_area_mm2": 129.0
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 214.44999999999993,
+                  "min_span_mm": 16.7000001
+                }
+              ],
+              "plane_mm": 46.0,
+              "total_area_mm2": 214.44999999999993
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 96.0,
+                  "min_span_mm": 3.0
+                }
+              ],
+              "plane_mm": 59.80000003000001,
+              "total_area_mm2": 96.0
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 96.0,
+                  "min_span_mm": 3.0
+                }
+              ],
+              "plane_mm": 69.00000005,
+              "total_area_mm2": 96.0
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 361.3594919983852,
+                  "min_span_mm": 16.7
+                }
+              ],
+              "plane_mm": 77.280000068,
+              "total_area_mm2": 361.3594919983852
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 361.3594919983852,
+                  "min_span_mm": 16.7
+                }
+              ],
+              "plane_mm": 84.64000008400001,
+              "total_area_mm2": 361.3594919983852
+            }
+          ]
+        },
+        "y": {
+          "minimum_component_area_mm2": 16.88441097734486,
+          "minimum_component_span_mm": 3.0,
+          "minimum_total_area_mm2": 129.76882195468966,
+          "samples": [
+            {
+              "components": [
+                {
+                  "area_mm2": 281.99999999999994,
+                  "min_span_mm": 3.5
+                }
+              ],
+              "plane_mm": -21.000000084000007,
+              "total_area_mm2": 281.99999999999994
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 16.88441097734486,
+                  "min_span_mm": 3.0
+                },
+                {
+                  "area_mm2": 421.2844109773447,
+                  "min_span_mm": 16.7
+                }
+              ],
+              "plane_mm": -17.000000068000006,
+              "total_area_mm2": 438.1688219546896
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 293.5072394036855,
+                  "min_span_mm": 3.9879879028214424
+                },
+                {
+                  "area_mm2": 48.353619701842774,
+                  "min_span_mm": 6.0
+                },
+                {
+                  "area_mm2": 48.35361970184278,
+                  "min_span_mm": 6.0
+                }
+              ],
+              "plane_mm": -12.500000050000004,
+              "total_area_mm2": 390.21447880737105
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 446.39999999999986,
+                  "min_span_mm": 16.7
+                }
+              ],
+              "plane_mm": -7.5000000300000025,
+              "total_area_mm2": 446.39999999999986
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 377.37305335333787,
+                  "min_span_mm": 16.7
+                },
+                {
+                  "area_mm2": 48.03652667666894,
+                  "min_span_mm": 6.0
+                },
+                {
+                  "area_mm2": 48.03652667666894,
+                  "min_span_mm": 6.0
+                }
+              ],
+              "plane_mm": 0.0,
+              "total_area_mm2": 473.4461067066758
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 49.5,
+                  "min_span_mm": 3.0
+                },
+                {
+                  "area_mm2": 145.5,
+                  "min_span_mm": 3.0
+                }
+              ],
+              "plane_mm": 7.5000000300000025,
+              "total_area_mm2": 195.0
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 138.0,
+                  "min_span_mm": 3.0
+                }
+              ],
+              "plane_mm": 12.500000050000004,
+              "total_area_mm2": 138.0
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 16.88441097734486,
+                  "min_span_mm": 3.0
+                },
+                {
+                  "area_mm2": 112.8844109773448,
+                  "min_span_mm": 3.0
+                }
+              ],
+              "plane_mm": 17.000000068000006,
+              "total_area_mm2": 129.76882195468966
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 138.0,
+                  "min_span_mm": 3.0
+                }
+              ],
+              "plane_mm": 21.000000084000007,
+              "total_area_mm2": 138.0
+            }
+          ]
+        },
+        "z": {
+          "minimum_component_area_mm2": 5.999999999999999,
+          "minimum_component_span_mm": 1.676483696753273,
+          "minimum_total_area_mm2": 193.19600936321942,
+          "samples": [
+            {
+              "components": [
+                {
+                  "area_mm2": 3564.84159446225,
+                  "min_span_mm": 50.0
+                }
+              ],
+              "plane_mm": 1.3349062182890534,
+              "total_area_mm2": 3564.84159446225
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 3564.841594462251,
+                  "min_span_mm": 50.0
+                }
+              ],
+              "plane_mm": 2.671001338437832,
+              "total_area_mm2": 3564.841594462251
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 21.0,
+                  "min_span_mm": 3.0
+                },
+                {
+                  "area_mm2": 21.0,
+                  "min_span_mm": 3.0000000000000004
+                },
+                {
+                  "area_mm2": 17.451532552009656,
+                  "min_span_mm": 3.1817630088530438
+                },
+                {
+                  "area_mm2": 29.45153255200966,
+                  "min_span_mm": 5.181763008853045
+                },
+                {
+                  "area_mm2": 58.9030651040193,
+                  "min_span_mm": 6.0
+                },
+                {
+                  "area_mm2": 29.45153255200966,
+                  "min_span_mm": 5.181763008853045
+                },
+                {
+                  "area_mm2": 58.9030651040193,
+                  "min_span_mm": 6.0
+                },
+                {
+                  "area_mm2": 17.451532552009656,
+                  "min_span_mm": 3.1817630088530438
+                }
+              ],
+              "plane_mm": 4.174108348605207,
+              "total_area_mm2": 253.61226041607722
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 21.0,
+                  "min_span_mm": 3.0
+                },
+                {
+                  "area_mm2": 21.0,
+                  "min_span_mm": 3.0000000000000004
+                },
+                {
+                  "area_mm2": 9.899501170402424,
+                  "min_span_mm": 1.676483696753273
+                },
+                {
+                  "area_mm2": 21.89950117040244,
+                  "min_span_mm": 3.676483696753273
+                },
+                {
+                  "area_mm2": 43.79900234080485,
+                  "min_span_mm": 6.0
+                },
+                {
+                  "area_mm2": 21.89950117040244,
+                  "min_span_mm": 3.676483696753273
+                },
+                {
+                  "area_mm2": 43.79900234080485,
+                  "min_span_mm": 6.0
+                },
+                {
+                  "area_mm2": 9.899501170402424,
+                  "min_span_mm": 1.676483696753273
+                }
+              ],
+              "plane_mm": 5.84422724879118,
+              "total_area_mm2": 193.19600936321942
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 21.0,
+                  "min_span_mm": 3.0
+                },
+                {
+                  "area_mm2": 21.0,
+                  "min_span_mm": 3.0000000000000004
+                },
+                {
+                  "area_mm2": 16.612156272126164,
+                  "min_span_mm": 2.9960152935764253
+                },
+                {
+                  "area_mm2": 28.61215627212617,
+                  "min_span_mm": 4.996015293576425
+                },
+                {
+                  "area_mm2": 57.22431254425234,
+                  "min_span_mm": 6.0
+                },
+                {
+                  "area_mm2": 28.61215627212617,
+                  "min_span_mm": 4.996015293576425
+                },
+                {
+                  "area_mm2": 57.22431254425234,
+                  "min_span_mm": 6.0
+                },
+                {
+                  "area_mm2": 16.612156272126164,
+                  "min_span_mm": 2.9960152935764253
+                }
+              ],
+              "plane_mm": 8.349405599070138,
+              "total_area_mm2": 246.89725017700937
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 21.0,
+                  "min_span_mm": 3.0
+                },
+                {
+                  "area_mm2": 21.0,
+                  "min_span_mm": 3.0000000000000004
+                },
+                {
+                  "area_mm2": 132.0,
+                  "min_span_mm": 6.0
+                },
+                {
+                  "area_mm2": 132.0,
+                  "min_span_mm": 6.0
+                }
+              ],
+              "plane_mm": 10.854583949349099,
+              "total_area_mm2": 306.0
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 15.610697416737501,
+                  "min_span_mm": 3.0000002000000023
+                },
+                {
+                  "area_mm2": 15.610697416737501,
+                  "min_span_mm": 3.0000002000000006
+                },
+                {
+                  "area_mm2": 132.0,
+                  "min_span_mm": 6.0
+                },
+                {
+                  "area_mm2": 132.0,
+                  "min_span_mm": 6.0
+                }
+              ],
+              "plane_mm": 12.52470284953507,
+              "total_area_mm2": 295.221394833475
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 5.999999999999999,
+                  "min_span_mm": 2.0
+                },
+                {
+                  "area_mm2": 6.0,
+                  "min_span_mm": 2.0
+                },
+                {
+                  "area_mm2": 6.0,
+                  "min_span_mm": 2.0
+                },
+                {
+                  "area_mm2": 5.999999999999999,
+                  "min_span_mm": 2.0
+                },
+                {
+                  "area_mm2": 132.0,
+                  "min_span_mm": 6.0
+                },
+                {
+                  "area_mm2": 132.0,
+                  "min_span_mm": 6.0
+                }
+              ],
+              "plane_mm": 14.027809859702446,
+              "total_area_mm2": 288.0
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 21.0,
+                  "min_span_mm": 3.0
+                },
+                {
+                  "area_mm2": 21.0,
+                  "min_span_mm": 3.0000000000000004
+                },
+                {
+                  "area_mm2": 132.0,
+                  "min_span_mm": 6.0
+                },
+                {
+                  "area_mm2": 132.0,
+                  "min_span_mm": 6.0
+                }
+              ],
+              "plane_mm": 15.363904979851224,
+              "total_area_mm2": 306.0
+            }
+          ]
+        }
+      },
+      "solid_count": 1,
+      "volume_mm3": 14539.088687367379
+    },
+    "baseplate": {
+      "downfacing_overhang_area_below_45deg_mm2": 216.91158405505126,
+      "downfacing_sample_triangle_count": 284,
+      "first_layer_footprint_mm2": 6271.124999999999,
+      "first_layer_minimum_mm2": 1200.0,
+      "is_valid": true,
+      "local_z_max_mm": 19.800000100000002,
+      "local_z_min_mm": -1.0000007848201035e-07,
+      "section_audit": {
+        "x": {
+          "minimum_component_area_mm2": 1.1999999999999988,
+          "minimum_component_span_mm": 1.0,
+          "minimum_total_area_mm2": 148.39999999999998,
+          "samples": [
+            {
+              "components": [
+                {
+                  "area_mm2": 14.7,
+                  "min_span_mm": 2.8
+                },
+                {
+                  "area_mm2": 14.7,
+                  "min_span_mm": 2.8
+                },
+                {
+                  "area_mm2": 118.99999999999999,
+                  "min_span_mm": 2.8
+                }
+              ],
+              "plane_mm": 9.487999915999982,
+              "total_area_mm2": 148.39999999999998
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 14.699999999999998,
+                  "min_span_mm": 2.8
+                },
+                {
+                  "area_mm2": 14.7,
+                  "min_span_mm": 2.8
+                },
+                {
+                  "area_mm2": 118.99999999999999,
+                  "min_span_mm": 2.8
+                }
+              ],
+              "plane_mm": 18.975999931999983,
+              "total_area_mm2": 148.39999999999998
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 14.699999999999996,
+                  "min_span_mm": 2.8
+                },
+                {
+                  "area_mm2": 14.7,
+                  "min_span_mm": 2.8
+                },
+                {
+                  "area_mm2": 118.99999999999999,
+                  "min_span_mm": 2.8
+                }
+              ],
+              "plane_mm": 29.649999949999984,
+              "total_area_mm2": 148.39999999999998
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 22.400000000000002,
+                  "min_span_mm": 2.8
+                },
+                {
+                  "area_mm2": 108.5464464599551,
+                  "min_span_mm": 10.8
+                },
+                {
+                  "area_mm2": 66.72,
+                  "min_span_mm": 16.5
+                },
+                {
+                  "area_mm2": 18.897830165911714,
+                  "min_span_mm": 2.6920272465460098
+                },
+                {
+                  "area_mm2": 21.92,
+                  "min_span_mm": 1.6000000000000023
+                }
+              ],
+              "plane_mm": 41.50999996999998,
+              "total_area_mm2": 238.4842766258668
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 22.400000000000002,
+                  "min_span_mm": 2.8
+                },
+                {
+                  "area_mm2": 89.60000000000011,
+                  "min_span_mm": 7.8
+                },
+                {
+                  "area_mm2": 66.72,
+                  "min_span_mm": 16.5
+                },
+                {
+                  "area_mm2": 21.92,
+                  "min_span_mm": 1.6000000000000023
+                }
+              ],
+              "plane_mm": 59.29999999999999,
+              "total_area_mm2": 200.6400000000001
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 14.699999999999998,
+                  "min_span_mm": 2.8
+                },
+                {
+                  "area_mm2": 14.699999999999998,
+                  "min_span_mm": 2.8
+                },
+                {
+                  "area_mm2": 48.3,
+                  "min_span_mm": 2.8
+                },
+                {
+                  "area_mm2": 66.72000000000001,
+                  "min_span_mm": 16.5
+                },
+                {
+                  "area_mm2": 21.919999999999998,
+                  "min_span_mm": 1.6000000000000023
+                }
+              ],
+              "plane_mm": 77.09000003,
+              "total_area_mm2": 166.34
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 14.699999999999998,
+                  "min_span_mm": 2.8
+                },
+                {
+                  "area_mm2": 14.699999999999998,
+                  "min_span_mm": 2.8
+                },
+                {
+                  "area_mm2": 48.3,
+                  "min_span_mm": 2.8
+                },
+                {
+                  "area_mm2": 136.46498021,
+                  "min_span_mm": 19.5000001
+                }
+              ],
+              "plane_mm": 88.95000005,
+              "total_area_mm2": 214.16498020999998
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 14.7,
+                  "min_span_mm": 2.8
+                },
+                {
+                  "area_mm2": 20.7,
+                  "min_span_mm": 5.25
+                },
+                {
+                  "area_mm2": 124.99999999999999,
+                  "min_span_mm": 7.8
+                },
+                {
+                  "area_mm2": 1.1999999999999997,
+                  "min_span_mm": 1.0
+                },
+                {
+                  "area_mm2": 1.1999999999999988,
+                  "min_span_mm": 1.0
+                }
+              ],
+              "plane_mm": 99.624000068,
+              "total_area_mm2": 162.79999999999998
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 225.36011699819747,
+                  "min_span_mm": 6.2
+                }
+              ],
+              "plane_mm": 109.112000084,
+              "total_area_mm2": 225.36011699819747
+            }
+          ]
+        },
+        "y": {
+          "minimum_component_area_mm2": 33.99999999999999,
+          "minimum_component_span_mm": 2.0,
+          "minimum_total_area_mm2": 344.4,
+          "samples": [
+            {
+              "components": [
+                {
+                  "area_mm2": 458.1986955338076,
+                  "min_span_mm": 19.8
+                }
+              ],
+              "plane_mm": -25.200000084000017,
+              "total_area_mm2": 458.1986955338076
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 739.1155045641899,
+                  "min_span_mm": 19.8
+                }
+              ],
+              "plane_mm": -20.400000068000015,
+              "total_area_mm2": 739.1155045641899
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 417.22929165783256,
+                  "min_span_mm": 17.8
+                }
+              ],
+              "plane_mm": -15.000000050000011,
+              "total_area_mm2": 417.22929165783256
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 381.89999999999986,
+                  "min_span_mm": 17.8
+                }
+              ],
+              "plane_mm": -9.00000003000001,
+              "total_area_mm2": 381.89999999999986
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 159.3349402535375,
+                  "min_span_mm": 10.8
+                },
+                {
+                  "area_mm2": 61.599999999999994,
+                  "min_span_mm": 2.8
+                },
+                {
+                  "area_mm2": 116.9,
+                  "min_span_mm": 7.0
+                },
+                {
+                  "area_mm2": 33.99999999999999,
+                  "min_span_mm": 2.0
+                },
+                {
+                  "area_mm2": 45.93494025353738,
+                  "min_span_mm": 5.910795208768434
+                }
+              ],
+              "plane_mm": 0.0,
+              "total_area_mm2": 417.76988050707484
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 397.01994415803256,
+                  "min_span_mm": 15.600000000000001
+                }
+              ],
+              "plane_mm": 9.00000003000001,
+              "total_area_mm2": 397.01994415803256
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 379.72929165783273,
+                  "min_span_mm": 7.8
+                }
+              ],
+              "plane_mm": 15.000000050000011,
+              "total_area_mm2": 379.72929165783273
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 380.04801350400015,
+                  "min_span_mm": 7.8
+                }
+              ],
+              "plane_mm": 20.40000006800001,
+              "total_area_mm2": 380.04801350400015
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 344.4,
+                  "min_span_mm": 7.8
+                }
+              ],
+              "plane_mm": 25.200000084000024,
+              "total_area_mm2": 344.4
+            }
+          ]
+        },
+        "z": {
+          "minimum_component_area_mm2": 1.4400000000000024,
+          "minimum_component_span_mm": 1.1999999999999993,
+          "minimum_total_area_mm2": 124.53804846631881,
+          "samples": [
+            {
+              "components": [
+                {
+                  "area_mm2": 6271.125,
+                  "min_span_mm": 60.0
+                }
+              ],
+              "plane_mm": 1.583999915999928,
+              "total_area_mm2": 6271.125
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 243.6608978244469,
+                  "min_span_mm": 31.5
+                },
+                {
+                  "area_mm2": 1.440000000000003,
+                  "min_span_mm": 1.2000000000000002
+                },
+                {
+                  "area_mm2": 1.4400000000000026,
+                  "min_span_mm": 1.1999999999999993
+                },
+                {
+                  "area_mm2": 555.6251545673241,
+                  "min_span_mm": 31.5
+                },
+                {
+                  "area_mm2": 3.999999999999999,
+                  "min_span_mm": 2.0
+                },
+                {
+                  "area_mm2": 3.999999999999999,
+                  "min_span_mm": 2.0
+                },
+                {
+                  "area_mm2": 95.0017618445553,
+                  "min_span_mm": 12.0
+                },
+                {
+                  "area_mm2": 95.0017618445553,
+                  "min_span_mm": 12.0
+                },
+                {
+                  "area_mm2": 1.4400000000000026,
+                  "min_span_mm": 1.1999999999999993
+                },
+                {
+                  "area_mm2": 1.4400000000000028,
+                  "min_span_mm": 1.2000000000000002
+                },
+                {
+                  "area_mm2": 1.440000000000003,
+                  "min_span_mm": 1.2000000000000002
+                },
+                {
+                  "area_mm2": 1.4400000000000026,
+                  "min_span_mm": 1.1999999999999993
+                },
+                {
+                  "area_mm2": 1.4400000000000026,
+                  "min_span_mm": 1.1999999999999993
+                }
+              ],
+              "plane_mm": 3.1679999319999346,
+              "total_area_mm2": 1007.3695760808816
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 243.66089782444666,
+                  "min_span_mm": 31.5
+                },
+                {
+                  "area_mm2": 1.4400000000000026,
+                  "min_span_mm": 1.2000000000000002
+                },
+                {
+                  "area_mm2": 1.4400000000000026,
+                  "min_span_mm": 1.1999999999999993
+                },
+                {
+                  "area_mm2": 315.625154567324,
+                  "min_span_mm": 31.5
+                },
+                {
+                  "area_mm2": 3.999999999999999,
+                  "min_span_mm": 2.0
+                },
+                {
+                  "area_mm2": 3.999999999999999,
+                  "min_span_mm": 2.0
+                },
+                {
+                  "area_mm2": 95.00176184455532,
+                  "min_span_mm": 12.0
+                },
+                {
+                  "area_mm2": 95.00176184455532,
+                  "min_span_mm": 12.0
+                },
+                {
+                  "area_mm2": 1.4400000000000026,
+                  "min_span_mm": 1.1999999999999993
+                },
+                {
+                  "area_mm2": 1.4400000000000028,
+                  "min_span_mm": 1.2000000000000002
+                },
+                {
+                  "area_mm2": 1.4400000000000026,
+                  "min_span_mm": 1.2000000000000002
+                },
+                {
+                  "area_mm2": 1.4400000000000026,
+                  "min_span_mm": 1.1999999999999993
+                },
+                {
+                  "area_mm2": 1.4400000000000024,
+                  "min_span_mm": 1.1999999999999993
+                }
+              ],
+              "plane_mm": 4.949999949999942,
+              "total_area_mm2": 767.3695760808813
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 243.6608978244469,
+                  "min_span_mm": 31.5
+                },
+                {
+                  "area_mm2": 1.440000000000003,
+                  "min_span_mm": 1.2000000000000002
+                },
+                {
+                  "area_mm2": 1.4400000000000026,
+                  "min_span_mm": 1.1999999999999993
+                },
+                {
+                  "area_mm2": 315.625154567324,
+                  "min_span_mm": 31.5
+                },
+                {
+                  "area_mm2": 3.999999999999999,
+                  "min_span_mm": 2.0
+                },
+                {
+                  "area_mm2": 3.999999999999999,
+                  "min_span_mm": 2.0
+                },
+                {
+                  "area_mm2": 1.4400000000000026,
+                  "min_span_mm": 1.1999999999999993
+                },
+                {
+                  "area_mm2": 1.4400000000000028,
+                  "min_span_mm": 1.2000000000000002
+                },
+                {
+                  "area_mm2": 1.440000000000003,
+                  "min_span_mm": 1.2000000000000002
+                },
+                {
+                  "area_mm2": 1.4400000000000026,
+                  "min_span_mm": 1.1999999999999993
+                },
+                {
+                  "area_mm2": 1.4400000000000026,
+                  "min_span_mm": 1.1999999999999993
+                }
+              ],
+              "plane_mm": 6.929999969999949,
+              "total_area_mm2": 577.366052391771
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 311.9688116005422,
+                  "min_span_mm": 31.5
+                },
+                {
+                  "area_mm2": 29.405307237600464,
+                  "min_span_mm": 7.0
+                },
+                {
+                  "area_mm2": 74.74145471601577,
+                  "min_span_mm": 11.0
+                },
+                {
+                  "area_mm2": 1.4400000000000028,
+                  "min_span_mm": 1.1999999999999993
+                },
+                {
+                  "area_mm2": 1.4400000000000028,
+                  "min_span_mm": 1.2000000000000002
+                },
+                {
+                  "area_mm2": 1.4400000000000026,
+                  "min_span_mm": 1.1999999999999993
+                },
+                {
+                  "area_mm2": 1.440000000000003,
+                  "min_span_mm": 1.2000000000000002
+                },
+                {
+                  "area_mm2": 1.4400000000000026,
+                  "min_span_mm": 1.1999999999999993
+                },
+                {
+                  "area_mm2": 1.440000000000003,
+                  "min_span_mm": 1.2000000000000002
+                },
+                {
+                  "area_mm2": 1.4400000000000026,
+                  "min_span_mm": 1.1999999999999993
+                }
+              ],
+              "plane_mm": 9.899999999999961,
+              "total_area_mm2": 426.19557355415844
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 311.9688116005421,
+                  "min_span_mm": 31.5
+                },
+                {
+                  "area_mm2": 54.53804846631883,
+                  "min_span_mm": 9.0
+                }
+              ],
+              "plane_mm": 12.870000029999973,
+              "total_area_mm2": 366.5068600668609
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 311.9688116005421,
+                  "min_span_mm": 31.5
+                },
+                {
+                  "area_mm2": 54.538048466318834,
+                  "min_span_mm": 9.0
+                }
+              ],
+              "plane_mm": 14.85000004999998,
+              "total_area_mm2": 366.50686006686095
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 21.0,
+                  "min_span_mm": 3.0000000000000004
+                },
+                {
+                  "area_mm2": 14.0,
+                  "min_span_mm": 2.0
+                },
+                {
+                  "area_mm2": 108.53605066293788,
+                  "min_span_mm": 9.472699218663521
+                },
+                {
+                  "area_mm2": 21.0,
+                  "min_span_mm": 3.0
+                },
+                {
+                  "area_mm2": 14.0,
+                  "min_span_mm": 2.0
+                }
+              ],
+              "plane_mm": 16.63200006799999,
+              "total_area_mm2": 178.5360506629379
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 21.0,
+                  "min_span_mm": 3.0000000000000004
+                },
+                {
+                  "area_mm2": 14.0,
+                  "min_span_mm": 2.0
+                },
+                {
+                  "area_mm2": 54.53804846631881,
+                  "min_span_mm": 9.0
+                },
+                {
+                  "area_mm2": 21.0,
+                  "min_span_mm": 3.0
+                },
+                {
+                  "area_mm2": 14.0,
+                  "min_span_mm": 2.0
+                }
+              ],
+              "plane_mm": 18.216000083999997,
+              "total_area_mm2": 124.53804846631881
+            }
+          ]
+        }
+      },
+      "solid_count": 8,
+      "volume_mm3": 24959.81542619784
+    },
+    "cocking_lever": {
+      "downfacing_overhang_area_below_45deg_mm2": 0.0,
+      "downfacing_sample_triangle_count": 0,
+      "first_layer_footprint_mm2": 395.57964775166636,
+      "first_layer_minimum_mm2": 200.0,
+      "is_valid": true,
+      "local_z_max_mm": 3.0013287609020463,
+      "local_z_min_mm": -0.0013287609020462077,
+      "section_audit": {
+        "x": {
+          "minimum_component_area_mm2": 6.596492037786504,
+          "minimum_component_span_mm": 2.2437610863552733,
+          "minimum_total_area_mm2": 13.192984075573012,
+          "samples": [
+            {
+              "components": [
+                {
+                  "area_mm2": 36.0,
+                  "min_span_mm": 3.0
+                }
+              ],
+              "plane_mm": -5.400000084000011,
+              "total_area_mm2": 36.0
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 35.88363902277616,
+                  "min_span_mm": 3.0
+                }
+              ],
+              "plane_mm": -1.8000000680000081,
+              "total_area_mm2": 35.88363902277616
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 36.0,
+                  "min_span_mm": 3.0
+                }
+              ],
+              "plane_mm": 2.249999949999994,
+              "total_area_mm2": 36.0
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 24.0,
+                  "min_span_mm": 3.0
+                }
+              ],
+              "plane_mm": 6.749999969999996,
+              "total_area_mm2": 24.0
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 24.0,
+                  "min_span_mm": 3.0
+                }
+              ],
+              "plane_mm": 13.500000000000002,
+              "total_area_mm2": 24.0
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 24.0,
+                  "min_span_mm": 3.0
+                }
+              ],
+              "plane_mm": 20.25000003000001,
+              "total_area_mm2": 24.0
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 24.0,
+                  "min_span_mm": 3.0
+                }
+              ],
+              "plane_mm": 24.750000050000004,
+              "total_area_mm2": 24.0
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 24.0,
+                  "min_span_mm": 3.0
+                }
+              ],
+              "plane_mm": 28.80000006800001,
+              "total_area_mm2": 24.0
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 6.596492037786507,
+                  "min_span_mm": 2.2437610863552733
+                },
+                {
+                  "area_mm2": 6.596492037786504,
+                  "min_span_mm": 2.2437610863552733
+                }
+              ],
+              "plane_mm": 32.40000008400001,
+              "total_area_mm2": 13.192984075573012
+            }
+          ]
+        },
+        "y": {
+          "minimum_component_area_mm2": 3.304114515805676,
+          "minimum_component_span_mm": 1.1041163010353188,
+          "minimum_total_area_mm2": 42.0,
+          "samples": [
+            {
+              "components": [
+                {
+                  "area_mm2": 42.0,
+                  "min_span_mm": 3.0
+                }
+              ],
+              "plane_mm": -5.040000084000012,
+              "total_area_mm2": 42.0
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 58.739974703996225,
+                  "min_span_mm": 3.000000200000007
+                }
+              ],
+              "plane_mm": -4.08000006800001,
+              "total_area_mm2": 58.739974703996225
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 135.0,
+                  "min_span_mm": 3.0
+                }
+              ],
+              "plane_mm": -3.0000000500000072,
+              "total_area_mm2": 135.0
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 131.61462559439838,
+                  "min_span_mm": 3.0
+                }
+              ],
+              "plane_mm": -1.800000030000005,
+              "total_area_mm2": 131.61462559439838
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 88.20871383821485,
+                  "min_span_mm": 3.0
+                },
+                {
+                  "area_mm2": 21.90459932240917,
+                  "min_span_mm": 3.0
+                },
+                {
+                  "area_mm2": 3.304114515805676,
+                  "min_span_mm": 1.1041163010353188
+                }
+              ],
+              "plane_mm": 0.0,
+              "total_area_mm2": 113.4174276764297
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 131.6146255943985,
+                  "min_span_mm": 3.0
+                }
+              ],
+              "plane_mm": 1.800000030000005,
+              "total_area_mm2": 131.6146255943985
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 135.0,
+                  "min_span_mm": 3.0
+                }
+              ],
+              "plane_mm": 3.000000050000007,
+              "total_area_mm2": 135.0
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 58.73997470399625,
+                  "min_span_mm": 3.000000200000007
+                }
+              ],
+              "plane_mm": 4.08000006800001,
+              "total_area_mm2": 58.73997470399625
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 42.0,
+                  "min_span_mm": 3.0
+                }
+              ],
+              "plane_mm": 5.040000084000012,
+              "total_area_mm2": 42.0
+            }
+          ]
+        },
+        "z": {
+          "minimum_component_area_mm2": 395.57964775166636,
+          "minimum_component_span_mm": 12.0,
+          "minimum_total_area_mm2": 395.57964775166636,
+          "samples": [
+            {
+              "components": [
+                {
+                  "area_mm2": 395.5796477516664,
+                  "min_span_mm": 12.0
+                }
+              ],
+              "plane_mm": 0.2388838408422812,
+              "total_area_mm2": 395.5796477516664
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 395.5796477516665,
+                  "min_span_mm": 12.0
+                }
+              ],
+              "plane_mm": 0.4790964425866086,
+              "total_area_mm2": 395.5796477516665
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 395.57964775166636,
+                  "min_span_mm": 12.0
+                }
+              ],
+              "plane_mm": 0.7493356195489769,
+              "total_area_mm2": 395.57964775166636
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 395.57964775166636,
+                  "min_span_mm": 12.0
+                }
+              ],
+              "plane_mm": 1.049601371729386,
+              "total_area_mm2": 395.57964775166636
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 395.57964775166636,
+                  "min_span_mm": 12.0
+                }
+              ],
+              "plane_mm": 1.5,
+              "total_area_mm2": 395.57964775166636
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 395.57964775166636,
+                  "min_span_mm": 12.0
+                }
+              ],
+              "plane_mm": 1.950398628270614,
+              "total_area_mm2": 395.57964775166636
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 395.57964775166636,
+                  "min_span_mm": 12.0
+                }
+              ],
+              "plane_mm": 2.250664380451023,
+              "total_area_mm2": 395.57964775166636
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 395.57964775166636,
+                  "min_span_mm": 12.0
+                }
+              ],
+              "plane_mm": 2.5209035574133916,
+              "total_area_mm2": 395.57964775166636
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 395.57964775166636,
+                  "min_span_mm": 12.0
+                }
+              ],
+              "plane_mm": 2.761116159157719,
+              "total_area_mm2": 395.57964775166636
+            }
+          ]
+        }
+      },
+      "solid_count": 1,
+      "volume_mm3": 1186.738943254999
+    },
+    "palm_switch_pod": {
+      "downfacing_overhang_area_below_45deg_mm2": 0.0,
+      "downfacing_sample_triangle_count": 0,
+      "first_layer_footprint_mm2": 766.921239199482,
+      "first_layer_minimum_mm2": 300.0,
+      "is_valid": true,
+      "local_z_max_mm": 7.000000100000004,
+      "local_z_min_mm": -0.0004896066481246006,
+      "section_audit": {
+        "x": {
+          "minimum_component_area_mm2": 27.99999999999998,
+          "minimum_component_span_mm": 4.0,
+          "minimum_total_area_mm2": 55.99999999999998,
+          "samples": [
+            {
+              "components": [
+                {
+                  "area_mm2": 238.0,
+                  "min_span_mm": 7.0
+                }
+              ],
+              "plane_mm": 2.2399999160000004,
+              "total_area_mm2": 238.0
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 28.0,
+                  "min_span_mm": 4.0
+                },
+                {
+                  "area_mm2": 27.99999999999998,
+                  "min_span_mm": 4.0
+                }
+              ],
+              "plane_mm": 4.479999932,
+              "total_area_mm2": 55.99999999999998
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 28.000000000000004,
+                  "min_span_mm": 4.0
+                },
+                {
+                  "area_mm2": 27.99999999999998,
+                  "min_span_mm": 4.0
+                }
+              ],
+              "plane_mm": 6.99999995,
+              "total_area_mm2": 55.999999999999986
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 85.16687846052687,
+                  "min_span_mm": 7.0
+                },
+                {
+                  "area_mm2": 85.16687846052687,
+                  "min_span_mm": 7.0
+                }
+              ],
+              "plane_mm": 9.79999997,
+              "total_area_mm2": 170.33375692105375
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 172.99999999999997,
+                  "min_span_mm": 7.0
+                }
+              ],
+              "plane_mm": 14.000000000000002,
+              "total_area_mm2": 172.99999999999997
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 85.1668784605269,
+                  "min_span_mm": 7.0
+                },
+                {
+                  "area_mm2": 85.1668784605269,
+                  "min_span_mm": 7.0
+                }
+              ],
+              "plane_mm": 18.20000003,
+              "total_area_mm2": 170.3337569210538
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 28.0,
+                  "min_span_mm": 4.0
+                },
+                {
+                  "area_mm2": 27.999999999999986,
+                  "min_span_mm": 4.0
+                }
+              ],
+              "plane_mm": 21.00000005,
+              "total_area_mm2": 55.999999999999986
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 28.0,
+                  "min_span_mm": 4.0
+                },
+                {
+                  "area_mm2": 27.999999999999986,
+                  "min_span_mm": 4.0
+                }
+              ],
+              "plane_mm": 23.520000068,
+              "total_area_mm2": 55.999999999999986
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 238.0,
+                  "min_span_mm": 7.0
+                }
+              ],
+              "plane_mm": 25.760000084,
+              "total_area_mm2": 238.0
+            }
+          ]
+        },
+        "y": {
+          "minimum_component_area_mm2": 3.607476476907503,
+          "minimum_component_span_mm": 1.8112511343022035,
+          "minimum_total_area_mm2": 76.42990590763002,
+          "samples": [
+            {
+              "components": [
+                {
+                  "area_mm2": 196.0,
+                  "min_span_mm": 7.0
+                }
+              ],
+              "plane_mm": 2.7199999160000004,
+              "total_area_mm2": 196.0
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 28.000000000000004,
+                  "min_span_mm": 4.0
+                },
+                {
+                  "area_mm2": 91.00000000000001,
+                  "min_span_mm": 7.0
+                },
+                {
+                  "area_mm2": 28.000000000000004,
+                  "min_span_mm": 4.0
+                }
+              ],
+              "plane_mm": 5.439999932,
+              "total_area_mm2": 147.00000000000003
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 28.000000000000004,
+                  "min_span_mm": 4.0
+                },
+                {
+                  "area_mm2": 90.99999999999999,
+                  "min_span_mm": 7.0
+                },
+                {
+                  "area_mm2": 28.0,
+                  "min_span_mm": 4.0
+                }
+              ],
+              "plane_mm": 8.499999950000001,
+              "total_area_mm2": 147.0
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 28.0,
+                  "min_span_mm": 4.0
+                },
+                {
+                  "area_mm2": 28.0,
+                  "min_span_mm": 4.0
+                },
+                {
+                  "area_mm2": 25.999999999999996,
+                  "min_span_mm": 2.0
+                }
+              ],
+              "plane_mm": 11.899999970000001,
+              "total_area_mm2": 82.0
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 28.000000000000004,
+                  "min_span_mm": 4.0
+                },
+                {
+                  "area_mm2": 28.0,
+                  "min_span_mm": 4.0
+                },
+                {
+                  "area_mm2": 3.607476476907507,
+                  "min_span_mm": 1.8112511343022053
+                },
+                {
+                  "area_mm2": 13.214952953814999,
+                  "min_span_mm": 2.0
+                },
+                {
+                  "area_mm2": 3.607476476907503,
+                  "min_span_mm": 1.8112511343022035
+                }
+              ],
+              "plane_mm": 17.0,
+              "total_area_mm2": 76.42990590763002
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 28.0,
+                  "min_span_mm": 4.0
+                },
+                {
+                  "area_mm2": 28.000000000000004,
+                  "min_span_mm": 4.0
+                },
+                {
+                  "area_mm2": 25.999999999999996,
+                  "min_span_mm": 2.0
+                }
+              ],
+              "plane_mm": 22.10000003,
+              "total_area_mm2": 82.0
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 28.000000000000004,
+                  "min_span_mm": 4.0
+                },
+                {
+                  "area_mm2": 28.0,
+                  "min_span_mm": 4.0
+                },
+                {
+                  "area_mm2": 91.0,
+                  "min_span_mm": 7.0
+                }
+              ],
+              "plane_mm": 25.50000005,
+              "total_area_mm2": 147.0
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 28.000000000000004,
+                  "min_span_mm": 4.0
+                },
+                {
+                  "area_mm2": 28.0,
+                  "min_span_mm": 4.0
+                },
+                {
+                  "area_mm2": 91.0,
+                  "min_span_mm": 7.0
+                }
+              ],
+              "plane_mm": 28.560000068,
+              "total_area_mm2": 147.0
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 196.0,
+                  "min_span_mm": 7.0
+                }
+              ],
+              "plane_mm": 31.280000084,
+              "total_area_mm2": 196.0
+            }
+          ]
+        },
+        "z": {
+          "minimum_component_area_mm2": 601.0000000000005,
+          "minimum_component_span_mm": 28.0,
+          "minimum_total_area_mm2": 601.0000000000005,
+          "samples": [
+            {
+              "components": [
+                {
+                  "area_mm2": 766.921239199482,
+                  "min_span_mm": 28.0
+                }
+              ],
+              "plane_mm": 0.5595495698837257,
+              "total_area_mm2": 766.921239199482
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 766.9212391994822,
+                  "min_span_mm": 28.0
+                }
+              ],
+              "plane_mm": 1.119588746415576,
+              "total_area_mm2": 766.9212391994822
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 766.9212391994822,
+                  "min_span_mm": 28.0
+                }
+              ],
+              "plane_mm": 1.7496328200139075,
+              "total_area_mm2": 766.9212391994822
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 601.0000000000005,
+                  "min_span_mm": 28.0
+                }
+              ],
+              "plane_mm": 2.4496817906787203,
+              "total_area_mm2": 601.0000000000005
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 601.0000000000007,
+                  "min_span_mm": 28.0
+                }
+              ],
+              "plane_mm": 3.4997552466759396,
+              "total_area_mm2": 601.0000000000007
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 601.0000000000007,
+                  "min_span_mm": 28.0
+                }
+              ],
+              "plane_mm": 4.549828702673159,
+              "total_area_mm2": 601.0000000000007
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 601.0000000000005,
+                  "min_span_mm": 28.0
+                }
+              ],
+              "plane_mm": 5.249877673337972,
+              "total_area_mm2": 601.0000000000005
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 601.0000000000007,
+                  "min_span_mm": 28.0
+                }
+              ],
+              "plane_mm": 5.879921746936303,
+              "total_area_mm2": 601.0000000000007
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 601.0000000000005,
+                  "min_span_mm": 28.0
+                }
+              ],
+              "plane_mm": 6.439960923468154,
+              "total_area_mm2": 601.0000000000005
+            }
+          ]
+        }
+      },
+      "solid_count": 1,
+      "volume_mm3": 4538.842478398963
+    },
+    "servo_sear": {
+      "downfacing_overhang_area_below_45deg_mm2": 0.0,
+      "downfacing_sample_triangle_count": 0,
+      "first_layer_footprint_mm2": 103.92079723112549,
+      "first_layer_minimum_mm2": 65.0,
+      "is_valid": true,
+      "local_z_max_mm": 3.0011889018597238,
+      "local_z_min_mm": -0.0011889018597237917,
+      "section_audit": {
+        "x": {
+          "minimum_component_area_mm2": 12.0,
+          "minimum_component_span_mm": 3.0,
+          "minimum_total_area_mm2": 12.0,
+          "samples": [
+            {
+              "components": [
+                {
+                  "area_mm2": 14.999999999999995,
+                  "min_span_mm": 3.0
+                }
+              ],
+              "plane_mm": -1.6600000840000029,
+              "total_area_mm2": 14.999999999999995
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 14.999999999999996,
+                  "min_span_mm": 3.0
+                }
+              ],
+              "plane_mm": -0.8200000680000024,
+              "total_area_mm2": 14.999999999999996
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 53.999992839999706,
+                  "min_span_mm": 3.0000001999999997
+                }
+              ],
+              "plane_mm": 0.12499994999999808,
+              "total_area_mm2": 53.999992839999706
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 22.5477039389954,
+                  "min_span_mm": 3.0
+                },
+                {
+                  "area_mm2": 22.547703938995376,
+                  "min_span_mm": 3.0
+                }
+              ],
+              "plane_mm": 1.1749999699999982,
+              "total_area_mm2": 45.09540787799078
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 22.429528816529334,
+                  "min_span_mm": 3.0
+                },
+                {
+                  "area_mm2": 22.42952881652932,
+                  "min_span_mm": 3.0
+                }
+              ],
+              "plane_mm": 2.7499999999999996,
+              "total_area_mm2": 44.859057633058654
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 12.0,
+                  "min_span_mm": 3.0
+                },
+                {
+                  "area_mm2": 14.999999999999996,
+                  "min_span_mm": 3.0
+                }
+              ],
+              "plane_mm": 4.32500003,
+              "total_area_mm2": 26.999999999999996
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 12.0,
+                  "min_span_mm": 3.0
+                },
+                {
+                  "area_mm2": 14.999999999999996,
+                  "min_span_mm": 3.0
+                }
+              ],
+              "plane_mm": 5.375000050000001,
+              "total_area_mm2": 26.999999999999996
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 12.0,
+                  "min_span_mm": 3.0
+                },
+                {
+                  "area_mm2": 14.999999999999996,
+                  "min_span_mm": 3.0
+                }
+              ],
+              "plane_mm": 6.320000068000002,
+              "total_area_mm2": 26.999999999999996
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 12.0,
+                  "min_span_mm": 3.0
+                }
+              ],
+              "plane_mm": 7.1600000840000035,
+              "total_area_mm2": 12.0
+            }
+          ]
+        },
+        "y": {
+          "minimum_component_area_mm2": 0.9045993224091743,
+          "minimum_component_span_mm": 0.30460181668140285,
+          "minimum_total_area_mm2": 1.8091986448183488,
+          "samples": [
+            {
+              "components": [
+                {
+                  "area_mm2": 24.0,
+                  "min_span_mm": 3.0
+                }
+              ],
+              "plane_mm": 1.4399999159999972,
+              "total_area_mm2": 24.0
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 24.0,
+                  "min_span_mm": 3.0
+                }
+              ],
+              "plane_mm": 2.8799999319999983,
+              "total_area_mm2": 24.0
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 12.0,
+                  "min_span_mm": 3.0
+                }
+              ],
+              "plane_mm": 4.4999999499999985,
+              "total_area_mm2": 12.0
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 12.0,
+                  "min_span_mm": 3.0
+                }
+              ],
+              "plane_mm": 6.299999969999999,
+              "total_area_mm2": 12.0
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 0.9045993224091743,
+                  "min_span_mm": 0.30460181668140285
+                },
+                {
+                  "area_mm2": 0.9045993224091744,
+                  "min_span_mm": 0.30460181668140285
+                }
+              ],
+              "plane_mm": 9.000000000000002,
+              "total_area_mm2": 1.8091986448183488
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 12.0,
+                  "min_span_mm": 3.0
+                }
+              ],
+              "plane_mm": 11.700000030000004,
+              "total_area_mm2": 12.0
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 27.0,
+                  "min_span_mm": 3.0
+                }
+              ],
+              "plane_mm": 13.500000050000004,
+              "total_area_mm2": 27.0
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 27.0,
+                  "min_span_mm": 3.0
+                }
+              ],
+              "plane_mm": 15.120000068000005,
+              "total_area_mm2": 27.0
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 27.0,
+                  "min_span_mm": 3.0
+                }
+              ],
+              "plane_mm": 16.560000084000006,
+              "total_area_mm2": 27.0
+            }
+          ]
+        },
+        "z": {
+          "minimum_component_area_mm2": 103.9207972311254,
+          "minimum_component_span_mm": 10.5,
+          "minimum_total_area_mm2": 103.9207972311254,
+          "samples": [
+            {
+              "components": [
+                {
+                  "area_mm2": 103.92079723112549,
+                  "min_span_mm": 10.5
+                }
+              ],
+              "plane_mm": 0.239001322437832,
+              "total_area_mm2": 103.92079723112549
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 103.92079723112549,
+                  "min_span_mm": 10.5
+                }
+              ],
+              "plane_mm": 0.4791915467353878,
+              "total_area_mm2": 103.92079723112549
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 103.92079723112549,
+                  "min_span_mm": 10.5
+                }
+              ],
+              "plane_mm": 0.7494055490701381,
+              "total_area_mm2": 103.92079723112549
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 103.92079723112549,
+                  "min_span_mm": 10.5
+                }
+              ],
+              "plane_mm": 1.0496433294420828,
+              "total_area_mm2": 103.92079723112549
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 103.92079723112549,
+                  "min_span_mm": 10.5
+                }
+              ],
+              "plane_mm": 1.5,
+              "total_area_mm2": 103.92079723112549
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 103.9207972311254,
+                  "min_span_mm": 10.5
+                }
+              ],
+              "plane_mm": 1.9503566705579172,
+              "total_area_mm2": 103.9207972311254
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 103.92079723112549,
+                  "min_span_mm": 10.5
+                }
+              ],
+              "plane_mm": 2.250594450929862,
+              "total_area_mm2": 103.92079723112549
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 103.92079723112549,
+                  "min_span_mm": 10.5
+                }
+              ],
+              "plane_mm": 2.5208084532646122,
+              "total_area_mm2": 103.92079723112549
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 103.92079723112549,
+                  "min_span_mm": 10.5
+                }
+              ],
+              "plane_mm": 2.760998677562168,
+              "total_area_mm2": 103.92079723112549
+            }
+          ]
+        }
+      },
+      "solid_count": 1,
+      "volume_mm3": 311.7623916933765
+    },
+    "spring_carriage": {
+      "downfacing_overhang_area_below_45deg_mm2": 27.27387851340113,
+      "downfacing_sample_triangle_count": 65,
+      "first_layer_footprint_mm2": 80.0,
+      "first_layer_minimum_mm2": 70.0,
+      "is_valid": true,
+      "local_z_max_mm": 16.00116144044249,
+      "local_z_min_mm": -1.000000001334322e-07,
+      "section_audit": {
+        "x": {
+          "minimum_component_area_mm2": 3.904599322409175,
+          "minimum_component_span_mm": 1.3046018166814028,
+          "minimum_total_area_mm2": 224.11073175228807,
+          "samples": [
+            {
+              "components": [
+                {
+                  "area_mm2": 234.99999999999997,
+                  "min_span_mm": 16.0
+                }
+              ],
+              "plane_mm": 0.39999991599999857,
+              "total_area_mm2": 234.99999999999997
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 233.71063694286764,
+                  "min_span_mm": 16.0
+                }
+              ],
+              "plane_mm": 0.799999931999999,
+              "total_area_mm2": 233.71063694286764
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 222.41124121253495,
+                  "min_span_mm": 16.0
+                },
+                {
+                  "area_mm2": 5.5584310159992025,
+                  "min_span_mm": 2.000312617614889
+                }
+              ],
+              "plane_mm": 1.2499999499999992,
+              "total_area_mm2": 227.96967222853414
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 220.90603848127955,
+                  "min_span_mm": 16.0
+                },
+                {
+                  "area_mm2": 4.429528860959659,
+                  "min_span_mm": 1.5424764332951604
+                }
+              ],
+              "plane_mm": 1.7499999699999995,
+              "total_area_mm2": 225.33556734223922
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 220.2061324298789,
+                  "min_span_mm": 16.0
+                },
+                {
+                  "area_mm2": 3.904599322409175,
+                  "min_span_mm": 1.3046018166814028
+                }
+              ],
+              "plane_mm": 2.5000000000000004,
+              "total_area_mm2": 224.11073175228807
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 220.90603848127952,
+                  "min_span_mm": 16.0
+                },
+                {
+                  "area_mm2": 4.4295288609596595,
+                  "min_span_mm": 1.5424764332951604
+                }
+              ],
+              "plane_mm": 3.250000030000001,
+              "total_area_mm2": 225.3355673422392
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 222.411241212535,
+                  "min_span_mm": 16.0
+                },
+                {
+                  "area_mm2": 5.558431015999208,
+                  "min_span_mm": 2.00031261761489
+                }
+              ],
+              "plane_mm": 3.7500000500000015,
+              "total_area_mm2": 227.96967222853422
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 233.7106369428676,
+                  "min_span_mm": 16.0
+                }
+              ],
+              "plane_mm": 4.200000068000001,
+              "total_area_mm2": 233.7106369428676
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 235.0,
+                  "min_span_mm": 16.0
+                }
+              ],
+              "plane_mm": 4.600000084000002,
+              "total_area_mm2": 235.0
+            }
+          ]
+        },
+        "y": {
+          "minimum_component_area_mm2": 2.8317532957896803,
+          "minimum_component_span_mm": 1.0026773529128747,
+          "minimum_total_area_mm2": 5.663506591579363,
+          "samples": [
+            {
+              "components": [
+                {
+                  "area_mm2": 3.783644876423672,
+                  "min_span_mm": 1.3869974015663797
+                },
+                {
+                  "area_mm2": 3.7836448764236734,
+                  "min_span_mm": 1.3869974015663797
+                }
+              ],
+              "plane_mm": -2.160000084000001,
+              "total_area_mm2": 7.567289752847346
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 2.8317532957896803,
+                  "min_span_mm": 1.0026773529128747
+                },
+                {
+                  "area_mm2": 2.8317532957896825,
+                  "min_span_mm": 1.0026773529128752
+                }
+              ],
+              "plane_mm": -0.3200000680000006,
+              "total_area_mm2": 5.663506591579363
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 79.99999999999999,
+                  "min_span_mm": 5.0
+                }
+              ],
+              "plane_mm": 1.7499999499999994,
+              "total_area_mm2": 79.99999999999999
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 64.99999999999999,
+                  "min_span_mm": 5.0
+                }
+              ],
+              "plane_mm": 4.04999997,
+              "total_area_mm2": 64.99999999999999
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 64.99999999999999,
+                  "min_span_mm": 5.0
+                }
+              ],
+              "plane_mm": 7.5,
+              "total_area_mm2": 64.99999999999999
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 64.99999999999999,
+                  "min_span_mm": 5.0
+                }
+              ],
+              "plane_mm": 10.95000003,
+              "total_area_mm2": 64.99999999999999
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 64.99999999999999,
+                  "min_span_mm": 5.0
+                }
+              ],
+              "plane_mm": 13.25000005,
+              "total_area_mm2": 64.99999999999999
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 65.0,
+                  "min_span_mm": 5.0
+                }
+              ],
+              "plane_mm": 15.320000067999999,
+              "total_area_mm2": 65.0
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 15.0,
+                  "min_span_mm": 3.0
+                }
+              ],
+              "plane_mm": 17.160000084000004,
+              "total_area_mm2": 15.0
+            }
+          ]
+        },
+        "z": {
+          "minimum_component_area_mm2": 15.0,
+          "minimum_component_span_mm": 3.0,
+          "minimum_total_area_mm2": 35.9207972311255,
+          "samples": [
+            {
+              "components": [
+                {
+                  "area_mm2": 79.99999999999999,
+                  "min_span_mm": 5.0
+                }
+              ],
+              "plane_mm": 1.2800928232353994,
+              "total_area_mm2": 79.99999999999999
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 79.99999999999999,
+                  "min_span_mm": 5.0
+                }
+              ],
+              "plane_mm": 2.5601857464707987,
+              "total_area_mm2": 79.99999999999999
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 79.99999999999999,
+                  "min_span_mm": 5.0
+                }
+              ],
+              "plane_mm": 4.000290285110623,
+              "total_area_mm2": 79.99999999999999
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 79.99999999999999,
+                  "min_span_mm": 5.0
+                }
+              ],
+              "plane_mm": 5.600406439154872,
+              "total_area_mm2": 79.99999999999999
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 79.99999999999999,
+                  "min_span_mm": 5.0
+                }
+              ],
+              "plane_mm": 8.000580670221247,
+              "total_area_mm2": 79.99999999999999
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 79.99999999999999,
+                  "min_span_mm": 5.0
+                }
+              ],
+              "plane_mm": 10.400754901287621,
+              "total_area_mm2": 79.99999999999999
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 79.32161535874066,
+                  "min_span_mm": 5.0
+                }
+              ],
+              "plane_mm": 12.000871055331869,
+              "total_area_mm2": 79.32161535874066
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 20.920797231125498,
+                  "min_span_mm": 5.0
+                },
+                {
+                  "area_mm2": 15.0,
+                  "min_span_mm": 3.0
+                }
+              ],
+              "plane_mm": 13.440975593971693,
+              "total_area_mm2": 35.9207972311255
+            },
+            {
+              "components": [
+                {
+                  "area_mm2": 20.920797231125498,
+                  "min_span_mm": 5.0
+                },
+                {
+                  "area_mm2": 15.0,
+                  "min_span_mm": 3.0
+                }
+              ],
+              "plane_mm": 14.721068517207094,
+              "total_area_mm2": 35.9207972311255
+            }
+          ]
+        }
+      },
+      "solid_count": 1,
+      "volume_mm3": 1146.4150115521065
+    }
+  },
+  "stroke_sweep": [
+    {
+      "maximum_intersection_mm3": 4.562192114349369,
+      "minimum_static_gap_mm": 0.0,
+      "nearest_static_item": "printed/baseplate",
+      "travel_mm": 0.0
+    },
+    {
+      "maximum_intersection_mm3": 4.562192114349369,
+      "minimum_static_gap_mm": 0.0,
+      "nearest_static_item": "printed/baseplate",
+      "travel_mm": 0.5
+    },
+    {
+      "maximum_intersection_mm3": 4.562192114349369,
+      "minimum_static_gap_mm": 0.0,
+      "nearest_static_item": "printed/baseplate",
+      "travel_mm": 1.0
+    },
+    {
+      "maximum_intersection_mm3": 4.562192114349369,
+      "minimum_static_gap_mm": 0.0,
+      "nearest_static_item": "printed/baseplate",
+      "travel_mm": 1.5
+    },
+    {
+      "maximum_intersection_mm3": 4.562192114349369,
+      "minimum_static_gap_mm": 0.0,
+      "nearest_static_item": "printed/baseplate",
+      "travel_mm": 2.0
+    },
+    {
+      "maximum_intersection_mm3": 4.562192114349369,
+      "minimum_static_gap_mm": 0.0,
+      "nearest_static_item": "printed/baseplate",
+      "travel_mm": 2.5
+    },
+    {
+      "maximum_intersection_mm3": 4.562192114349369,
+      "minimum_static_gap_mm": 0.0,
+      "nearest_static_item": "printed/baseplate",
+      "travel_mm": 3.0
+    },
+    {
+      "maximum_intersection_mm3": 4.562192114349369,
+      "minimum_static_gap_mm": 0.0,
+      "nearest_static_item": "printed/baseplate",
+      "travel_mm": 3.5
+    },
+    {
+      "maximum_intersection_mm3": 4.562192114349369,
+      "minimum_static_gap_mm": 0.0,
+      "nearest_static_item": "printed/baseplate",
+      "travel_mm": 4.0
+    },
+    {
+      "maximum_intersection_mm3": 4.562192114349369,
+      "minimum_static_gap_mm": 0.0,
+      "nearest_static_item": "printed/baseplate",
+      "travel_mm": 4.5
+    },
+    {
+      "maximum_intersection_mm3": 4.5621921143493696,
+      "minimum_static_gap_mm": 0.0,
+      "nearest_static_item": "printed/baseplate",
+      "travel_mm": 5.0
+    },
+    {
+      "maximum_intersection_mm3": 4.5621921143493696,
+      "minimum_static_gap_mm": 0.0,
+      "nearest_static_item": "printed/baseplate",
+      "travel_mm": 5.5
+    },
+    {
+      "maximum_intersection_mm3": 4.5621921143493696,
+      "minimum_static_gap_mm": 0.0,
+      "nearest_static_item": "printed/baseplate",
+      "travel_mm": 6.0
+    },
+    {
+      "maximum_intersection_mm3": 4.562192114349369,
+      "minimum_static_gap_mm": 0.0,
+      "nearest_static_item": "printed/baseplate",
+      "travel_mm": 6.5
+    },
+    {
+      "maximum_intersection_mm3": 4.562192114349369,
+      "minimum_static_gap_mm": 0.0,
+      "nearest_static_item": "printed/baseplate",
+      "travel_mm": 7.0
+    },
+    {
+      "maximum_intersection_mm3": 4.5621921143493696,
+      "minimum_static_gap_mm": 0.0,
+      "nearest_static_item": "printed/baseplate",
+      "travel_mm": 7.5
+    },
+    {
+      "maximum_intersection_mm3": 4.562192114349661,
+      "minimum_static_gap_mm": 0.0,
+      "nearest_static_item": "printed/baseplate",
+      "travel_mm": 8.0
+    },
+    {
+      "maximum_intersection_mm3": 4.56219211434947,
+      "minimum_static_gap_mm": 0.0,
+      "nearest_static_item": "printed/baseplate",
+      "travel_mm": 8.5
+    },
+    {
+      "maximum_intersection_mm3": 4.56219211434947,
+      "minimum_static_gap_mm": 0.0,
+      "nearest_static_item": "printed/baseplate",
+      "travel_mm": 9.0
+    },
+    {
+      "maximum_intersection_mm3": 29.002192114349576,
+      "minimum_static_gap_mm": 0.0,
+      "nearest_static_item": "printed/baseplate",
+      "travel_mm": 9.5
+    },
+    {
+      "maximum_intersection_mm3": 52.8355415815257,
+      "minimum_static_gap_mm": 0.0,
+      "nearest_static_item": "printed/baseplate",
+      "travel_mm": 10.0
+    },
+    {
+      "maximum_intersection_mm3": 56.03360932411858,
+      "minimum_static_gap_mm": 0.0,
+      "nearest_static_item": "printed/baseplate",
+      "travel_mm": 10.072699218663525
+    }
+  ],
   "wrist_profile": {
-    "highest_geometry_global_z_mm": 29.5,
-    "profile_above_skin_mm": 21.72463035441596,
-    "skin_crown_global_z_mm": 7.77536964558404,
-    "wrist_x_range_mm": [
+    "highest_geometry_z_mm": 22.900000100000003,
+    "profile_above_skin_mm": 23.700000100000004,
+    "skin_plane_z_mm": -0.8,
+    "x_range_mm": [
       90.0,
       120.0
     ]
