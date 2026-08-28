@@ -297,7 +297,7 @@ def make_sear() -> cq.Shape:
     arm = _box(reach + 4.0, 5.0, SEAR_W, -(reach + 2.0), lat / 2.0, 0.0)
     # tooth face stops at the lug, it does not enter it: intended contact is a
     # touch, never an interpenetration
-    tooth = _box(3.0, 5.0, SEAR_W, -(reach + 1.0), lat, 0.0)
+    tooth = _box(3.0, 5.0, SEAR_W, -reach, lat, 0.0)
     tail = _box(SEAR_TAIL_LEN, 4.5, SEAR_W, 2.0, -3.0, 0.0)
     body = _fuse(hub, arm, tooth, tail)
     body = body.cut(_cyl_z(SEAR_W + 2.0, 1.75, 0.0, 0.0, -1.0))

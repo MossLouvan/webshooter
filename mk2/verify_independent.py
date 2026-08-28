@@ -314,7 +314,10 @@ def check_clearances(bodies: dict) -> None:
 # ------------------------------- 5. motion sweeps — everything, no exclusions
 def check_motion(bodies: dict, moving: dict, travel: float, step: float) -> None:
     print(f"\n=== 5. MOTION SWEEP (0 to {travel:.3f} mm, step {step} mm, no exclusions) ===")
-    statics = {k: v for k, v in bodies.items() if k not in moving}
+    # the sear is checked separately in 5b, through its release rotation; leaving
+    # it here would report a jam that the mechanism resolves by moving
+    statics = {k: v for k, v in bodies.items()
+               if k not in moving and k != "printed/sear"}
     worst: dict[str, tuple[float, float]] = {}
     t = 0.0
     while t <= travel + 1e-9:
@@ -337,6 +340,46 @@ def check_motion(bodies: dict, moving: dict, travel: float, step: float) -> None
 
 
 # ---------------------------------------------- 6. physics derived, not read
+def check_sear_release(bodies: dict, travel: float, step: float) -> None:
+    """The sear is modelled ENGAGED. Firing requires it to rotate clear. Rather
+    than excluding it from the sweep (which is exactly what hid Mk3's jam), find
+    the smallest release angle at which the whole carriage stroke is clear, and
+    fail if no angle under 90 deg works."""
+    sear = bodies.get("printed/sear")
+    carr = bodies.get("printed/carriage")
+    if sear is None or carr is None:
+        return
+    print("")
+    print("=== 5b. SEAR RELEASE (rotation required to clear the stroke) ===")
+    px = getattr(M, "SEAR_PIVOT_X", 0.0)
+    py = getattr(M, "SEAR_PIVOT_Y", 0.0)
+    axis = cq.Vector(0, 0, 1)
+    ok_angle = None
+    for deg in range(0, 95, 5):
+        rot = sear.moved(cq.Location(cq.Vector(-px, -py, 0)))
+        rot = rot.rotate(cq.Vector(0, 0, 0), axis, -deg)
+        rot = rot.moved(cq.Location(cq.Vector(px, py, 0)))
+        worst = 0.0
+        t2 = 0.0
+        while t2 <= travel + 1e-9:
+            v = intersect_volume(carr.moved(cq.Location(cq.Vector(t2, 0, 0))), rot)
+            worst = max(worst, v if v == v else 0.0)
+            t2 += step
+        if worst <= 0.5:
+            ok_angle = deg
+            break
+        if deg % 20 == 0:
+            print(f"  {deg:3d} deg -> worst interference {worst:8.2f} mm3")
+    if ok_angle is None:
+        fail("sear", "no release angle under 90 deg clears the carriage stroke")
+        print("  NO ANGLE CLEARS - the pawl cannot get out of its own way")
+    else:
+        print(f"  clears at {ok_angle} deg of release rotation")
+        REPORT["sear_release_deg"] = ok_angle
+        if ok_angle > 45:
+            warn("sear", f"needs {ok_angle} deg of release travel - check the servo throw")
+
+
 def check_physics() -> None:
     print("\n=== 6. PHYSICS (derived from stored energy) ===")
     E = getattr(M, "SPRING_RELEASE_ENERGY_J", None) or getattr(M, "SPRING_ENERGY_J")
@@ -430,6 +473,8 @@ def main() -> int:
     else:
         warn("motion", "no moving bodies identified; sweep skipped")
 
+    if moving:
+        check_sear_release(bodies, M.PLUNGER_STROKE, max(swp_step, 1.0))
     check_physics()
 
     print("\n" + "=" * 72)
