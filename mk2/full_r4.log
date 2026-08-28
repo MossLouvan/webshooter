@@ -1,0 +1,127 @@
+Independent verification — webshooter_mk4.py
+thresholds: wall>=0.80 ligament>=1.20 section>=2.0 first_layer>=150 island<=5.0 clearance>=0.15
+
+=== 1. PART INTEGRITY ===
+  baseplate              solids=1 shells=1 valid=True vol=  30721.7  
+  carriage               solids=1 shells=1 valid=True vol=   2772.2  
+  sear                   solids=1 shells=1 valid=True vol=   1514.1  
+  outlet_adapter         solids=1 shells=1 valid=True vol=   3414.3  
+  switch_pod             solids=1 shells=1 valid=True vol=   2175.0  
+
+=== 2. THIN FEATURES (section step 0.5 mm) ===
+  baseplate              min section    13.24 mm2   max pieces 12
+  carriage               min section    22.90 mm2   max pieces 2
+  sear                   min section     9.40 mm2   max pieces 2
+  outlet_adapter         min section    79.93 mm2   max pieces 2
+  switch_pod             min section    72.00 mm2   max pieces 3
+
+=== 3. PRINTABILITY (layer step 0.4 mm) ===
+  baseplate              first layer   4030.7 mm2 (2 pc)   worst unsupported     0.0 mm2
+  carriage               first layer    218.9 mm2 (1 pc)   worst unsupported     0.0 mm2
+  sear                   first layer    180.1 mm2 (1 pc)   worst unsupported     0.0 mm2
+  outlet_adapter         first layer    215.7 mm2 (1 pc)   worst unsupported     0.0 mm2
+  switch_pod             first layer    456.0 mm2 (1 pc)   worst unsupported     0.0 mm2
+
+=== 4. STATIC CLEARANCE (no allowlist) ===
+  clean
+
+=== 5b. SEAR RELEASE (rotation required to clear the stroke) ===
+  -- sear vs 3 static bodies through 90 deg (gate: any shared volume) --
+    0 deg  clear
+    5 deg  clear
+   10 deg  clear
+   15 deg  clear
+   20 deg  clear
+   25 deg  clear
+   30 deg  clear
+   35 deg  clear
+   40 deg  clear
+   45 deg  clear
+   50 deg  clear
+   55 deg  clear
+   60 deg  clear
+   65 deg  clear
+   70 deg  clear
+   75 deg  clear
+   80 deg  clear
+   85 deg  clear
+   90 deg  clear
+    0 deg -> worst carriage interference    56.40 mm3
+   10 deg -> worst carriage interference    35.90 mm3
+   20 deg -> worst carriage interference     7.47 mm3
+  clears at 25 deg of release rotation
+
+=== 5c. SEAR REST POSE (equilibrium measured, not assumed) ===
+  equilibrium angle  +0.000 deg  (forward rotation stopped by printed/baseplate)
+  lateral play measured in the rails    -1.450 .. +1.450 mm
+  -y limit (dy -1.450 mm)  free advance 0.0000 mm   bearing patch 24.38 mm2
+  nominal  (dy +0.000 mm)  free advance 0.0000 mm   bearing patch 24.00 mm2
+  +y limit (dy +1.450 mm)  free advance 0.0000 mm   bearing patch 24.00 mm2
+  WORST over the play band: free advance 0.0000 mm, bearing patch 24.00 mm2 (+y limit)
+
+=== 5d. COCKING STROKE (16.429 mm back to 0, step 0.25 mm) ===
+  pawl at the MEASURED equilibrium +0.000 deg; release lift for comparison 25 deg
+  mu = 0.35 (PETG on PETG), camming margin required 1.5x  ->  ramp >= 27.70 deg
+  offset   7.68 mm  overlap    2.056 mm3  lift   0.39 deg  cam  30.51 deg
+  offset   7.43 mm  overlap    8.056 mm3  lift   1.52 deg  cam  30.51 deg
+  offset   7.18 mm  overlap   14.056 mm3  lift   2.66 deg  cam  30.51 deg
+  offset   6.93 mm  overlap   20.056 mm3  lift   3.80 deg  cam  30.51 deg
+  offset   6.68 mm  overlap   26.056 mm3  lift   4.88 deg  cam  30.51 deg
+  offset   6.43 mm  overlap   31.919 mm3  lift   5.93 deg  cam  30.51 deg
+  offset   6.18 mm  overlap   37.183 mm3  lift   6.95 deg  cam  30.51 deg
+  offset   5.93 mm  overlap   41.811 mm3  lift   7.95 deg  cam  30.51 deg
+  offset   5.68 mm  overlap   45.803 mm3  lift   8.91 deg  cam  30.51 deg
+  offset   5.43 mm  overlap   49.158 mm3  lift   9.85 deg  cam  30.51 deg
+  offset   5.18 mm  overlap   51.876 mm3  lift  10.77 deg  cam  30.51 deg
+  offset   4.93 mm  overlap   53.959 mm3  lift  11.66 deg  cam  30.51 deg
+  offset   4.68 mm  overlap   55.404 mm3  lift  12.52 deg  cam  30.51 deg
+  offset   4.43 mm  overlap   56.214 mm3  lift  13.37 deg  cam  30.51 deg
+  offset   4.18 mm  overlap   56.403 mm3  lift  14.19 deg  cam  30.51 deg
+  offset   3.93 mm  overlap   56.403 mm3  lift  14.98 deg  cam  30.51 deg
+  offset   3.68 mm  overlap   56.403 mm3  lift  15.76 deg  cam  30.51 deg
+  offset   3.43 mm  overlap   56.352 mm3  lift  16.51 deg  cam  30.51 deg
+  offset   3.18 mm  overlap   55.780 mm3  lift  17.24 deg  cam  30.51 deg
+  offset   2.93 mm  overlap   54.571 mm3  lift  17.95 deg  cam  30.51 deg
+  offset   2.68 mm  overlap   52.725 mm3  lift  18.65 deg  cam  30.51 deg
+  offset   2.43 mm  overlap   50.243 mm3  lift  19.33 deg  cam  30.51 deg
+  offset   2.18 mm  overlap   47.125 mm3  lift  19.98 deg  cam  30.51 deg
+  offset   1.93 mm  overlap   43.370 mm3  lift  20.62 deg  cam  30.51 deg
+  offset   1.68 mm  overlap   38.979 mm3  lift  21.24 deg  cam  30.51 deg
+  offset   1.43 mm  overlap   33.951 mm3  lift  21.84 deg  cam  30.51 deg
+  offset   1.18 mm  overlap   28.287 mm3  lift  22.44 deg  cam  30.51 deg
+  offset   0.93 mm  overlap   22.287 mm3  lift  23.01 deg  cam  30.51 deg
+  offset   0.68 mm  overlap   16.287 mm3  lift  23.57 deg  cam  30.51 deg
+  offset   0.43 mm  overlap   10.287 mm3  lift  24.11 deg  cam  30.51 deg
+  offset   0.18 mm  overlap    4.287 mm3  lift  24.27 deg  cam  54.52 deg
+  PEAK required lift      24.27 deg at offset 0.18 mm (release lift is 25 deg)
+  MINIMUM ramp angle      30.51 deg at offset 7.68 mm
+  camming margin          1.684x (tan 30.51 deg / mu 0.35)
+
+=== 5. MOTION SWEEP (0 to 16.429 mm, step 0.25 mm, no exclusions) ===
+  (pawl posed at its certified 25 deg release angle and swept, not excluded)
+  full stroke clear
+
+=== 6. PHYSICS (derived from stored energy) ===
+  model 3.0 mm outlet    A_o= 12.57 mm2  v= 3.84 m/s  range= 1.50 m  dP=   46.0 kPa  work=0.0921 J
+  real 8 ga ID 3.429     A_o=  9.23 mm2  v= 5.22 m/s  range= 2.78 m  dP=   85.2 kPa  work=0.1705 J
+  outlet as designed     A_o= 12.57 mm2  v= 3.84 m/s  range= 1.50 m  dP=   46.0 kPa  work=0.0921 J
+  spring stores 0.2472 J   cocked 30.09 N   stroke 16.429 mm
+  shot time 41.5 ms is DERIVED from flow rate; work 0.0921 J vs stored 0.2472 J (margin 2.68x)
+
+========================================================================
+WARNINGS (10)
+  [thin] baseplate: up to 3 disjoint pieces in x-sections (a thin ligament may be the only thing joining them)
+  [thin] baseplate: up to 6 disjoint pieces in y-sections (a thin ligament may be the only thing joining them)
+  [thin] baseplate: up to 12 disjoint pieces in z-sections (a thin ligament may be the only thing joining them)
+  [thin] carriage: up to 2 disjoint pieces in z-sections (a thin ligament may be the only thing joining them)
+  [thin] sear: up to 2 disjoint pieces in x-sections (a thin ligament may be the only thing joining them)
+  [thin] sear: up to 2 disjoint pieces in y-sections (a thin ligament may be the only thing joining them)
+  [thin] outlet_adapter: up to 2 disjoint pieces in y-sections (a thin ligament may be the only thing joining them)
+  [thin] outlet_adapter: up to 2 disjoint pieces in z-sections (a thin ligament may be the only thing joining them)
+  [thin] switch_pod: up to 2 disjoint pieces in x-sections (a thin ligament may be the only thing joining them)
+  [thin] switch_pod: up to 3 disjoint pieces in z-sections (a thin ligament may be the only thing joining them)
+
+FAILURES (0)
+  none — every independent check passed
+
+wrote full_r4.json

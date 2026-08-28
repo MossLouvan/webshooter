@@ -1,0 +1,87 @@
+Independent verification — webshooter_mk4.py
+thresholds: wall>=0.80 ligament>=1.20 section>=2.0 first_layer>=150 island<=5.0 clearance>=0.15
+
+=== 1. PART INTEGRITY ===
+  baseplate              solids=1 shells=1 valid=True vol=  30721.7  
+  carriage               solids=1 shells=1 valid=True vol=   2665.1  
+  sear                   solids=1 shells=1 valid=True vol=   1588.6  
+  outlet_adapter         solids=1 shells=1 valid=True vol=   3414.3  
+  switch_pod             solids=1 shells=1 valid=True vol=   2175.0  
+
+=== 2. THIN FEATURES (section step 0.5 mm) ===
+  baseplate              min section    13.24 mm2   max pieces 12
+  carriage               min section    22.90 mm2   max pieces 3
+  sear                   min section    12.31 mm2   max pieces 2
+  outlet_adapter         min section    79.93 mm2   max pieces 2
+  switch_pod             min section    72.00 mm2   max pieces 3
+
+=== 3. PRINTABILITY (layer step 0.4 mm) ===
+  baseplate              first layer   4030.7 mm2 (2 pc)   worst unsupported     0.0 mm2
+  carriage               first layer    218.9 mm2 (1 pc)   worst unsupported     0.0 mm2
+  sear                   first layer     46.5 mm2 (1 pc)   worst unsupported     0.0 mm2
+  outlet_adapter         first layer    215.7 mm2 (1 pc)   worst unsupported     0.0 mm2
+  switch_pod             first layer    456.0 mm2 (1 pc)   worst unsupported     0.0 mm2
+
+=== 4. STATIC CLEARANCE (no allowlist) ===
+  clean
+
+=== 5. MOTION SWEEP (0 to 16.429 mm, step 0.25 mm, no exclusions) ===
+  full stroke clear
+
+=== 5b. SEAR RELEASE (rotation required to clear the stroke) ===
+  -- sear vs 3 static bodies through 90 deg (gate: any shared volume) --
+    0 deg  clear
+    5 deg  clear
+   10 deg  clear
+   15 deg  clear
+   20 deg  clear
+   25 deg  clear
+   30 deg  clear
+   35 deg  clear
+   40 deg  clear
+   45 deg  clear
+   50 deg  clear
+   55 deg  clear
+   60 deg  clear
+   65 deg  clear
+   70 deg  clear
+   75 deg  clear
+   80 deg  clear
+   85 deg  clear
+   90 deg  clear
+    0 deg -> worst carriage interference    88.00 mm3
+   10 deg -> worst carriage interference    64.25 mm3
+   20 deg -> worst carriage interference    27.22 mm3
+   30 deg -> worst carriage interference     0.07 mm3
+  clears at 31 deg of release rotation
+
+=== 5c. SEAR REST POSE (equilibrium measured, not assumed) ===
+  equilibrium angle  +0.000 deg  (forward rotation stopped by printed/baseplate)
+  free advance before the tooth bites   0.0000 mm
+  bearing patch at contact              22.00 mm2
+
+=== 6. PHYSICS (derived from stored energy) ===
+  model 3.0 mm outlet    A_o= 12.57 mm2  v= 3.84 m/s  range= 1.50 m  dP=   46.0 kPa  work=0.0921 J
+  real 8 ga ID 3.429     A_o=  9.23 mm2  v= 5.22 m/s  range= 2.78 m  dP=   85.2 kPa  work=0.1705 J
+  outlet as designed     A_o= 12.57 mm2  v= 3.84 m/s  range= 1.50 m  dP=   46.0 kPa  work=0.0921 J
+  spring stores 0.1335 J   cocked 16.25 N   stroke 16.429 mm
+  shot time 41.5 ms is DERIVED from flow rate; work 0.0921 J vs stored 0.1335 J (margin 1.45x)
+
+========================================================================
+WARNINGS (10)
+  [thin] baseplate: up to 3 disjoint pieces in x-sections (a thin ligament may be the only thing joining them)
+  [thin] baseplate: up to 6 disjoint pieces in y-sections (a thin ligament may be the only thing joining them)
+  [thin] baseplate: up to 12 disjoint pieces in z-sections (a thin ligament may be the only thing joining them)
+  [thin] carriage: up to 3 disjoint pieces in z-sections (a thin ligament may be the only thing joining them)
+  [thin] sear: up to 2 disjoint pieces in x-sections (a thin ligament may be the only thing joining them)
+  [thin] sear: up to 2 disjoint pieces in z-sections (a thin ligament may be the only thing joining them)
+  [thin] outlet_adapter: up to 2 disjoint pieces in y-sections (a thin ligament may be the only thing joining them)
+  [thin] outlet_adapter: up to 2 disjoint pieces in z-sections (a thin ligament may be the only thing joining them)
+  [thin] switch_pod: up to 2 disjoint pieces in x-sections (a thin ligament may be the only thing joining them)
+  [thin] switch_pod: up to 3 disjoint pieces in z-sections (a thin ligament may be the only thing joining them)
+
+FAILURES (2)
+  [print] sear: first layer 46.5 mm2 in 1 piece(s) (< 150.0)
+  [physics] real 8 ga ID 3.429: needs 0.1705 J but the spring stores 0.1335 J
+
+wrote full_r3.json
