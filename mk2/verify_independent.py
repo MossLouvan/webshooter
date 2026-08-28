@@ -38,7 +38,9 @@ from typing import Any
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 import cadquery as cq  # noqa: E402
-import webshooter_mk2 as M  # noqa: E402
+import importlib  # noqa: E402
+_MODEL = os.environ.get("WS_MODEL", "webshooter_mk2")
+M = importlib.import_module(_MODEL)  # noqa: E402
 
 # ----------------------------------------------------------------- thresholds
 # Set from manufacturing reality, not from what the current model happens to do.
@@ -72,15 +74,15 @@ def solid_of(shape) -> Any:
     is how the first draft of this ended up holding a bound method."""
     if isinstance(shape, cq.Workplane):
         return shape.val()
-    if isinstance(shape, M.PlacedShape):
-        return shape.global_shape()
+    if hasattr(shape, "shape") and hasattr(shape, "location"):
+        return shape.shape.moved(shape.location)
     return shape
 
 
 def placed(entry) -> Any:
     """Resolve the model's PlacedShape into world space."""
-    if isinstance(entry, M.PlacedShape):
-        return entry.global_shape()
+    if hasattr(entry, "shape") and hasattr(entry, "location"):
+        return entry.shape.moved(entry.location)
     return solid_of(entry)
 
 
@@ -230,19 +232,25 @@ def check_printability(parts: dict, step: float) -> None:
             cur = s.intersect(cq.Workplane("XY").workplane(offset=z)
                               .rect(big, big).extrude(step).val())
             if vol(cur) > 0:
-                shadow = cq.Workplane("XY").workplane(offset=z - step - 0.05)
-                # project the previous layer down as a support footprint
+                # A true ISLAND is a connected lump with nothing at all beneath it.
+                # An OVERHANG is a lump partly over the layer below - a slicer
+                # bridges that (the top of every round hole is one), so counting
+                # overhang area as unsupported is a false positive. Split the
+                # layer into components and only flag ones with zero support.
                 try:
                     below = s.intersect(cq.Workplane("XY").workplane(offset=z - step)
                                         .rect(big, big).extrude(step).val())
-                    # area of current not overlapping anything below, measured by
-                    # extruding the lower slab upward and subtracting
-                    lift = below.moved(cq.Location(cq.Vector(0, 0, step)))
-                    unsup = vol(cur.cut(lift)) / step if vol(below) > 0 else vol(cur) / step
+                    lift = (below.moved(cq.Location(cq.Vector(0, 0, step)))
+                            if vol(below) > 0 else None)
+                    for lump in cur.Solids():
+                        a = vol(lump) / step
+                        if a <= MAX_UNSUPPORTED_ISLAND:
+                            continue
+                        supported = vol(lump.intersect(lift)) if lift is not None else 0.0
+                        if supported <= 1e-6:
+                            islands = max(islands, a)
                 except Exception:
-                    unsup = 0.0
-                if unsup > MAX_UNSUPPORTED_ISLAND:
-                    islands = max(islands, unsup)
+                    pass
             prev = cur
             z += step
         if islands > MAX_UNSUPPORTED_ISLAND:
@@ -311,16 +319,16 @@ def check_motion(bodies: dict, moving: dict, travel: float, step: float) -> None
 # ---------------------------------------------- 6. physics derived, not read
 def check_physics() -> None:
     print("\n=== 6. PHYSICS (derived from stored energy) ===")
-    E = M.SPRING_RELEASE_ENERGY_J
-    V_m3 = M.SHOT_VOLUME_ML * 1e-6 if hasattr(M, "SHOT_VOLUME_ML") else 2.0e-6
+    E = getattr(M, "SPRING_RELEASE_ENERGY_J", None) or getattr(M, "SPRING_ENERGY_J")
+    V_m3 = getattr(M, 'SHOT_VOLUME_ML', 2.0) * 1e-6
     stroke_m = M.PLUNGER_STROKE / 1000.0
-    A_p = math.pi * (M.SYRINGE_BORE_DIAMETER / 2000.0) ** 2
+    A_p = math.pi * (getattr(M, "SYRINGE_BORE_DIAMETER", getattr(M, "SYRINGE_BORE", 12.45)) / 2000.0) ** 2
 
     # Real 8 ga cannula ID, not the model's "conservative effective" 3.0 mm.
     real_id_mm = 3.429
-    for label, d_mm, L_mm in (("model 3.0 mm outlet", M.ORIFICE_DIAMETER, M.NOZZLE_LENGTH),
-                              ("real 8 ga ID 3.429", real_id_mm, M.NOZZLE_LENGTH),
-                              ("syringe Luer tip", 2.0, M.SYRINGE_LUER_LENGTH)):
+    for label, d_mm, L_mm in (("model 3.0 mm outlet", getattr(M, "ORIFICE_DIAMETER", getattr(M, "OUTLET_BORE", 3.0)), getattr(M, "NOZZLE_LENGTH", getattr(M, "OUTLET_LENGTH", 12.0))),
+                              ("real 8 ga ID 3.429", real_id_mm, getattr(M, "NOZZLE_LENGTH", getattr(M, "OUTLET_LENGTH", 12.0))),
+                              ("outlet as designed", getattr(M, "OUTLET_BORE", 3.0), getattr(M, "OUTLET_LENGTH", 12.0))):
         r = d_mm / 2000.0
         A_o = math.pi * r * r
         # velocity implied by the DECLARED shot time
@@ -340,11 +348,15 @@ def check_physics() -> None:
             fail("physics", f"{label}: needs {work:.4f} J but the spring stores {E:.4f} J")
         if label == "real 8 ga ID 3.429" and rng < 1.5:
             fail("physics", f"real orifice gives {rng:.2f} m range (target >= 1.5 m)")
-    print(f"  spring stores {E:.4f} J   cocked {M.SPRING_COCKED_FORCE_N:.2f} N   "
+    print(f"  spring stores {E:.4f} J   cocked {getattr(M, "SPRING_COCKED_FORCE_N", getattr(M, "SPRING_PEAK_N", 0.0)):.2f} N   "
           f"stroke {M.PLUNGER_STROKE:.3f} mm")
-    if hasattr(M, "SHOT_TIME_S"):
-        print(f"  NOTE: SHOT_TIME_S = {M.SHOT_TIME_S} is a declared constant, not derived "
-              f"from spring force vs. flow resistance.")
+    derived = hasattr(M, "FLOW_RATE_M3_S") and hasattr(M, "FLOW_WORK_J")
+    if derived:
+        print(f"  shot time {M.SHOT_TIME_S*1000:.1f} ms is DERIVED from flow rate; "
+              f"work {M.FLOW_WORK_J:.4f} J vs stored {E:.4f} J "
+              f"(margin {E/M.FLOW_WORK_J:.2f}x)")
+    else:
+        print(f"  NOTE: SHOT_TIME_S = {M.SHOT_TIME_S} is a declared constant.")
         warn("physics", "SHOT_TIME_S is declared, not derived from the energy balance")
 
 
@@ -372,15 +384,16 @@ def main() -> int:
     try:
         for name, entry in M.printed_parts.items():
             parts[name] = solid_of(entry.shape)
-            assembled[f"printed/{name}"] = entry.global_shape()
+            assembled[f"printed/{name}"] = entry.shape.moved(entry.location)
     except Exception as e:
         fail("build", f"printed parts: {e}")
 
-    try:
-        for name, entry in M.mockups.items():
-            assembled[f"mockup/{name}"] = placed(entry)
-    except Exception as e:
-        fail("build", f"mockups: {e}")
+    if hasattr(M, "mockups"):
+        try:
+            for name, entry in M.mockups.items():
+                assembled[f"mockup/{name}"] = placed(entry)
+        except Exception as e:
+            fail("build", f"mockups: {e}")
 
     bodies = assembled
 

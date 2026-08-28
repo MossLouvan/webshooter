@@ -1,0 +1,256 @@
+{
+ "parts": {
+  "baseplate": {
+   "solids": 1,
+   "shells": 1,
+   "valid": true,
+   "volume": 40631.311124337604,
+   "zmin": 0.0,
+   "dims": [
+    171.8,
+    72.35,
+    25.0
+   ]
+  },
+  "carriage": {
+   "solids": 1,
+   "shells": 1,
+   "valid": true,
+   "volume": 3125.5176835573557,
+   "zmin": 0.0,
+   "dims": [
+    24.0,
+    18.0,
+    22.0
+   ]
+  },
+  "sear": {
+   "solids": 1,
+   "shells": 1,
+   "valid": true,
+   "volume": 825.3926414488228,
+   "zmin": 0.0,
+   "dims": [
+    35.23154621172782,
+    11.0,
+    5.0
+   ]
+  },
+  "outlet_adapter": {
+   "solids": 1,
+   "shells": 1,
+   "valid": true,
+   "volume": 3414.2508767859044,
+   "zmin": 0.0,
+   "dims": [
+    22.0,
+    18.1,
+    15.100000000000003
+   ]
+  },
+  "switch_pod": {
+   "solids": 1,
+   "shells": 1,
+   "valid": true,
+   "volume": 2174.9999999999995,
+   "zmin": 0.0,
+   "dims": [
+    24.0,
+    20.0,
+    7.0
+   ]
+  }
+ },
+ "thin_features": {
+  "baseplate": {
+   "x": {
+    "min_area": 111.0,
+    "at": 147.5458823529412,
+    "max_pieces": 3
+   },
+   "y": {
+    "min_area": 112.91973578570475,
+    "at": -34.32083333333333,
+    "max_pieces": 4
+   },
+   "z": {
+    "min_area": 43.48392309811956,
+    "at": 20.833333333333332,
+    "max_pieces": 11
+   }
+  },
+  "carriage": {
+   "x": {
+    "min_area": 22.90221044466959,
+    "at": -6.0,
+    "max_pieces": 1
+   },
+   "y": {
+    "min_area": 56.34999999999994,
+    "at": -7.0,
+    "max_pieces": 1
+   },
+   "z": {
+    "min_area": 57.59999999999998,
+    "at": 14.0,
+    "max_pieces": 2
+   }
+  },
+  "sear": {
+   "x": {
+    "min_area": 12.541368560850987,
+    "at": 10.362219474037593,
+    "max_pieces": 1
+   },
+   "y": {
+    "min_area": 14.999999999999998,
+    "at": -6.3,
+    "max_pieces": 2
+   },
+   "z": {
+    "min_area": 165.0785282897646,
+    "at": 2.5,
+    "max_pieces": 1
+   }
+  },
+  "outlet_adapter": {
+   "x": {
+    "min_area": 79.92712371162314,
+    "at": 4.0,
+    "max_pieces": 1
+   },
+   "y": {
+    "min_area": 156.53574376862176,
+    "at": 1.0055555555555546,
+    "max_pieces": 2
+   },
+   "z": {
+    "min_area": 185.7249815354669,
+    "at": 12.942857142857147,
+    "max_pieces": 2
+   }
+  },
+  "switch_pod": {
+   "x": {
+    "min_area": 71.99999999999997,
+    "at": 2.0,
+    "max_pieces": 2
+   },
+   "y": {
+    "min_area": 85.99999999999997,
+    "at": -4.0,
+    "max_pieces": 1
+   },
+   "z": {
+    "min_area": 210.9999999999999,
+    "at": 2.3333333333333335,
+    "max_pieces": 3
+   }
+  }
+ },
+ "printability": {
+  "baseplate": {
+   "first_layer_mm2": 10240.239999999996,
+   "first_layer_pieces": 1,
+   "worst_unsupported_mm2": 50.70000000000001
+  },
+  "carriage": {
+   "first_layer_mm2": 212.42,
+   "first_layer_pieces": 1,
+   "worst_unsupported_mm2": 21.540805181637726
+  },
+  "sear": {
+   "first_layer_mm2": 156.82460187527633,
+   "first_layer_pieces": 1,
+   "worst_unsupported_mm2": 0.0
+  },
+  "outlet_adapter": {
+   "first_layer_mm2": 215.6576073900229,
+   "first_layer_pieces": 1,
+   "worst_unsupported_mm2": 50.82468538649489
+  },
+  "switch_pod": {
+   "first_layer_mm2": 456.0,
+   "first_layer_pieces": 1,
+   "worst_unsupported_mm2": 59.99999999999997
+  }
+ },
+ "clearance": {
+  "overlaps": [
+   [
+    18.899999999999963,
+    "printed/baseplate",
+    "printed/carriage"
+   ],
+   [
+    85.87718385701548,
+    "printed/baseplate",
+    "printed/outlet_adapter"
+   ],
+   [
+    149.99999999999997,
+    "printed/baseplate",
+    "printed/sear"
+   ],
+   [
+    255.95265860386002,
+    "printed/baseplate",
+    "printed/switch_pod"
+   ]
+  ],
+  "tangencies": []
+ },
+ "motion": {
+  "printed/carriage -> printed/baseplate": {
+   "volume": 18.900000000000013,
+   "at_travel": 0.0
+  }
+ },
+ "physics": {
+  "model 3.0 mm outlet": {
+   "area_mm2": 12.566370614359172,
+   "v_m_s": 3.8360135557633264,
+   "range_m": 1.4999999999999998,
+   "dP_kPa": 46.03216266915991,
+   "work_J": 0.09206432533831982
+  },
+  "real 8 ga ID 3.429": {
+   "area_mm2": 9.234743806551895,
+   "v_m_s": 5.219935607658898,
+   "range_m": 2.7775461516926874,
+   "dP_kPa": 85.23763751721128,
+   "work_J": 0.17047527503442256
+  },
+  "outlet as designed": {
+   "area_mm2": 12.566370614359172,
+   "v_m_s": 3.8360135557633264,
+   "range_m": 1.4999999999999998,
+   "dP_kPa": 46.03216266915991,
+   "work_J": 0.09206432533831982
+  }
+ },
+ "failures": [
+  "[print] baseplate: 50.7 mm2 of material begins unsupported (> 5.0)",
+  "[print] carriage: 21.5 mm2 of material begins unsupported (> 5.0)",
+  "[print] outlet_adapter: 50.8 mm2 of material begins unsupported (> 5.0)",
+  "[print] switch_pod: 60.0 mm2 of material begins unsupported (> 5.0)",
+  "[clearance] printed/baseplate <> printed/switch_pod overlap 255.95 mm3",
+  "[clearance] printed/baseplate <> printed/sear overlap 150.00 mm3",
+  "[clearance] printed/baseplate <> printed/outlet_adapter overlap 85.88 mm3",
+  "[clearance] printed/baseplate <> printed/carriage overlap 18.90 mm3",
+  "[motion] printed/carriage -> printed/baseplate: 18.90 mm3 interference at 0.00 mm of travel",
+  "[physics] real 8 ga ID 3.429: needs 0.1705 J but the spring stores 0.1335 J"
+ ],
+ "warnings": [
+  "[thin] baseplate: up to 3 disjoint pieces in x-sections (a thin ligament may be the only thing joining them)",
+  "[thin] baseplate: up to 4 disjoint pieces in y-sections (a thin ligament may be the only thing joining them)",
+  "[thin] baseplate: up to 11 disjoint pieces in z-sections (a thin ligament may be the only thing joining them)",
+  "[thin] carriage: up to 2 disjoint pieces in z-sections (a thin ligament may be the only thing joining them)",
+  "[thin] sear: up to 2 disjoint pieces in y-sections (a thin ligament may be the only thing joining them)",
+  "[thin] outlet_adapter: up to 2 disjoint pieces in y-sections (a thin ligament may be the only thing joining them)",
+  "[thin] outlet_adapter: up to 2 disjoint pieces in z-sections (a thin ligament may be the only thing joining them)",
+  "[thin] switch_pod: up to 2 disjoint pieces in x-sections (a thin ligament may be the only thing joining them)",
+  "[thin] switch_pod: up to 3 disjoint pieces in z-sections (a thin ligament may be the only thing joining them)",
+  "[physics] SHOT_TIME_S is declared, not derived from the energy balance"
+ ]
+}
