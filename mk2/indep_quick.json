@@ -1,0 +1,364 @@
+{
+ "parts": {
+  "baseplate": {
+   "solids": 1,
+   "shells": 1,
+   "valid": true,
+   "volume": 27029.143233786963,
+   "zmin": 0.0,
+   "dims": [
+    118.0,
+    79.0,
+    19.5
+   ]
+  },
+  "barrel_bridge": {
+   "solids": 1,
+   "shells": 1,
+   "valid": true,
+   "volume": 10794.838687367373,
+   "zmin": 0.0,
+   "dims": [
+    92.0,
+    60.0,
+    16.7
+   ]
+  },
+  "spring_carriage": {
+   "solids": 1,
+   "shells": 1,
+   "valid": true,
+   "volume": 1695.8387016227414,
+   "zmin": 0.0,
+   "dims": [
+    5.0,
+    33.5,
+    14.5
+   ]
+  },
+  "cocking_lever": {
+   "solids": 1,
+   "shells": 1,
+   "valid": true,
+   "volume": 2198.045525470191,
+   "zmin": 0.0,
+   "dims": [
+    85.0,
+    12.0,
+    3.0
+   ]
+  },
+  "servo_sear": {
+   "solids": 1,
+   "shells": 1,
+   "valid": true,
+   "volume": 221.76239169337651,
+   "zmin": 0.0,
+   "dims": [
+    11.0,
+    12.0,
+    3.0
+   ]
+  },
+  "palm_switch_pod": {
+   "solids": 1,
+   "shells": 1,
+   "valid": true,
+   "volume": 4538.842478398963,
+   "zmin": 0.0,
+   "dims": [
+    28.0,
+    34.0,
+    7.0
+   ]
+  }
+ },
+ "thin_features": {
+  "baseplate": {
+   "x": {
+    "min_area": 159.59999999999997,
+    "at": 10.0,
+    "max_pieces": 5
+   },
+   "y": {
+    "min_area": 131.6,
+    "at": 44.97435897435898,
+    "max_pieces": 3
+   },
+   "z": {
+    "min_area": 109.13804846631876,
+    "at": 17.333333333333332,
+    "max_pieces": 17
+   }
+  },
+  "barrel_bridge": {
+   "x": {
+    "min_area": 40.5,
+    "at": 52.0,
+    "max_pieces": 4
+   },
+   "y": {
+    "min_area": 48.0,
+    "at": -28.0,
+    "max_pieces": 3
+   },
+   "z": {
+    "min_area": 205.40892930688256,
+    "at": 6.262499999999999,
+    "max_pieces": 8
+   }
+  },
+  "spring_carriage": {
+   "x": {
+    "min_area": 337.77217540568535,
+    "at": 2.5,
+    "max_pieces": 1
+   },
+   "y": {
+    "min_area": 7.2362902402910345,
+    "at": -0.8125,
+    "max_pieces": 1
+   },
+   "z": {
+    "min_area": 83.24222580255405,
+    "at": 12.428571428571429,
+    "max_pieces": 1
+   }
+  },
+  "cocking_lever": {
+   "x": {
+    "min_area": 13.312198311326899,
+    "at": 25.97619047619048,
+    "max_pieces": 2
+   },
+   "y": {
+    "min_area": 54.0,
+    "at": -4.0,
+    "max_pieces": 1
+   },
+   "z": {
+    "min_area": 549.5113813675487,
+    "at": 1.5,
+    "max_pieces": 1
+   }
+  },
+  "servo_sear": {
+   "x": {
+    "min_area": 10.68089219383637,
+    "at": -2.5999999999999996,
+    "max_pieces": 1
+   },
+   "y": {
+    "min_area": 12.0,
+    "at": 2.0,
+    "max_pieces": 2
+   },
+   "z": {
+    "min_area": 55.44059792334413,
+    "at": 1.5,
+    "max_pieces": 1
+   }
+  },
+  "palm_switch_pod": {
+   "x": {
+    "min_area": 56.000000000000014,
+    "at": 4.0,
+    "max_pieces": 2
+   },
+   "y": {
+    "min_area": 78.92123919948199,
+    "at": 18.0,
+    "max_pieces": 3
+   },
+   "z": {
+    "min_area": 601.0000000000003,
+    "at": 2.3333333333333335,
+    "max_pieces": 1
+   }
+  }
+ },
+ "printability": {
+  "baseplate": {
+   "first_layer_mm2": 7063.843750000001,
+   "first_layer_pieces": 1,
+   "worst_unsupported_mm2": 108.54166258775348
+  },
+  "barrel_bridge": {
+   "first_layer_mm2": 2238.0495147391384,
+   "first_layer_pieces": 1,
+   "worst_unsupported_mm2": 59.40483337701895
+  },
+  "spring_carriage": {
+   "first_layer_mm2": 113.99999999999994,
+   "first_layer_pieces": 1,
+   "worst_unsupported_mm2": 19.884088686197643
+  },
+  "cocking_lever": {
+   "first_layer_mm2": 696.0477497322302,
+   "first_layer_pieces": 1,
+   "worst_unsupported_mm2": 0.0
+  },
+  "servo_sear": {
+   "first_layer_mm2": 70.22475736956922,
+   "first_layer_pieces": 1,
+   "worst_unsupported_mm2": 0.0
+  },
+  "palm_switch_pod": {
+   "first_layer_mm2": 728.5751772395079,
+   "first_layer_pieces": 1,
+   "worst_unsupported_mm2": 0.0
+  }
+ },
+ "clearance": {
+  "overlaps": [
+   [
+    5.372123437638541,
+    "mockup/bridge_m3_insert_1",
+    "mockup/bridge_m3_screw_1"
+   ],
+   [
+    13.579534245141847,
+    "mockup/bridge_m3_insert_1",
+    "printed/baseplate"
+   ],
+   [
+    5.372123437638541,
+    "mockup/bridge_m3_insert_2",
+    "mockup/bridge_m3_screw_2"
+   ],
+   [
+    13.579534245141847,
+    "mockup/bridge_m3_insert_2",
+    "printed/baseplate"
+   ],
+   [
+    18.37831702350028,
+    "mockup/bridge_m3_screw_1",
+    "printed/baseplate"
+   ],
+   [
+    18.37831702350028,
+    "mockup/bridge_m3_screw_2",
+    "printed/baseplate"
+   ],
+   [
+    16.364953671427614,
+    "mockup/cocking_pivot_m3",
+    "printed/baseplate"
+   ],
+   [
+    9.439827635411406,
+    "mockup/corona_ds239mg_servo",
+    "mockup/sear_pivot_m3"
+   ],
+   [
+    87.40823262082122,
+    "mockup/corona_ds239mg_servo",
+    "printed/baseplate"
+   ],
+   [
+    60.8212337734984,
+    "mockup/live_8ga_blunt_nozzle",
+    "mockup/syringe_norm_ject_10ml"
+   ],
+   [
+    26.48149418470418,
+    "mockup/sear_pivot_m3",
+    "printed/baseplate"
+   ],
+   [
+    187.00159800018136,
+    "mockup/syringe_epdm_retainer",
+    "printed/baseplate"
+   ],
+   [
+    8.639999999999924,
+    "mockup/tp4056_epdm_retainer",
+    "printed/baseplate"
+   ],
+   [
+    8.639999999999933,
+    "mockup/xiao_epdm_retainer",
+    "printed/baseplate"
+   ]
+  ],
+  "tangencies": []
+ },
+ "motion": {
+  "printed/spring_carriage -> printed/servo_sear": {
+   "volume": 60.2,
+   "at_travel": 4.0
+  },
+  "printed/spring_carriage -> mockup/syringe_norm_ject_10ml": {
+   "volume": 567.8230016469245,
+   "at_travel": 5.0
+  },
+  "printed/spring_carriage -> mockup/cocking_drive_m3": {
+   "volume": 2.0477145129185557,
+   "at_travel": 2.0
+  }
+ },
+ "physics": {
+  "model 3.0 mm outlet": {
+   "area_mm2": 7.0685834705770345,
+   "v_m_s": 4.10061045003273,
+   "range_m": 1.7140678963218785,
+   "dP_kPa": 185.16534298814457,
+   "work_J": 0.37033068597628915
+  },
+  "real 8 ga ID 3.429": {
+   "area_mm2": 9.234743806551895,
+   "v_m_s": 3.1387451404782967,
+   "range_m": 1.0042529109965466,
+   "dP_kPa": 108.48627123262965,
+   "work_J": 0.2169725424652593
+  },
+  "syringe Luer tip": {
+   "area_mm2": 3.141592653589793,
+   "v_m_s": 9.226373512573641,
+   "range_m": 8.677468725129506,
+   "dP_kPa": 332.149446452651,
+   "work_J": 0.664298892905302
+  }
+ },
+ "failures": [
+  "[print] baseplate: 108.5 mm2 of material begins unsupported (> 5.0)",
+  "[print] barrel_bridge: 59.4 mm2 of material begins unsupported (> 5.0)",
+  "[print] spring_carriage: first layer 114.0 mm2 in 1 piece(s) (< 150.0)",
+  "[print] spring_carriage: 19.9 mm2 of material begins unsupported (> 5.0)",
+  "[print] servo_sear: first layer 70.2 mm2 in 1 piece(s) (< 150.0)",
+  "[clearance] mockup/syringe_epdm_retainer <> printed/baseplate overlap 187.00 mm3",
+  "[clearance] mockup/corona_ds239mg_servo <> printed/baseplate overlap 87.41 mm3",
+  "[clearance] mockup/live_8ga_blunt_nozzle <> mockup/syringe_norm_ject_10ml overlap 60.82 mm3",
+  "[clearance] mockup/sear_pivot_m3 <> printed/baseplate overlap 26.48 mm3",
+  "[clearance] mockup/bridge_m3_screw_2 <> printed/baseplate overlap 18.38 mm3",
+  "[clearance] mockup/bridge_m3_screw_1 <> printed/baseplate overlap 18.38 mm3",
+  "[clearance] mockup/cocking_pivot_m3 <> printed/baseplate overlap 16.36 mm3",
+  "[clearance] mockup/bridge_m3_insert_2 <> printed/baseplate overlap 13.58 mm3",
+  "[clearance] mockup/bridge_m3_insert_1 <> printed/baseplate overlap 13.58 mm3",
+  "[clearance] mockup/corona_ds239mg_servo <> mockup/sear_pivot_m3 overlap 9.44 mm3",
+  "[clearance] mockup/xiao_epdm_retainer <> printed/baseplate overlap 8.64 mm3",
+  "[clearance] mockup/tp4056_epdm_retainer <> printed/baseplate overlap 8.64 mm3",
+  "[clearance] mockup/bridge_m3_insert_2 <> mockup/bridge_m3_screw_2 overlap 5.37 mm3",
+  "[clearance] mockup/bridge_m3_insert_1 <> mockup/bridge_m3_screw_1 overlap 5.37 mm3",
+  "[motion] printed/spring_carriage -> mockup/syringe_norm_ject_10ml: 567.82 mm3 interference at 5.00 mm of travel",
+  "[motion] printed/spring_carriage -> printed/servo_sear: 60.20 mm3 interference at 4.00 mm of travel",
+  "[motion] printed/spring_carriage -> mockup/cocking_drive_m3: 2.05 mm3 interference at 2.00 mm of travel",
+  "[physics] real 8 ga ID 3.429: needs 0.2170 J but the spring stores 0.1785 J",
+  "[physics] real orifice gives 1.00 m range (target >= 1.5 m)",
+  "[physics] syringe Luer tip: needs 0.6643 J but the spring stores 0.1785 J"
+ ],
+ "warnings": [
+  "[thin] baseplate: up to 5 disjoint pieces in x-sections (a thin ligament may be the only thing joining them)",
+  "[thin] baseplate: up to 3 disjoint pieces in y-sections (a thin ligament may be the only thing joining them)",
+  "[thin] baseplate: up to 17 disjoint pieces in z-sections (a thin ligament may be the only thing joining them)",
+  "[thin] barrel_bridge: up to 4 disjoint pieces in x-sections (a thin ligament may be the only thing joining them)",
+  "[thin] barrel_bridge: up to 3 disjoint pieces in y-sections (a thin ligament may be the only thing joining them)",
+  "[thin] barrel_bridge: up to 8 disjoint pieces in z-sections (a thin ligament may be the only thing joining them)",
+  "[thin] cocking_lever: up to 2 disjoint pieces in x-sections (a thin ligament may be the only thing joining them)",
+  "[thin] servo_sear: up to 2 disjoint pieces in y-sections (a thin ligament may be the only thing joining them)",
+  "[thin] palm_switch_pod: up to 2 disjoint pieces in x-sections (a thin ligament may be the only thing joining them)",
+  "[thin] palm_switch_pod: up to 3 disjoint pieces in y-sections (a thin ligament may be the only thing joining them)",
+  "[physics] SHOT_TIME_S is declared, not derived from the energy balance"
+ ]
+}
