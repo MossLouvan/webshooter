@@ -131,6 +131,24 @@ def scene_bounds(items=None):
         return None
     return (min(xs), max(xs), min(ys), max(ys), min(zs), max(zs))
 
+
+def action_fcurves(act):
+    """Blender 4.4+/5.x moved F-curves out of Action.fcurves into slotted
+    layers -> strips -> channelbags. Support both so this works either way."""
+    if act is None:
+        return []
+    if hasattr(act, "fcurves"):
+        try:
+            return list(act.fcurves)
+        except Exception:
+            pass
+    out = []
+    for layer in getattr(act, "layers", []):
+        for strip in getattr(layer, "strips", []):
+            for bag in getattr(strip, "channelbags", []):
+                out.extend(getattr(bag, "fcurves", []))
+    return out
+
 def set_visible(o, vis):
     o.hide_viewport = not vis
     o.hide_render = not vis
@@ -195,7 +213,7 @@ for o in find_many(ARGV["names"]):
         print("mesh        %d verts, %d faces" % (len(o.data.vertices), len(o.data.polygons)))
         print("materials   %s" % (", ".join(m.name for m in o.data.materials if m) or "-"))
     if o.animation_data and o.animation_data.action:
-        fcs = o.animation_data.action.fcurves
+        fcs = action_fcurves(o.animation_data.action)
         kf = sorted({int(k.co[0]) for fc in fcs for k in fc.keyframe_points})
         print("keyframes   %s" % (kf if len(kf) < 20 else "%d keys %d..%d" % (len(kf), kf[0], kf[-1])))
     for c in o.constraints:
@@ -307,7 +325,9 @@ any_anim = False
 for o in sorted(objs(), key=lambda x: x.name):
     if o.animation_data and o.animation_data.action:
         any_anim = True
-        fcs = o.animation_data.action.fcurves
+        fcs = action_fcurves(o.animation_data.action)
+        if not fcs:
+            continue
         keys = sorted({int(k.co[0]) for fc in fcs for k in fc.keyframe_points})
         paths = sorted({fc.data_path for fc in fcs})
         print("  %-40s %-28s keys %d..%d (%d)"

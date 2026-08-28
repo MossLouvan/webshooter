@@ -95,6 +95,16 @@ SPRING_COCKED_LEN = SPRING_FREE_LEN - PLUNGER_STROKE
 # ------------------------------------------------------------------- envelope
 PLATE_T = 3.0
 PLATE_W = 64.0
+
+# Wrist curve. Mk3's baseplate was a full vault and printed on two hairline
+# edges (35 mm2 first layer). Here the curve is a shallow relief cut into the
+# UNDERSIDE only: the outer rim stays flat so the part still has a wide contact
+# band on the bed, and the relief is what cups the arm. WRIST_RADIUS is large on
+# purpose - the arm's dorsal crown is ~50 mm, but a 50 mm cup would need a 9 mm
+# sagitta and no rim would survive. RELIEF_DEPTH is the honest limit.
+WRIST_RADIUS = 95.0             # mm, cylindrical relief radius
+RELIEF_DEPTH = 2.2              # mm at the centreline - the sagitta we allow
+RELIEF_RIM = 7.0                # mm of flat rim left on each edge for bed contact
 WALL = 2.4
 RAIL_H = 9.0
 RAIL_T = 2.4
@@ -177,6 +187,17 @@ def make_baseplate() -> cq.Shape:
     """Flat plate with two rails. Flat because a vaulted plate gave Mk3 a 35 mm2
     first layer; the arm curve is taken up by foam, not by the print."""
     plate = _box(PLATE_L, PLATE_W, PLATE_T)
+
+    # Shallow cylindrical relief in the underside, inboard of a flat rim.
+    # The cylinder sits BELOW the plate so its top surface is highest on the
+    # centreline - that is what cups the arm. (Centring it above hollows the
+    # edges instead, which is the opposite of a wrist curve.)
+    relief_w = PLATE_W - 2 * RELIEF_RIM
+    cyl_z = RELIEF_DEPTH - WRIST_RADIUS
+    cutter = (cq.Workplane("YZ").circle(WRIST_RADIUS).extrude(PLATE_L + 20.0)
+              .val().moved(cq.Location(cq.Vector(-10.0, 0.0, cyl_z))))
+    keep = _box(PLATE_L + 20.0, relief_w, PLATE_T + 6.0, -10.0, 0.0, -3.0)
+    plate = plate.cut(cutter.intersect(keep))
 
     # carriage ways: two rails either side of the fluid lane
     inner = SYRINGE_OD / 2.0 + 3.0
@@ -372,6 +393,22 @@ def report() -> dict:
     }
 
 
+def export_params() -> None:
+    """Publish the numbers downstream tools need, so the Blender viz reads data
+    rather than importing this module (Blender's Python has no CadQuery)."""
+    import json
+    d = report()
+    d.update(dict(
+        PLUNGER_STROKE=PLUNGER_STROKE, SPRING_FREE_LEN=SPRING_FREE_LEN,
+        SPRING_COCKED_LEN=SPRING_COCKED_LEN, OUTLET_X1=OUTLET_X1,
+        MUZZLE_LEN=MUZZLE_LEN, FLUID_Y=FLUID_Y, SYRINGE_AXIS_Z=SYRINGE_AXIS_Z,
+        PLATE_L=PLATE_L, PLATE_W=PLATE_W, SHOT_TIME_MS=SHOT_TIME_S * 1000.0,
+    ))
+    with open(os.path.join(OUT, "mk4_params.json"), "w", encoding="utf-8") as f:
+        json.dump(d, f, indent=1)
+    print("  wrote mk4_params.json")
+
+
 def export_all() -> None:
     for name, fn in PARTS.items():
         s = fn()
@@ -391,5 +428,6 @@ if __name__ == "__main__":
     print(json.dumps(report(), indent=1))
     print("\nexporting:")
     export_all()
+    export_params()
     sys.stdout.flush()
     os._exit(0)

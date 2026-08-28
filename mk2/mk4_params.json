@@ -1,0 +1,40 @@
+{
+ "exit_velocity_m_s": 3.8360135557633264,
+ "ballistic_range_m": 1.4999999999999998,
+ "shot_volume_ml": 2.0,
+ "shot_time_s": 0.0414896717069148,
+ "outlet_bore_mm": 4.0,
+ "outlet_dp_kPa": 46.032162669159916,
+ "flow_work_J": 0.09206432533831983,
+ "spring_energy_J": 0.13349327174056375,
+ "energy_margin": 1.45,
+ "plunger_stroke_mm": 16.428632373479946,
+ "plunger_force_N": 5.603894666663514,
+ "spring_peak_N": 16.25129453332419,
+ "spring_rate_N_mm": 0.9892055628171446,
+ "hand_cock_force_N": 16.25129453332419,
+ "printed_part_count": 5,
+ "plate_mm": [
+  171.8,
+  64.0,
+  3.0
+ ],
+ "sear": {
+  "r_x_mm": -6.0,
+  "r_z_mm": -14.0,
+  "force_N": 16.25129453332419,
+  "moment_N_mm": -227.51812346653867,
+  "self_holding": true,
+  "note": "negative M_y drives the tooth deeper into the notch"
+ },
+ "PLUNGER_STROKE": 16.428632373479946,
+ "SPRING_FREE_LEN": 46.0,
+ "SPRING_COCKED_LEN": 29.571367626520054,
+ "OUTLET_X1": 151.8,
+ "MUZZLE_LEN": 14.0,
+ "FLUID_Y": -20.0,
+ "SYRINGE_AXIS_Z": 10.45,
+ "PLATE_L": 171.8,
+ "PLATE_W": 64.0,
+ "SHOT_TIME_MS": 41.489671706914805
+}
