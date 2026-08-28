@@ -47,3 +47,34 @@ mutually exclusive. Mk3 replaces the drive with a spring and sear.
 
 Print in PETG for load-bearing parts (acetone resistance and creep); PLA is fine for
 fit-test coupons only.
+
+## `bl.py` — Blender scene CLI
+
+Drives `webshooter_mk3_visualization.blend` headlessly, so the scene is
+inspectable and controllable from a terminal without opening the GUI.
+
+```bash
+python mk2/bl.py stats                  # counts, bounds, frame range, markers, cameras
+python mk2/bl.py ls                     # every object: collection, dims, location
+python mk2/bl.py tree                   # collection hierarchy
+python mk2/bl.py info sear              # full dump for matching objects
+python mk2/bl.py anim                   # frame range, markers, keyframed objects
+python mk2/bl.py materials              # materials and their users
+
+python mk2/bl.py measure syringe sear   # min vertex gap + bbox gap + centre distance
+python mk2/bl.py bounds --of printed    # bounding box of a collection or objects
+
+python mk2/bl.py isolate baseplate      # show only these
+python mk2/bl.py hide labels            # collections work as names
+python mk2/bl.py reset                  # unhide everything
+
+python mk2/bl.py render --cam hero --frame 46 --res 1920x1280
+python mk2/bl.py shot --az 135 --el 20  # render from an arbitrary angle
+python mk2/bl.py turntable --frames 24  # orbit sequence
+python mk2/bl.py views                  # render from every camera
+python mk2/bl.py export --fmt glb --only printed
+```
+
+Names match loosely: case-insensitive, punctuation-insensitive substrings, and
+collection names work anywhere an object name does. `--dry` prints the generated
+Blender script instead of running it.
