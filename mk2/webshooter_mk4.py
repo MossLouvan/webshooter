@@ -756,6 +756,72 @@ for _a, _v1, _v2 in (("xmin", _b1.xmin, _b2.xmin), ("xmax", _b1.xmax, _b2.xmax),
     assert abs(_v1 - _v2) < 1e-6, f"sear assembly transform: {_a} {_v1} vs {_v2}"
 
 
+
+# ============================================================ purchased parts
+# THE MOST IMPORTANT BLOCK IN THIS FILE.
+#
+# Two independent acceptance reviews found every blocking defect at a
+# printed-to-purchased interface, and both traced it to the same cause: Mk4
+# defined no `mockups`, so verify_independent.py's `if hasattr(M, "mockups")`
+# guard silently skipped and `bodies` held only the five printed parts. The
+# syringe, plunger, spring, servo and pins were in no check at all.
+#
+# One reviewer's phrasing: "the harness was not gamed by editing - it was
+# starved by the model."
+#
+# Every body the machine touches now goes in here, so the checks can see them.
+# Dimensions carry their source; where a number is unverified it says so, and
+# an unverified number must never be quietly trusted by a check.
+
+SPRING_SEAT_X = SPRING_X0 - 2.0                  # abutment FRONT face, the real seat
+SPRING_TRUE_COCKED_LEN = (CARRIAGE_X_FIRED - PLUNGER_STROKE) - SPRING_SEAT_X
+SPRING_TRUE_COCKED_N = (SPRING_FREE_LEN - SPRING_TRUE_COCKED_LEN) * SPRING_RATE_N_MM
+
+# Sear release torque, the check neither the model nor the harness ever ran.
+_SEAR_R_X = SEAR_CONTACT_X - SEAR_PIVOT_X
+_SEAR_R_Z = SEAR_CONTACT_Z - SEAR_PIVOT_Z
+SEAR_HOLD_MOMENT_N_MM = abs(_SEAR_R_Z) * SPRING_TRUE_COCKED_N
+SEAR_FRICTION_MU = 0.35                          # PETG on PETG, dry - ESTIMATE
+SEAR_RELEASE_MOMENT_N_MM = (SEAR_HOLD_MOMENT_N_MM
+                            + SEAR_FRICTION_MU * SPRING_TRUE_COCKED_N * abs(_SEAR_R_X)
+                            + 18.0)              # pin drag - ESTIMATE
+SERVO_STALL_N_MM = 4.6 * 98.07                   # DS239MG 4.6 kg.cm at 6 V
+SERVO_USABLE_N_MM = SERVO_STALL_N_MM / 3.0       # a third of stall is the honest ceiling
+SEAR_TAIL_ADVANTAGE = SEAR_TAIL_LEN / max(1e-6, abs(_SEAR_R_X))
+
+
+def make_mockups() -> Dict[str, Placed]:
+    """Purchased bodies at their assembly positions, so the harness can see them."""
+    m: Dict[str, Placed] = {}
+    L = cq.Location()
+
+    # 5 mL NORM-JECT, Restek 22775. Barrel figures are from that table; the
+    # flange and thumb diameters are NOT in it - they are unverified.
+    m["syringe_barrel"] = Placed(
+        _cyl_x(SYRINGE_BARREL_LEN, SYRINGE_OD / 2.0, SYRINGE_X0, FLUID_Y, SYRINGE_AXIS_Z), L)
+    px = SYRINGE_X0 - 6.0 - PLUNGER_STROKE
+    m["syringe_plunger_rod"] = Placed(
+        _cyl_x(34.0, PLUNGER_ROD_OD / 2.0, px, FLUID_Y, SYRINGE_AXIS_Z), L)
+    m["syringe_thumb_flange"] = Placed(
+        _cyl_x(PLUNGER_THUMB_T, PLUNGER_THUMB_OD / 2.0,
+               px - PLUNGER_THUMB_T, FLUID_Y, SYRINGE_AXIS_Z), L)
+    m["syringe_finger_flange"] = Placed(
+        _cyl_x(SYRINGE_FLANGE_T, SYRINGE_FLANGE_OD / 2.0,
+               SYRINGE_X0 - SYRINGE_FLANGE_T, FLUID_Y, SYRINGE_AXIS_Z), L)
+    m["compression_spring"] = Placed(
+        _cyl_x(SPRING_TRUE_COCKED_LEN, SPRING_OD / 2.0,
+               SPRING_SEAT_X, FLUID_Y, PLATE_T + CARRIAGE_BODY_H / 2.0 + 0.4), L)
+    m["sear_pivot_pin"] = Placed(
+        (cq.Workplane("XZ").circle(1.6).extrude(-14.0).val()
+         .moved(cq.Location(cq.Vector(SEAR_PIVOT_X, SEAR_PIVOT_Y + 7.0, SEAR_PIVOT_Z)))), L)
+    m["lipo_2000mah"] = Placed(
+        _box(54.0, 34.0, 10.0, BATT_X0, ELEC_Y, PLATE_T), L)
+    return m
+
+
+mockups: Dict[str, Placed] = make_mockups()
+
+
 def sear_moment_check() -> dict:
     """Does the spring load hold the sear closed, or open it?
 
