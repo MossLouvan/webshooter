@@ -20,19 +20,20 @@
   3.0
  ],
  "sear": {
-  "r_x_mm": -4.399999999999999,
-  "r_y_mm": 5.5,
+  "r_x_mm": -9.0,
+  "r_z_mm": -13.4,
   "force_N": 16.25129453332419,
-  "moment_N_mm": -89.38211993328305,
+  "moment_N_mm": -217.76734674654418,
   "self_holding": true,
-  "note": "contact behind the pivot: load rotates the tooth inboard"
+  "lift_to_release_deg": 26.60013496097876,
+  "note": "tooth below AND behind the pivot: load drives it down"
  },
  "PLUNGER_STROKE": 16.428632373479946,
  "SPRING_FREE_LEN": 46.0,
  "SPRING_COCKED_LEN": 29.571367626520054,
  "OUTLET_X1": 151.8,
  "MUZZLE_LEN": 14.0,
- "FLUID_Y": -20.0,
+ "FLUID_Y": -16.0,
  "SYRINGE_AXIS_Z": 10.45,
  "PLATE_L": 171.8,
  "PLATE_W": 64.0,

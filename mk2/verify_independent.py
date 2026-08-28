@@ -353,12 +353,13 @@ def check_sear_release(bodies: dict, travel: float, step: float) -> None:
     print("=== 5b. SEAR RELEASE (rotation required to clear the stroke) ===")
     px = getattr(M, "SEAR_PIVOT_X", 0.0)
     py = getattr(M, "SEAR_PIVOT_Y", 0.0)
-    axis = cq.Vector(0, 0, 1)
+    axis = cq.Vector(0, 1, 0)
     ok_angle = None
     for deg in range(0, 95, 5):
-        rot = sear.moved(cq.Location(cq.Vector(-px, -py, 0)))
-        rot = rot.rotate(cq.Vector(0, 0, 0), axis, -deg)
-        rot = rot.moved(cq.Location(cq.Vector(px, py, 0)))
+        pz = getattr(M, "SEAR_PIVOT_Z", 0.0)
+        rot = sear.moved(cq.Location(cq.Vector(-px, -py, -pz)))
+        rot = rot.rotate(cq.Vector(0, 0, 0), axis, deg)
+        rot = rot.moved(cq.Location(cq.Vector(px, py, pz)))
         worst = 0.0
         t2 = 0.0
         while t2 <= travel + 1e-9:
