@@ -22,8 +22,11 @@ and physics derived from stored energy rather than read from a declared constant
     python verify_independent.py            # full run
     python verify_independent.py --quick    # coarser sampling, faster
     python verify_independent.py --json OUT # machine-readable report
+    python verify_independent.py --model webshooter_mk2   # audit the Mk3 model instead
+                                            # (or set WS_MODEL=...)
 
-Exit code 0 if every check passes, 1 otherwise.
+Exit code 0 if every check passes, 1 otherwise. The process exits via os._exit
+because CadQuery/OCCT can segfault at interpreter teardown.
 """
 from __future__ import annotations
 
@@ -39,7 +42,14 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 import cadquery as cq  # noqa: E402
 import importlib  # noqa: E402
-_MODEL = os.environ.get("WS_MODEL", "webshooter_mk2")
+def _pick_model() -> str:
+    pre = argparse.ArgumentParser(add_help=False)
+    pre.add_argument("--model")
+    ns, _ = pre.parse_known_args()
+    return ns.model or os.environ.get("WS_MODEL", "webshooter_mk4")
+
+
+_MODEL = _pick_model()
 M = importlib.import_module(_MODEL)  # noqa: E402
 
 # ----------------------------------------------------------------- thresholds
@@ -54,6 +64,16 @@ MIN_CLEARANCE = 0.15           # mm; anything tighter is a press fit or a collis
 SECTION_STEP = 0.5             # mm between section planes
 SWEEP_STEP = 0.25              # mm of travel between interference samples
 LAYER_STEP = 0.4               # mm, island scan resolution
+
+# Pairs permitted to TOUCH (gap ~0). Volume interpenetration is never permitted,
+# for any pair - that distinction is the whole point. A sear must bear on the lug
+# it holds; it must not occupy the same space as it.
+TOUCH_OK = {
+    frozenset({"printed/sear", "printed/carriage"}): "pawl bears on the carriage lug",
+    frozenset({"printed/sear", "printed/baseplate"}): "pawl journals on its pivot pin",
+    frozenset({"printed/carriage", "printed/baseplate"}): "carriage slides in its rails",
+    frozenset({"printed/outlet_adapter", "printed/baseplate"}): "adapter seats in the thrust stop",
+}
 
 FAILURES: list[str] = []
 WARNINGS: list[str] = []
@@ -277,7 +297,7 @@ def check_clearances(bodies: dict) -> None:
             hits.append((v, a, b))
         elif v == 0.0:
             g = min_gap(bodies[a], bodies[b])
-            if g < MIN_CLEARANCE:
+            if g < MIN_CLEARANCE and frozenset({a, b}) not in TOUCH_OK:
                 tang.append((g, a, b))
     for v, a, b in sorted(hits, reverse=True)[:25]:
         print(f"  OVERLAP  {v:9.2f} mm3   {a} <> {b}")
@@ -364,6 +384,7 @@ def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--quick", action="store_true")
     ap.add_argument("--json")
+    ap.add_argument("--model", default=_MODEL, help="model module to audit (default: webshooter_mk4)")
     a = ap.parse_args()
     sec_step = 2.0 if a.quick else SECTION_STEP
     lay_step = 1.0 if a.quick else LAYER_STEP
@@ -431,4 +452,7 @@ def main() -> int:
 
 
 if __name__ == "__main__":
-    sys.exit(main())
+    rc = main()
+    sys.stdout.flush()
+    sys.stderr.flush()
+    os._exit(rc)

@@ -22,7 +22,7 @@ Mk4 does not patch those. It removes the conditions that created them:
   2. A 5 mL SYRINGE replaces the 10 mL. Same 2 mL shot (bore does not affect exit
      velocity: v = V/(t*A_o), the bore cancels), but the longer stroke drops peak
      spring force to 11.2 N.
-  3. 11.2 N IS A THUMB PULL, so the cocking lever and its two pins are deleted.
+  3. the peak spring force (16.3 N, see mk4_params.json) is a thumb pull, so the cocking lever and its two pins are deleted.
      A broken mechanism removed rather than repaired.
   4. THE SEAR ENGAGES THE CARRIAGE'S REAR FACE. Firing moves the carriage away
      from the sear, so a stroke jam is not geometrically possible. The pivot sits
@@ -116,8 +116,8 @@ INSERT_PILOT = 4.5              # 5.0 x 4.0 knurled inserts
 INSERT_BOSS_OD = 10.0
 
 # lanes: fluid on -Y, electronics on +Y
-FLUID_Y = -20.0
-ELEC_Y = 11.0
+FLUID_Y = -16.0
+ELEC_Y = 13.0
 
 # stations along X
 BATT_X0, BATT_X1 = 6.0, 60.0            # LiPo 54 x 34 x 10, beside the spring
@@ -137,12 +137,20 @@ CARRIAGE_Z0 = PLATE_T
 # ----------------------------------------------------------------------- sear
 # Pivot ABOVE and FORWARD of the contact so the +X spring load torques the tooth
 # down into engagement. Sign is verified in sear_moment_check().
-SEAR_PIVOT_X = CARRIAGE_X_FIRED - 4.0
-SEAR_PIVOT_Z = PLATE_T + RAIL_H + 9.0
-SEAR_TOOTH_X = SEAR_PIVOT_X - 6.0
-SEAR_TOOTH_Z = PLATE_T + 4.0
-SEAR_W = 5.0
-SEAR_TAIL_LEN = 22.0
+# Vertical-axis pawl. The pivot sits FORWARD of the contact so the carriage's
+# +X load rotates the tooth inboard, deeper into engagement (see
+# sear_moment_check). Behind the contact it would unlatch itself - which is
+# exactly the inversion Mk3 shipped.
+CARRIAGE_LUG_X = 8.0                              # local, from the carriage rear
+CARRIAGE_LUG_Y = -4.0                             # local, inboard on the top face
+SEAR_PIVOT_X = CARRIAGE_X_FIRED - PLUNGER_STROKE + CARRIAGE_LUG_X + 10.0
+SEAR_PIVOT_Y = -31.0                              # outboard of the carriage sweep
+SEAR_CONTACT_X = CARRIAGE_X_FIRED - PLUNGER_STROKE + CARRIAGE_LUG_X + 4.0
+SEAR_CONTACT_Y = FLUID_Y + CARRIAGE_LUG_Y         # over the lug
+SEAR_Z = PLATE_T + RAIL_H - 0.2                   # pawl plane, just above the rails
+SEAR_W = 5.0                                      # thickness in Z
+SEAR_TAIL_LEN = 24.0
+SEAR_POST_R = 3.0
 
 # =============================================================== small helpers
 def _box(l, w, h, x=0.0, y=0.0, z=0.0):
@@ -228,12 +236,11 @@ def make_baseplate() -> cq.Shape:
                        SYRINGE_X1 - 1.0, FLUID_Y, SYRINGE_AXIS_Z))
     plate = _fuse(plate, stop)
 
-    # sear pivot post
-    post = _box(6.0, SEAR_W + 2 * 2.4, SEAR_PIVOT_Z - PLATE_T + 4.0,
-                SEAR_PIVOT_X - 3.0, FLUID_Y - inner - RAIL_T - 3.2, PLATE_T)
-    post = post.cut(_cyl_x(30.0, 1.7, SEAR_PIVOT_X - 12.0,
-                           FLUID_Y - inner - RAIL_T - 3.2, SEAR_PIVOT_Z))
-    plate = _fuse(plate, post)
+    # sear pivot post: a stub on the outer rail, carrying a vertical M3 pin
+    shoulder = _cyl_z(SEAR_Z - PLATE_T, SEAR_POST_R, SEAR_PIVOT_X, SEAR_PIVOT_Y, PLATE_T)
+    pin = _cyl_z(SEAR_W + 1.5, 1.6, SEAR_PIVOT_X, SEAR_PIVOT_Y, SEAR_Z)
+    plate = _fuse(plate, shoulder, pin)
+    plate = plate.cut(_cyl_z(60.0, 1.7, SEAR_PIVOT_X, SEAR_PIVOT_Y, -1.0))
 
     # electronics shelf ribs (open, so nothing prints in mid-air)
     for cx in (BATT_X1 + 6.0, BATT_X1 + 40.0):
@@ -244,7 +251,7 @@ def make_baseplate() -> cq.Shape:
         plate = plate.cut(_box(4.0, 27.0, PLATE_T + 2, sx, 0.0, -1.0))
 
     # bridge inserts
-    for y in (-16.0, 16.0):
+    for y in (-26.0, 26.0):
         bx = PLATE_L - 12.0
         boss = _cyl_z(6.0, INSERT_BOSS_OD / 2.0, bx, y, PLATE_T)
         plate = _fuse(plate, boss)
@@ -261,7 +268,7 @@ def make_carriage() -> cq.Shape:
     body = _box(CARRIAGE_LEN, body_w, RAIL_H - 1.0, 0.0, 0.0, 0.0)
 
     # push pad against the plunger thumb flange
-    pad = _box(3.0, PLUNGER_THUMB_OD, SYRINGE_AXIS_Z - PLATE_T + 6.0,
+    pad = _box(3.0, body_w, SYRINGE_AXIS_Z - PLATE_T + 6.0,
                CARRIAGE_LEN - 3.0, 0.0, 0.0)
     body = _fuse(body, pad)
 
@@ -269,9 +276,10 @@ def make_carriage() -> cq.Shape:
     body = _fuse(body, _cyl_x(8.0, SPRING_OD / 2.0 - SPRING_WIRE - 0.4,
                               -8.0, 0.0, (RAIL_H - 1.0) / 2.0))
 
-    # sear shelf on the REAR face — a square notch the tooth drops into
-    notch = _box(3.2, SEAR_W + 2 * CLEAR, 5.0, 0.0, -body_w / 2.0 + 4.0, 0.0)
-    body = body.cut(notch)
+    # sear lug on the outboard face: the pawl bears on its FORWARD face, so the
+    # spring load is carried by the pawl and never by the servo
+    lug = _box(4.0, 6.0, 5.0, CARRIAGE_LUG_X, CARRIAGE_LUG_Y, RAIL_H - 1.0)
+    body = _fuse(body, lug)
 
     # thumb tab for hand cocking — 11.2 N peak, no lever needed
     body = _fuse(body, _box(4.0, body_w, 14.0, 2.0, 0.0, RAIL_H - 1.0))
@@ -280,19 +288,19 @@ def make_carriage() -> cq.Shape:
 
 # ==================================================================== part 3/5
 def make_sear() -> cq.Shape:
-    """Pawl. Pivot sits above and forward of the tooth so the spring's +X load
-    produces a moment that drives the tooth DOWN into the notch."""
-    dx = SEAR_PIVOT_X - SEAR_TOOTH_X
-    dz = SEAR_PIVOT_Z - SEAR_TOOTH_Z
-    arm_len = math.hypot(dx, dz)
+    """Flat pawl swinging about a vertical pin. Modelled in its own frame with
+    the pivot at the origin; it lies flat on the bed and needs no support."""
+    reach = SEAR_PIVOT_X - SEAR_CONTACT_X
+    lat = SEAR_CONTACT_Y - SEAR_PIVOT_Y
 
-    # Modelled flat: the 5 mm dimension is Z, so the whole profile lies on the bed
-    # and prints without support. Rotate 90 deg about X at assembly.
-    arm = _box(arm_len, 5.0, SEAR_W, 0.0, 0.0, 0.0)
-    tooth = _box(3.0, 6.0, SEAR_W, 0.0, -5.5, 0.0)
-    tail = _box(SEAR_TAIL_LEN, 4.0, SEAR_W, arm_len - 2.0, 0.5, 0.0)
-    body = _fuse(arm, tooth, tail)
-    body = body.cut(_cyl_z(SEAR_W + 2, 1.7, arm_len - 3.0, 0.0, -1.0))
+    hub = _cyl_z(SEAR_W, 3.6, 0.0, 0.0, 0.0)
+    arm = _box(reach + 4.0, 5.0, SEAR_W, -(reach + 2.0), lat / 2.0, 0.0)
+    # tooth face stops at the lug, it does not enter it: intended contact is a
+    # touch, never an interpenetration
+    tooth = _box(3.0, 5.0, SEAR_W, -(reach + 1.0), lat, 0.0)
+    tail = _box(SEAR_TAIL_LEN, 4.5, SEAR_W, 2.0, -3.0, 0.0)
+    body = _fuse(hub, arm, tooth, tail)
+    body = body.cut(_cyl_z(SEAR_W + 2.0, 1.75, 0.0, 0.0, -1.0))
     return _ground(body)
 
 
@@ -334,15 +342,12 @@ PARTS = {
 # Assembly transforms. The sear is MODELLED flat for printing (5 mm in Z) and
 # rotated upright here — changing a part's print frame without changing its
 # assembly transform is exactly how it ended up buried in its own post.
-SEAR_Y = FLUID_Y - SYRINGE_OD / 2.0 - 3.0 - RAIL_T - 3.2
-
 printed_parts: Dict[str, Placed] = {
     "baseplate": Placed(make_baseplate(), cq.Location()),
     "carriage": Placed(make_carriage(), cq.Location(cq.Vector(
         CARRIAGE_X_FIRED - PLUNGER_STROKE, FLUID_Y, CARRIAGE_Z0 + 0.4))),
-    "sear": Placed(make_sear(), cq.Location(
-        cq.Vector(SEAR_TOOTH_X, SEAR_Y - 4.0, SEAR_TOOTH_Z + 6.0),
-        cq.Vector(1.0, 0.0, 0.0), 90.0)),
+    "sear": Placed(make_sear(), cq.Location(cq.Vector(
+        SEAR_PIVOT_X, SEAR_PIVOT_Y, SEAR_Z))),
     "outlet_adapter": Placed(make_outlet(), cq.Location(cq.Vector(
         OUTLET_X0 - 2.0, FLUID_Y, SYRINGE_AXIS_Z - (SYRINGE_OD / 2.0 + 2.2) + 3.0))),
     # palm pod rides its own strap, clear of the plate entirely
@@ -361,13 +366,17 @@ def sear_moment_check() -> dict:
     r_z = tooth_z - pivot_z is negative (tooth below pivot), so M_y is negative:
     a rotation that drives the tooth further into the notch. Engagement is stable.
     """
-    r_x = SEAR_TOOTH_X - SEAR_PIVOT_X
-    r_z = SEAR_TOOTH_Z - SEAR_PIVOT_Z
-    F = SPRING_PEAK_N
-    m_y = r_z * F - r_x * 0.0
-    return dict(r_x_mm=r_x, r_z_mm=r_z, force_N=F, moment_N_mm=m_y,
-                self_holding=m_y < 0,
-                note="negative M_y drives the tooth deeper into the notch")
+    r_x = SEAR_CONTACT_X - SEAR_PIVOT_X          # negative: contact behind pivot
+    r_y = SEAR_CONTACT_Y - SEAR_PIVOT_Y          # positive: contact inboard
+    F = SPRING_PEAK_N                             # carriage pushes the tooth +X
+    m_z = -r_y * F                                # M_z = rx*Fy - ry*Fx, Fy = 0
+    # Under that rotation the contact moves in Y by -r_x * dtheta. With the
+    # contact BEHIND the pivot (r_x < 0) that is positive: inboard, i.e. deeper
+    # into engagement. Forward of the pivot it would unlatch itself.
+    engages = (-r_x) > 0
+    return dict(r_x_mm=r_x, r_y_mm=r_y, force_N=F, moment_N_mm=m_z,
+                self_holding=engages,
+                note="contact behind the pivot: load rotates the tooth inboard")
 
 
 def report() -> dict:

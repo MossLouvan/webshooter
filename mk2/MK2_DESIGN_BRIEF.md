@@ -119,7 +119,7 @@ in which case flag it loudly.
 
 ## 5. Deliverables
 
-Work in `<repo>\mk2\`. Do not touch `../archive_mk1/`.
+Work in `mk2/`. Do not touch `../archive_mk1/`.
 
 1. **`webshooter_mk2.py`** — parameterized CadQuery model. Named constants at the top with a
    confidence comment on anything unverified. Exports one STEP and STL per printed part.

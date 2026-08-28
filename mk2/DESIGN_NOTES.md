@@ -79,7 +79,7 @@ The electronics stack is now only the owned 1S LiPo, XIAO ESP32C3, TP4056/DW01 c
 - checks straight fluid-path connectivity and tower-bore alignment;
 - asserts a named source and envelope for every assembly mockup.
 
-Latest clean audit values are written to the JSON rather than copied as untracked claims. The generated model has 6 valid single-solid parts, a 24.3 mm wrist-zone profile, a 0.400 mm worst-case swept static gap, and zero verifier failures.
+Latest clean audit values are written to the JSON rather than copied as untracked claims. The generated model has 6 valid single-solid parts, a 24.3 mm wrist-zone profile, a 0.400 mm worst-case swept static gap, and zero failures **from its own self-check**. The independent harness (`verify_independent.py --model webshooter_mk2`, output in `indep_quick.json`) disagrees and reports jams and overlaps; that disagreement is what drove Mk4, which still has open failures — see the README.
 
 ## Assembly and operation
 

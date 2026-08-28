@@ -1,7 +1,7 @@
 # Web-Shooter Mk3 — REBUILD BRIEF
 
 **To:** Codex (full access)
-**Model:** `<repo>\mk2\webshooter_mk2.py`
+**Model:** `mk2/webshooter_mk2.py`
 **Status:** three independent audits ran probes against your Mk2. All three returned BROKEN.
 The open-frame concept, the zones, the bridge, the syringe-as-reservoir idea and the electronics
 stack all survive. **The drive does not.**

@@ -20,12 +20,12 @@
   3.0
  ],
  "sear": {
-  "r_x_mm": -6.0,
-  "r_z_mm": -14.0,
+  "r_x_mm": -4.399999999999999,
+  "r_y_mm": 5.5,
   "force_N": 16.25129453332419,
-  "moment_N_mm": -227.51812346653867,
+  "moment_N_mm": -89.38211993328305,
   "self_holding": true,
-  "note": "negative M_y drives the tooth deeper into the notch"
+  "note": "contact behind the pivot: load rotates the tooth inboard"
  },
  "PLUNGER_STROKE": 16.428632373479946,
  "SPRING_FREE_LEN": 46.0,
