@@ -105,7 +105,10 @@ for fp in sorted(glob.glob(os.path.join(SRC, "*.stl"))):
         metal = 0.85 if rgba in (BRASS, BRASS_D) else 0.0
         rough = 0.28 if metal else 0.45
         o.data.materials.append(mat("M_" + key, rgba, alpha, metal, rough))
-        o.data.polygons.foreach_set("use_smooth", [True] * len(o.data.polygons))
+        # FLAT shading. Blanket smooth shading interpolates normals across every
+        # hard edge, which turns crisp machined boxes into blobs - that is what
+        # made the viewport look blurry. Mechanical parts want facets.
+        o.data.polygons.foreach_set("use_smooth", [False] * len(o.data.polygons))
         o.data.update()
         link(o, coll)
         objs[key] = o
