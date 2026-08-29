@@ -274,13 +274,26 @@ for attr, val in (("use_bloom", True), ("use_ssr", True), ("use_gtao", True)):
     except Exception:
         pass
 
-for w in bpy.context.window_manager.windows:
-    for a in w.screen.areas:
-        if a.type == 'VIEW_3D':
-            for s in a.spaces:
-                if s.type == 'VIEW_3D':
-                    s.shading.type = 'MATERIAL'
-                    s.clip_end = 20000
+# Viewport shading must be set on bpy.data.screens, NOT through
+# window_manager.windows: in background mode there are no windows, so that loop
+# is a silent no-op and the saved file opens in flat Solid shading with no
+# materials or lighting. This is why it looked "low res".
+for screen in bpy.data.screens:
+    for area in screen.areas:
+        if area.type != 'VIEW_3D':
+            continue
+        for space in area.spaces:
+            if space.type != 'VIEW_3D':
+                continue
+            space.shading.type = 'MATERIAL'
+            space.shading.use_scene_lights = True
+            space.shading.use_scene_world = True
+            space.clip_end = 20000
+            space.overlay.show_relationship_lines = False
+            space.overlay.show_extras = False        # hides camera/light gizmos
+            space.overlay.show_floor = False
+            space.overlay.show_axis_x = False
+            space.overlay.show_axis_y = False
 
 blend = os.path.join(HERE, "webshooter_mk5.blend")
 bpy.ops.wm.save_as_mainfile(filepath=blend)
