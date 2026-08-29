@@ -1,0 +1,273 @@
+Independent verification — webshooter_mk4.py
+thresholds: wall>=0.80 ligament>=1.20 section>=2.0 first_layer>=150 island<=5.0 clearance>=0.15
+
+=== 1. PART INTEGRITY ===
+  baseplate              solids=1 shells=1 valid=True vol=  30838.2  
+  carriage               solids=1 shells=1 valid=True vol=   3372.5  
+  sear                   solids=1 shells=1 valid=True vol=   1514.1  
+  outlet_adapter         solids=1 shells=1 valid=True vol=   4849.5  
+  switch_pod             solids=1 shells=1 valid=True vol=   2175.0  
+
+=== 2. THIN FEATURES (section step 0.5 mm) ===
+  baseplate              min section    13.24 mm2   max pieces 12
+  carriage               min section    22.90 mm2   max pieces 2
+  sear                   min section     9.40 mm2   max pieces 2
+  outlet_adapter         min section    97.75 mm2   max pieces 2
+  switch_pod             min section    72.00 mm2   max pieces 3
+
+=== 3. PRINTABILITY (layer step 0.4 mm) ===
+  baseplate              first layer   4081.4 mm2 (2 pc)   worst unsupported     0.0 mm2
+  carriage               first layer    269.0 mm2 (1 pc)   worst unsupported     0.0 mm2
+  sear                   first layer    180.1 mm2 (1 pc)   worst unsupported     0.0 mm2
+  outlet_adapter         first layer    237.1 mm2 (1 pc)   worst unsupported     0.0 mm2
+  switch_pod             first layer    456.0 mm2 (1 pc)   worst unsupported     0.0 mm2
+
+=== 4. STATIC CLEARANCE (no allowlist) ===
+  OVERLAP     669.50 mm3   mockup/servo_winch <> printed/baseplate
+  OVERLAP     624.00 mm3   mockup/servo_trip <> printed/baseplate
+  OVERLAP     338.23 mm3   mockup/push_rod <> printed/carriage
+  OVERLAP     302.40 mm3   mockup/rocker <> printed/baseplate
+  OVERLAP     293.30 mm3   mockup/lipo_2000mah <> printed/baseplate
+  OVERLAP     252.34 mm3   mockup/rocker <> printed/carriage
+  OVERLAP     138.40 mm3   mockup/grip_plate_drive <> printed/carriage
+  OVERLAP     125.63 mm3   mockup/syringe_finger_flange <> printed/baseplate
+  OVERLAP      67.86 mm3   mockup/push_rod <> printed/baseplate
+  OVERLAP      60.46 mm3   mockup/rocker <> printed/sear
+  OVERLAP      53.51 mm3   mockup/horn_winch <> printed/baseplate
+  OVERLAP      53.51 mm3   mockup/horn_trip <> printed/baseplate
+  OVERLAP      48.25 mm3   mockup/rocker <> mockup/rocker_pin
+  OVERLAP      47.89 mm3   mockup/compression_spring <> printed/baseplate
+  OVERLAP      45.95 mm3   mockup/cradle_screw_0 <> mockup/servo_winch
+  OVERLAP      45.95 mm3   mockup/cradle_screw_1 <> mockup/servo_trip
+  OVERLAP      30.86 mm3   mockup/compression_spring <> printed/carriage
+  OVERLAP      25.73 mm3   mockup/rocker_pin <> printed/carriage
+  OVERLAP      18.94 mm3   mockup/cannula <> printed/outlet_adapter
+  OVERLAP      10.84 mm3   mockup/cradle_screw_0b <> printed/baseplate
+  OVERLAP      10.84 mm3   mockup/cradle_screw_0 <> printed/baseplate
+  OVERLAP      10.63 mm3   mockup/lipo_2000mah <> mockup/syringe_finger_flange
+  OVERLAP       2.51 mm3   mockup/rocker_pin <> printed/baseplate
+  OVERLAP       2.30 mm3   mockup/horn_winch <> mockup/pushrod_winch
+  OVERLAP       2.30 mm3   mockup/horn_trip <> mockup/pushrod_trip
+  TANGENT      0.000 mm    mockup/syringe_barrel <> mockup/syringe_finger_flange
+  TANGENT      0.050 mm    mockup/sear_pivot_pin <> mockup/sear_torsion_spring
+
+=== 5b. SEAR RELEASE (rotation required to clear the stroke) ===
+  -- sear vs 29 static bodies through 90 deg (gate: any shared volume) --
+    0 deg  mockup/rocker=60.4646
+    1 deg  mockup/rocker=62.5735
+    2 deg  mockup/rocker=64.0951
+    3 deg  mockup/rocker=65.0693
+    4 deg  mockup/rocker=65.5307
+    5 deg  mockup/rocker=65.5095
+    6 deg  mockup/rocker=65.0317
+    7 deg  mockup/rocker=64.1200
+    8 deg  mockup/rocker=62.7938
+    9 deg  mockup/rocker=61.0700
+   10 deg  mockup/rocker=58.9660
+   11 deg  mockup/rocker=56.4929
+   12 deg  mockup/rocker=53.5992
+   13 deg  mockup/rocker=50.4073
+   14 deg  mockup/rocker=47.1387
+   15 deg  mockup/rocker=43.8097
+   16 deg  mockup/rocker=40.4368
+   17 deg  mockup/rocker=37.0601
+   18 deg  mockup/rocker=33.6914
+   19 deg  mockup/rocker=30.3386
+   20 deg  mockup/rocker=27.0110
+   21 deg  mockup/rocker=23.7192
+   22 deg  mockup/rocker=20.4755
+   23 deg  mockup/rocker=17.2940
+   24 deg  mockup/rocker=14.1909
+   25 deg  mockup/rocker=11.1853
+   26 deg  mockup/rocker=8.2989
+   27 deg  mockup/rocker=5.5572
+   28 deg  mockup/rocker=2.9897
+   29 deg  mockup/rocker=1.0151
+   30 deg  mockup/rocker=0.0790
+   32 deg  mockup/cradle_screw_0b=0.1421
+   33 deg  mockup/cradle_screw_0b=0.9813
+   34 deg  mockup/cradle_screw_0b=2.6363
+   35 deg  mockup/cradle_screw_0b=5.0602
+   36 deg  mockup/cradle_screw_0b=8.0325
+   37 deg  mockup/cradle_screw_0b=11.1374
+   38 deg  mockup/cradle_screw_0b=14.3300
+   39 deg  mockup/cradle_screw_0b=17.6157
+   40 deg  mockup/cradle_screw_0b=21.0007
+   41 deg  mockup/cradle_screw_0b=24.4914
+   42 deg  mockup/cradle_screw_0b=27.9672
+   43 deg  mockup/cradle_screw_0b=30.9214
+   44 deg  mockup/cradle_screw_0b=32.9300
+   45 deg  mockup/cradle_screw_0b=33.7695
+   46 deg  mockup/cradle_screw_0b=33.4010
+   47 deg  mockup/cradle_screw_0b=31.9362
+   48 deg  mockup/cradle_screw_0b=29.7135
+   49 deg  mockup/cradle_screw_0b=26.7766
+   50 deg  mockup/cradle_screw_0b=23.1382
+   51 deg  mockup/cradle_screw_0b=18.9604
+   52 deg  mockup/cradle_screw_0b=14.7691
+   53 deg  mockup/cradle_screw_0b=10.9349
+   54 deg  mockup/cradle_screw_0b=7.5833
+   55 deg  mockup/cradle_screw_0b=4.7907
+   56 deg  mockup/cradle_screw_0b=2.6152
+   57 deg  mockup/cradle_screw_0b=1.0954
+   58 deg  mockup/cradle_screw_0b=0.2431  mockup/syringe_finger_flange=0.0001
+   59 deg  mockup/cradle_screw_0b=0.0010  mockup/syringe_finger_flange=0.0103
+   60 deg  mockup/syringe_finger_flange=0.0571
+   61 deg  mockup/syringe_finger_flange=0.1688
+   62 deg  mockup/syringe_finger_flange=0.3726
+   63 deg  mockup/syringe_finger_flange=0.6931
+   64 deg  mockup/syringe_finger_flange=1.1494
+   65 deg  mockup/syringe_finger_flange=1.7507
+   66 deg  mockup/syringe_finger_flange=2.4889
+   67 deg  mockup/syringe_finger_flange=3.3119  printed/baseplate=0.0289
+   68 deg  mockup/syringe_finger_flange=4.1083  printed/baseplate=0.1265
+   69 deg  mockup/syringe_finger_flange=4.8008  printed/baseplate=0.3011
+   70 deg  mockup/syringe_finger_flange=5.3512  printed/baseplate=0.5628
+   71 deg  mockup/syringe_finger_flange=5.7294  printed/baseplate=0.9108
+   72 deg  mockup/syringe_finger_flange=5.9251  printed/baseplate=1.3028
+   73 deg  mockup/syringe_finger_flange=5.9410  printed/baseplate=1.7369
+   74 deg  mockup/syringe_finger_flange=5.8042  printed/baseplate=2.1152
+   75 deg  mockup/syringe_finger_flange=5.4889  printed/baseplate=2.3724
+   76 deg  mockup/syringe_finger_flange=4.9435  printed/baseplate=2.4840
+   77 deg  mockup/syringe_finger_flange=4.1841  printed/baseplate=2.4816
+   78 deg  mockup/syringe_finger_flange=3.3559  printed/baseplate=2.4758
+   79 deg  mockup/syringe_finger_flange=2.5350  printed/baseplate=2.3872
+   80 deg  mockup/syringe_finger_flange=1.7211  printed/baseplate=2.1505
+   81 deg  mockup/syringe_finger_flange=0.9244  printed/baseplate=1.7181
+   82 deg  mockup/syringe_finger_flange=0.2855  printed/baseplate=1.0997
+   83 deg  mockup/syringe_finger_flange=0.0101  printed/baseplate=0.4973
+   84 deg  printed/baseplate=0.0932
+   85 deg  clear
+   90 deg  clear
+    0 deg -> worst carriage interference    56.40 mm3
+   10 deg -> worst carriage interference    35.90 mm3
+   20 deg -> worst carriage interference     7.47 mm3
+  clears at 25 deg of release rotation
+
+=== 5c. SEAR REST POSE (equilibrium measured, not assumed) ===
+  0 deg is NOT clear: 60.464640 mm3 shared with mockup/rocker
+
+=== 5d. COCKING STROKE (10.073 mm back to 0, step 0.25 mm) ===
+
+=== 5. MOTION SWEEP (0 to 10.073 mm, step 0.25 mm, no exclusions) ===
+  (pawl posed at its certified 25 deg release angle and swept, not excluded)
+  JAM     338.23 mm3 at travel   3.25 mm   printed/carriage -> mockup/push_rod
+  JAM     252.34 mm3 at travel   0.00 mm   printed/carriage -> mockup/rocker
+  JAM     159.28 mm3 at travel   9.50 mm   printed/carriage -> mockup/grip_plate_drive
+  JAM     135.19 mm3 at travel   7.25 mm   printed/carriage -> mockup/grip_plate_antireturn
+  JAM      39.01 mm3 at travel   2.75 mm   printed/carriage -> mockup/rocker_pin
+  JAM      30.86 mm3 at travel   0.00 mm   printed/carriage -> mockup/compression_spring
+  JAM      26.72 mm3 at travel  10.00 mm   printed/carriage -> mockup/syringe_finger_flange
+
+=== 6. PHYSICS (derived from stored energy) ===
+  model 3.0 mm outlet    A_o=  9.23 mm2  v= 3.96 m/s  range= 1.60 m  dP=   64.7 kPa  work=0.1294 J
+  real 8 ga ID 3.429     A_o=  9.23 mm2  v= 3.96 m/s  range= 1.60 m  dP=   64.7 kPa  work=0.1294 J
+  outlet as designed     A_o=  9.23 mm2  v= 3.96 m/s  range= 1.60 m  dP=   64.7 kPa  work=0.1294 J
+  spring stores 0.1876 J   cocked 37.25 N   stroke 10.073 mm
+  shot time 54.7 ms is DERIVED from flow rate; work 0.1294 J vs stored 0.1876 J (margin 1.45x)
+
+=== 7. SPRING BUCKLING (slenderness measured, pilot measured) ===
+  mockup/compression_spring
+  free 34.00 mm  compressed 23.93 mm  mean coil dia 7.10 mm  force 37.25 N
+  slenderness L0/D = 4.79   deflection 29.6% of free length   critical 13.1%
+  pilot coverage inside the coil bore (r 3.10 mm): 100% of the compressed length
+  unstable but fully piloted - the pilot is what makes it legal
+
+=== 8. SERVO TORQUE (release moment derived from geometry) ===
+  spring force MEASURED from its compressed length: 37.25 N
+  servo bodies present: mockup/servo_trip, mockup/servo_winch
+  stall 451 N.mm, usable at 0.33 duty 150 N.mm
+  r_x -9.00 mm  r_z -13.40 mm  mu 0.35
+  holding 499.2 + friction 117.3 + pin drag 22.8  =  639.3 N.mm at the sear pivot
+  linkage: horn 9.0 mm driving a 24.0 mm sear arm  ->  advantage 2.67
+  torque demanded at the servo shaft 239.7 N.mm vs 150 N.mm usable   margin 0.63x
+
+=== 9. ONE-WAY GRIP (holds forward, releases on return) ===
+  grip plates present: mockup/grip_plate_antireturn, mockup/grip_plate_drive
+  rod 6.00  bore 6.30  plate 1.50 mm  ->  bite angle >= 11.31 deg, plates tilted 11.31 deg
+  rod engagement over 5 shots: worst is 37.93 mm behind mockup/grip_plate_drive at shot 5 (needs 12.00 mm)
+  grip geometry bites
+
+=== 10. MULTI-SHOT (each shot's delivered volume, simulated) ===
+  drive face printed/carriage, driven face mockup/piston
+  target 5 shots of 2.00 mL; one-way grip certified: True
+  shot 1: free travel n/a (grip re-engages)   effective push  10.07 mm   delivers  2.00 mL
+  shot 2: free travel n/a (grip re-engages)   effective push  10.07 mm   delivers  2.00 mL
+  shot 3: free travel n/a (grip re-engages)   effective push  10.07 mm   delivers  2.00 mL
+  shot 4: free travel n/a (grip re-engages)   effective push  10.07 mm   delivers  2.00 mL
+  shot 5: free travel n/a (grip re-engages)   effective push  10.07 mm   delivers  2.00 mL
+
+=== 11. RECOCK BUDGET (work in vs energy stored) ===
+  spring PE to restore: 0.5 x 37.25 N x 10.07 mm = 187.6 N.mm (0.188 J)
+  servo 150 N.mm usable x 2.793 rad x 2 bites x 0.7 eff = 587.9 N.mm
+  torque needed per bite 48.0 N.mm   margin 3.13x
+  winch radius 1.804 mm -> PEAK torque at full cock 67.2 N.mm   margin 2.24x
+
+=== 12. WRIST PROFILE (over every body in the assembly) ===
+  underside z -0.90, highest point 34.60 on mockup/sear_torsion_spring
+  stack height 35.50 mm against a 25 mm target
+
+=== 13. PISTON CONTAINMENT (inside the bore, not merely clear) ===
+  barrel mockup/syringe_barrel x 54.00..142.00, bore 15.90 mm
+  piston mockup/piston x 81.64..91.64, travel 50.36 mm over 5 shots
+  piston radial extent from the fluid axis 7.950 mm vs bore radius 7.950 mm
+  piston stays between the barrel ends for all 5 shots
+
+========================================================================
+WARNINGS (10)
+  [thin] baseplate: up to 3 disjoint pieces in x-sections (a thin ligament may be the only thing joining them)
+  [thin] baseplate: up to 5 disjoint pieces in y-sections (a thin ligament may be the only thing joining them)
+  [thin] baseplate: up to 12 disjoint pieces in z-sections (a thin ligament may be the only thing joining them)
+  [thin] carriage: up to 2 disjoint pieces in z-sections (a thin ligament may be the only thing joining them)
+  [thin] sear: up to 2 disjoint pieces in x-sections (a thin ligament may be the only thing joining them)
+  [thin] sear: up to 2 disjoint pieces in y-sections (a thin ligament may be the only thing joining them)
+  [thin] outlet_adapter: up to 2 disjoint pieces in y-sections (a thin ligament may be the only thing joining them)
+  [thin] outlet_adapter: up to 2 disjoint pieces in z-sections (a thin ligament may be the only thing joining them)
+  [thin] switch_pod: up to 2 disjoint pieces in x-sections (a thin ligament may be the only thing joining them)
+  [thin] switch_pod: up to 3 disjoint pieces in z-sections (a thin ligament may be the only thing joining them)
+
+FAILURES (42)
+  [clearance] mockup/servo_winch <> printed/baseplate overlap 669.50 mm3
+  [clearance] mockup/servo_trip <> printed/baseplate overlap 624.00 mm3
+  [clearance] mockup/push_rod <> printed/carriage overlap 338.23 mm3
+  [clearance] mockup/rocker <> printed/baseplate overlap 302.40 mm3
+  [clearance] mockup/lipo_2000mah <> printed/baseplate overlap 293.30 mm3
+  [clearance] mockup/rocker <> printed/carriage overlap 252.34 mm3
+  [clearance] mockup/grip_plate_drive <> printed/carriage overlap 138.40 mm3
+  [clearance] mockup/syringe_finger_flange <> printed/baseplate overlap 125.63 mm3
+  [clearance] mockup/push_rod <> printed/baseplate overlap 67.86 mm3
+  [clearance] mockup/rocker <> printed/sear overlap 60.46 mm3
+  [clearance] mockup/horn_winch <> printed/baseplate overlap 53.51 mm3
+  [clearance] mockup/horn_trip <> printed/baseplate overlap 53.51 mm3
+  [clearance] mockup/rocker <> mockup/rocker_pin overlap 48.25 mm3
+  [clearance] mockup/compression_spring <> printed/baseplate overlap 47.89 mm3
+  [clearance] mockup/cradle_screw_0 <> mockup/servo_winch overlap 45.95 mm3
+  [clearance] mockup/cradle_screw_1 <> mockup/servo_trip overlap 45.95 mm3
+  [clearance] mockup/compression_spring <> printed/carriage overlap 30.86 mm3
+  [clearance] mockup/rocker_pin <> printed/carriage overlap 25.73 mm3
+  [clearance] mockup/cannula <> printed/outlet_adapter overlap 18.94 mm3
+  [clearance] mockup/cradle_screw_0b <> printed/baseplate overlap 10.84 mm3
+  [clearance] mockup/cradle_screw_0 <> printed/baseplate overlap 10.84 mm3
+  [clearance] mockup/lipo_2000mah <> mockup/syringe_finger_flange overlap 10.63 mm3
+  [clearance] mockup/rocker_pin <> printed/baseplate overlap 2.51 mm3
+  [clearance] mockup/horn_winch <> mockup/pushrod_winch overlap 2.30 mm3
+  [clearance] mockup/horn_trip <> mockup/pushrod_trip overlap 2.30 mm3
+  [clearance] mockup/syringe_barrel <> mockup/syringe_finger_flange gap 0.000 mm (< 0.15)
+  [clearance] mockup/sear_pivot_pin <> mockup/sear_torsion_spring gap 0.050 mm (< 0.15)
+  [sear] printed/sear <> mockup/rocker: 65.5307 mm3 interference at 4 deg of release rotation
+  [sear] printed/sear <> mockup/cradle_screw_0b: 33.7695 mm3 interference at 45 deg of release rotation
+  [sear] printed/sear <> mockup/syringe_finger_flange: 5.9410 mm3 interference at 73 deg of release rotation
+  [sear] printed/sear <> printed/baseplate: 2.4840 mm3 interference at 76 deg of release rotation
+  [rest] sear shares 60.464640 mm3 with mockup/rocker at 0 deg - the drawn pose is inside a static body, so there is no rest pose
+  [cock] no measured rest pose: the cocking stroke cannot be driven from an equilibrium that 5c could not find
+  [motion] printed/carriage -> mockup/push_rod: 338.23 mm3 interference at 3.25 mm of travel
+  [motion] printed/carriage -> mockup/rocker: 252.34 mm3 interference at 0.00 mm of travel
+  [motion] printed/carriage -> mockup/grip_plate_drive: 159.28 mm3 interference at 9.50 mm of travel
+  [motion] printed/carriage -> mockup/grip_plate_antireturn: 135.19 mm3 interference at 7.25 mm of travel
+  [motion] printed/carriage -> mockup/rocker_pin: 39.01 mm3 interference at 2.75 mm of travel
+  [motion] printed/carriage -> mockup/compression_spring: 30.86 mm3 interference at 0.00 mm of travel
+  [motion] printed/carriage -> mockup/syringe_finger_flange: 26.72 mm3 interference at 10.00 mm of travel
+  [servo] releasing the sear needs 240 N.mm at the servo shaft but only 150 N.mm is available (0.63x, needs 1.5x): the servo cannot open the sear
+  [profile] stack height 35.50 mm exceeds the 25 mm wrist target; the tallest body is mockup/sear_torsion_spring at z = 34.60
+
+wrote mk5_r1_full.json
